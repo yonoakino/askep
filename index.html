@@ -2713,6 +2713,51 @@ const askepData = [
         ]
     },
         {
+        id: 'D.0051',
+        keywords: ['d.0051', 'risiko inkontinensia urine urgensi'],
+        diagnosis: {
+            judul: 'Risiko Inkontinensia Urine Urgensi',
+            kode: 'D.0051',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Berisiko mengalami pengeluaran urin yang tidak terkendali.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Efek samping obat, kopi dan alkohol', 'Hiperrefleks destrussor', 'Gangguan sistem saraf pusat', 'Kerusakan kontraksi kandung kemih: relaksasi spingter tidak terkendali', 'Ketidakefektifan kebiasaan berkemih', 'Kapasitas kandung kemih kecil'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Infeksi/tumor/batu saluran kemih dan/atau ginjal', 'Gangguan sistem saraf pusat']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan mengontrol pengeluaran urine meningkat', 'Nokturia menurun', 'Residu volume urine setelah BAK menurun', 'Distensi kandung kemih menurun', 'Dribbling menurun', 'Hesitancy menurun', 'Enuresis menurun', 'Kemampuan menunda pengeluaran urine membaik', 'Frekuensi BAK membaik', 'Sensasi BAK membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Eliminasi Urine',
+                kode: 'I.04152',
+                definisi: 'Mengidentifikasi dan mengelola gangguan pola eliminasi urine.',
+                tindakan: {
+                    observasi: ['Identifikasi tanda dan gejala retensi atau inkontinensia urine', 'Identifikasi faktor yang menyebabkan retensi atau inkontinensia urine', 'Monitor eliminasi urine (mis. frekuensi, konsistensi, aroma, volume, dan warna)'],
+                    terapeutik: ['Catat waktu-waktu dan haluaran berkemih', 'Batasi asupan cairan, jika perlu', 'Ambil sampel urine tengah (midstream) atau kultur'],
+                    edukasi: ['Ajarkan tanda dan gejala infeksi saluran kemih', 'Ajarkan mengukur asupan cairan dan haluaran urine', 'Ajarkan mengambil spesimen urine midstream', 'Ajarkan mengenali tanda berkemih dan waktu yang tepat untuk berkemih', 'Ajarkan terapi modalitas penguatan otot-otot panggul/berkemihan', 'Anjurkan minum yang cukup, jika tidak ada kontraindikasi', 'Anjurkan mengurangi minum menjelang tidur'],
+                    kolaborasi: ['Kolaborasi pemberian obat supositoria uretra, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui tanda dan gejala retensi atau inkontinensia urine. Inkontinensia urine urgensi adalah keluarnya urine tidak terkendali sesaat setelah keinginan yang kuat untuk berkemih (kebelet). Untuk mengetahui faktor yang menyebabkan retensi atau inkontinensia urine. Untuk mengetahui karakteristik dari urin.',
+                    terapeutik: 'Untuk mengetahui waktu-waktu dan haluaran berkemih pasien. Pembatasan cairan akan menentukan haluaran urine. Urine tengah (midstream) adalah cara pengambilan sampel untuk pemeriksaan kultur urine.',
+                    edukasi: 'Memberikan informasi kepada pasien terkait masalah yang berisiko dialami oleh pasien. Agar pasien dapat mengetahui cara mengukur dan mencatat asupan cairan dan haluaran urine secara mandiri. Agar pasien mengetahui cara mengambil spesimen urine tengah (midstream). Agar pasien mengetahui tanda-tanda berkemih dan waktu yang tepat untuk berkemih. Latihan penguatan otot-otot panggul berfungsi untuk menguatkan otot-otot elevator ani dan urogenital yang dapat mencegah inkontinensia urine. Minum yang cukup sekitar 2 liter/hari agar kebutuhan cairan pasien terpenuhi. Pembatasan minum di malam hari dapat menghindarkan responden dari enuresis (mengompol) dan nokturia (BAK berlebih di malam hari).',
+                    kolaborasi: 'Suppositoria adalah obat berbentuk seperti peluru atau kerucut yang dimasukkan ke dalam anus (rektal), uretra, atau vagina. Supositoria uretra dapat diabsorbsi dengan mudah melalui mukosa ke dalam jaringan kandung kemih.'
+                }
+            }
+        ]
+    },
+      {
         id: 'D.0052',
         keywords: ['d.0052', 'risiko konstipasi'],
         diagnosis: {
@@ -3148,6 +3193,1987 @@ const askepData = [
                     terapeutik: 'Untuk memberi rasa nyaman bagi pasien. Untuk meningkatkan dan melatih masa otot dan gerak ekstremitas pasien. Untuk mengalihkan rasa ketidaknyamanan yang dialami pasien. Untuk melatih gerak mobilisasi pasien selama dirawat.',
                     edukasi: 'Untuk memberikan kenyamanan pasien saat beristirahat. Untuk menunjang proses kesembuhan pasien secara bertahap. Agar perawat bisa dengan segera mengkaji dan merencanakan kembali tindakan keperawatan yang bisa diberikan. Agar pasien dapat mengatasi kelelahannya secara mandiri dengan mudah.',
                     kolaborasi: 'Untuk memaksimalkan proses penyembuhan pasien.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0061',
+        keywords: ['d.0061', 'disrefleksia otonom'],
+        diagnosis: {
+            judul: 'Disrefleksia Otonom',
+            kode: 'D.0061',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Respon sistem saraf simpatis yang terjadi secara spontan dan mengancam jiwa terhadap stimulus berbahaya akibat cedera medula spinalis pada T7 atau di atasnya.',
+            penyebab: {
+                fisiologis: ['Cedera pada medula spinalis', 'Pembedahan medula spinalis T7 atau di atasnya', 'Proses keganasan pada medula spinalis'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Sakit Kepala'],
+                objektif: ['Tekanan darah sistolik meningkat >20%', 'Bercak merah pada kulit di atas lokasi cedera', 'Diaforesis di atas lokasi cedera', 'Pucat di bawah lokasi cedera', 'Bradikardia dan/atau takikardia']
+            },
+            gejalaMinor: {
+                subjektif: ['Nyeri dada', 'Pandangan kabur', 'Kongesti konjungtiva', 'Kongesti nasal', 'Parestesia', 'Sensasi logam di mulut'],
+                objektif: ['Menggigil', 'Sindrom Horner', 'Refleks pilomotorik', 'Dilatasi pupil', 'Penile erection', 'Semen emission']
+            },
+            kondisiKlinis: ['Cedera medula spinalis', 'Fraktur', 'Trombosis vena dalam']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Neurologis',
+                kode: 'L.06053',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Tingkat kesadaran membaik', 'Reaksi pupil membaik', 'Sakit kepala membaik', 'Tekanan darah sistolik membaik', 'Frekuensi nadi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Disrefleksia',
+                kode: 'I.06190',
+                definisi: 'Mengidentifikasi dan mengelola refleks hiperaktif dan respon otonom yang tidak tepat pada lesi servikal atau toraks.',
+                tindakan: {
+                    observasi: ['Identifikasi rangsangan yang dapat memicu disrefleksia (mis. distensi kandung kemih, kalkuli ginjal, infeksi, impaksi feses, pemeriksaan rektal, supositoria, kerusakan kulit)', 'Identifikasi penyebab pemicu disrefleksia', 'Monitor tanda dan gejala disrefleksia otonom', 'Monitor kepatenan kateter urin, jika terpasang', 'Monitor terjadinya hiperrefleksia', 'Monitor tanda-tanda vital'],
+                    terapeutik: ['Minimalkan rangsangan yang dapat memicu disrefleksia', 'Berikan posisi Fowler, jika perlu', 'Pasang kateter urin, jika perlu'],
+                    edukasi: ['Jelaskan penyebab dan gejala disrefleksia', 'Jelaskan penanganan dan pencegahan disrefleksia', 'Anjurkan pasien dan/atau keluarga jika mengalami tanda dan gejala disrefleksia'],
+                    kolaborasi: ['Pemberian agen antihipertensi intravena, sesuaikan indikasi']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui perkembangan status kesehatan pasien dan mencegah komplikasi lanjutan. Untuk mengetahui apa saja yang bisa menjadi penyebab yang dapat memicu Disrefleksia. Untuk dapat mengidentifikasi apa saja gejala yang termasuk dalam Disrefleksia. Agar dapat membantu pasien untuk dapat membuang urine. Hyperreflexia adalah adanya tanda kerusakan pada saraf motorik atas. Agar dapat memantau kondisi fisik dan tingkat kesembuhan pasien.',
+                    terapeutik: 'Rangsangan yang dapat memicu disrefleksia. Posisi fowler merupakan posisi setengah duduk untuk dapat membantu mempertahankan serta meningkatkan kenyamanan.',
+                    edukasi: 'Untuk dapat mengidentifikasi tanda dan gejala dari disrefleksia. Sebagian besar episode AD hilang setelah Anda menghilangkan pemicunya (stimulus).',
+                    kolaborasi: 'Obat antihipertensi ini bekerja dengan cara menghambat angiotensin II berikatan dengan reseptornya.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0062',
+        keywords: ['d.0062', 'gangguan memori'],
+        diagnosis: {
+            judul: 'Gangguan Memori',
+            kode: 'D.0062',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Ketidakmampuan mengingat beberapa informasi atau perilaku.',
+            penyebab: {
+                fisiologis: ['Ketidakadekuatan stimulasi intelektual', 'Gangguan sirkulasi ke otak', 'Gangguan volume cairan dan/atau elektrolit', 'Proses penuaan', 'Hipoksia', 'Gangguan neurologis (mis. EEG positif, cedera kepala, gangguan kejang)', 'Efek agen farmakologis', 'Penyalahgunaan zat'],
+                psikologis: ['Faktor psikologis (mis. kecemasan, depresi, stres berlebihan, berduka, gangguan tidur)'],
+                situasional: ['Distraksi lingkungan']
+            },
+            gejalaMayor: {
+                subjektif: ['Melaporkan pernah mengalami pengalaman lupa', 'Tidak mampu mempelajari keterampilan baru', 'Tidak mampu mengingat informasi faktual', 'Tidak mampu mengingat perilaku tertentu yang pernah dilakukan', 'Tidak mampu mengingat peristiwa'],
+                objektif: ['Tidak mampu melakukan kemampuan yang dipelajari sebelumnya']
+            },
+            gejalaMinor: {
+                subjektif: ['Lupa melakukan perilaku pada waktu yang telah dijadwalkan', 'Merasa mudah lupa'],
+                objektif: []
+            },
+            kondisiKlinis: ['Stroke', 'Cedera kepala', 'Kejang', 'Penyakit Alzheimer', 'Depresi', 'Intoksikasi alkohol']
+        },
+        luaran: {
+            utama: {
+                judul: 'Memori',
+                kode: 'L.09079',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Verbalisasi kemampuan mempelajari hal baru meningkat', 'Verbalisasi kemampuan mengingat informasi faktual meningkat', 'Verbalisasi kemampuan mengingat perilaku tertentu yang pernah dilakukan meningkat', 'Verbalisasi kemampuan mengingat peristiwa meningkat', 'Verbalisasi pengalaman lupa menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Memori',
+                kode: 'I.06188',
+                definisi: 'Mengajarkan kemampuan untuk meningkatkan daya ingat.',
+                tindakan: {
+                    observasi: ['Identifikasi masalah memori yang dialami', 'Identifikasi kesalahan terhadap orientasi', 'Monitor perilaku dan perubahan memori selama terapi'],
+                    terapeutik: ['Rencanakan metode mengajar sesuai kemampuan pasien', 'Stimulasi memori dengan mengulang pikiran yang terakhir kali diucapkan, jika perlu', 'Koreksi kesalahan orientasi', 'Fasilitasi mengingat kembali pengalaman masa lalu, jika perlu', 'Fasilitasi tugas pembelajaran (mis. mengingat informasi verbal dan gambar)', 'Fasilitasi kemampuan konsentrasi (mis. bermain kartu pasangan) jika perlu', 'Stimulasi menggunakan memori pada peristiwa yang baru terjadi (mis. bertanya kemana saja ia pergi akhir-akhir ini), jika perlu'],
+                    edukasi: ['Jelaskan tujuan dan prosedur latihan', 'Ajarkan teknik memori yang tepat (mis. imajinasi visual, perangkat mnemonic, permainan memori, isyarat memori, teknik asosiasi, membuat daftar, komputer, papan nama)'],
+                    kolaborasi: ['Rujuk pada terapi okupasi, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui masalah memori yang dialami. Untuk menemukan solusi yang tepat pada kesalahan orientasi. Untuk mengetahui perilaku dan perubahan memori klien pada saat melakukan terapi.',
+                    terapeutik: 'Pasien dapat belajar sesuai dengan kemampuan yang dia miliki. Bertujuan memberikan program stimulasi perhatian dan ingatan. Membantu klien untuk menyadari kesalahan pada orientasinya. Bertujuan untuk membantu kemampuan mengingat memori jangka panjang pasien. Bertujuan untuk membantu kemampuan mengingat informasi dan imajinasi pasien. Membantu meningkatkan kemampuan konsentrasi pasien. Bertujuan meningkatkan kemampuan memori jangka pendek pasien.',
+                    edukasi: 'Agar pasien mengetahui tujuan dan latihan dari intervensi yang akan dilakukan. Agar pasien dapat belajar sendiri teknik untuk meningkatkan kemampuan memorinya.',
+                    kolaborasi: 'Untuk meningkatkan keterampilan dan kemampuan pasien melakukan aktivitas sehari-hari.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0063',
+        keywords: ['d.0063', 'gangguan menelan'],
+        diagnosis: {
+            judul: 'Gangguan Menelan',
+            kode: 'D.0063',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Fungsi menelan abnormal akibat defisit struktur atau fungsi oral, faring atau esofagus.',
+            penyebab: {
+                fisiologis: ['Gangguan serebrovaskular', 'Gangguan saraf kranialis', 'Paralisis serebral', 'Akalasia', 'Abnormalitas laring', 'Abnormalitas orofaring', 'Anomali jalan napas atas', 'Defek anatomik kongenital', 'Defek laring', 'Defek nasal', 'Defek rongga nasofaring', 'Defek trakea', 'Refluks gastroesofagus', 'Obstruksi mekanis', 'Prematuritas'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh sulit menelan'],
+                objektif: ['Batuk sebelum menelan', 'Batuk setelah makan atau minum', 'Tersedak', 'Makan tertinggal di rongga mulut']
+            },
+            gejalaMinor: {
+                subjektif: ['Faring: Menolak makan', 'Esofagus: Mengeluh bangun di malam hari, Nyeri epigastrik'],
+                objektif: ['Oral: Bolus masuk terlalu cepat, Refluks nasal, Tidak mampu membersihkan rongga mulut, Makanan jatuh dari mulut, Makanan terdorong keluar dari mulut, Sulit mengunyah, Muntah sebelum menelan, Bolus terbentuk lama, Waktu makan lama, Porsi makan tidak habis, Fase oral abnormal, Mengiler', 'Faring: Muntah, Posisi kepala kurang elevasi, Menelan berulang-ulang', 'Esofagus: Hematemesis, Gelisah, Regurgitasi, Odinofagia, Bruksisme']
+            },
+            kondisiKlinis: ['Stroke', 'Distrofi muskuler', 'Poliomielitis', 'Cerebral palsy', 'Penyakit parkinson', 'Guillain Barre Syndrome', 'Myastenia gravis', 'Amyotropic lateral sclerosis', 'Neoplasma otak', 'Kerusakan saraf kranialis V, VII, IX, X, XII', 'Esofagitis']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Menelan',
+                kode: 'L.06052',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Mempertahankan makanan membaik', 'Refleks menelan membaik', 'Kemampuan mengosongkan mulut membaik', 'Frekuensi tersedak membaik', 'Batuk membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Perawatan Diri: Makan/Minum',
+                kode: 'I.11351',
+                definisi: 'Memfasilitasi pemenuhan kebutuhan makan/minum.',
+                tindakan: {
+                    observasi: ['Identifikasi diet yang dianjurkan', 'Monitor kemampuan menelan', 'Monitor status hidrasi pasien, jika perlu'],
+                    terapeutik: ['Ciptakan lingkungan yang menyenangkan selama makan', 'Atur posisi yang nyaman untuk makan/minum', 'Lakukan oral hygiene sebelum makan, jika perlu', 'Letakkan makanan di sisi mata yang sehat', 'Sediakan sedotan untuk minum, sesuai kebutuhan', 'Siapkan makanan dengan suhu yang meningkatkan nafsu makan', 'Sediakan makanan dan minuman yang disukai', 'Berikan bantuan saat makan/minum sesuai tingkat kemandirian, jika perlu', 'Motivasi untuk makan di ruang makan, jika tersedia'],
+                    edukasi: ['Jelaskan posisi makanan pada pasien yang mengalami gangguan penglihatan dengan menggunakan arah jarum jam'],
+                    kolaborasi: ['Kolaborasi pemberian obat (mis. analgesik, antiemetik), sesuai indikasi']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui monitor jumlah nutrisi dan kandungan kalori yang diperoleh. Untuk mengetahui masalah dalam kemampuan menelan pasien. Untuk mengetahui adanya tanda-tanda dehidrasi dan mencegah syok hipovolemik.',
+                    terapeutik: 'Untuk meningkatkan nafsu makan pasien. Untuk menghindari terjadinya tersedak. Untuk menghindari terjadinya penyebaran kuman. Untuk meningkatkan nafsu makan. Untuk memudahkan pasien untuk minum. Untuk makanan dengan suhu yang baik, pasien dapat mampu mencerna makanan dengan baik. Agar pasien bisa menghabiskan makanan sesuai kesukaannya. Untuk memudahkan pasien dalam makan. Untuk menambah kemauan pasien menghabiskan makanannya.',
+                    edukasi: 'Untuk mengatur waktu pasien saat makan.',
+                    kolaborasi: 'Dengan pemberian obat, dapat menurunkan gejala yang dirasakan oleh pasien.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0064',
+        keywords: ['d.0064', 'konfusi akut'],
+        diagnosis: {
+            judul: 'Konfusi Akut',
+            kode: 'D.0064',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Gangguan kesadaran, perhatian, kognitif dan persepsi yang reversibel, berlangsung tiba-tiba dan singkat.',
+            penyebab: {
+                fisiologis: ['Delirium', 'Demensia', 'Fluktuasi siklus tidur-bangun', 'Usia lebih 60 tahun', 'Penyalahgunaan zat'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Kurang motivasi untuk memulai/menyelesaikan perilaku terarah'],
+                objektif: ['Fluktuasi fungsi kognitif', 'Fluktuasi tingkat kesadaran', 'Fluktuasi aktivitas psikomotorik']
+            },
+            gejalaMinor: {
+                subjektif: ['Salah persepsi'],
+                objektif: ['Halusinasi', 'Gelisah']
+            },
+            kondisiKlinis: ['Cedera kepala', 'Stroke', 'Penyakit Alzheimer', 'Penyalahgunaan Zat', 'Demensia', 'Delirium']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Konfusi',
+                kode: 'L.06054',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Fungsi kognitif meningkat', 'Tingkat kesadaran meningkat', 'Aktivitas psikomotorik membaik', 'Motivasi memulai/menyelesaikan perilaku terarah meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Delirium',
+                kode: 'I.06189',
+                definisi: 'Mengidentifikasi dan mengelola lingkungan terapeutik dan aman pada status konfusi akut.',
+                tindakan: {
+                    observasi: ['Identifikasi faktor risiko delirium', 'Identifikasi tipe delirium (mis. hipoaktif, hiperaktif, campuran)', 'Monitor status neurologis dan tingkat delirium'],
+                    terapeutik: ['Berikan pencahayaan yang baik', 'Sediakan jam dan kalender yang mudah terbaca', 'Hindari stimulus sensorik berlebihan', 'Lakukan pengekangan fisik, sesuai indikasi', 'Sediakan informasi tentang apa yang terjadi', 'Batasi pembuatan keputusan', 'Hindari memvalidasi mispersepsi', 'Nyatakan persepsi dengan cara yang tenang', 'Fokus pada apa yang dikenali dan bermakna', 'Lakukan reorientasi', 'Sediakan lingkungan fisik dan rutinitas harian yang konsisten', 'Gunakan isyarat lingkungan untuk stimulasi memori', 'Berikan informasi baru secara perlahan'],
+                    edukasi: ['Anjurkan kunjungan keluarga, jika perlu', 'Anjurkan penggunaan alat bantu sensorik'],
+                    kolaborasi: ['Kolaborasi pemberian obat ansietas atau agitasi, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui identifikasi faktor risiko delirium. Untuk mengetahui identifikasi tipe delirium. Untuk mengetahui monitor status neurologis dan tingkat delirium.',
+                    terapeutik: 'Untuk memberikan pencahayaan yang baik. Untuk menyediakan jam dan kalender yang mudah terbaca. Untuk menghindari stimulus sensorik berlebihan. Untuk melakukan pengekangan fisik. Untuk menyediakan informasi tentang apa yang terjadi. Untuk membatasi pembuatan keputusan. Untuk menghindari memvalidasi mispersepsi. Untuk menyatakan persepsi dengan cara yang tenang. Untuk memfokuskan pada apa yang dikenali. Untuk melakukan reorientasi. Untuk menyediakan lingkungan fisik dan rutinitas harian yang konsisten. Untuk menggunakan isyarat lingkungan untuk stimulasi memori. Untuk memberikan informasi baru secara perlahan.',
+                    edukasi: 'Untuk menganjurkan kunjungan keluarga, jika perlu. Untuk menganjurkan penggunaan alat bantu sensorik.',
+                    kolaborasi: 'Untuk mengkolaborasi pemberian obat ansietas atau agitasi, jika perlu.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0065',
+        keywords: ['d.0065', 'konfusi kronis'],
+        diagnosis: {
+            judul: 'Konfusi Kronis',
+            kode: 'D.0065',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Gangguan kesadaran, perhatian, kognitif dan persepsi yang ireversibel, berlangsung lama, dan/atau progresif.',
+            penyebab: {
+                fisiologis: ['Cedera otak (mis. kerusakan serebrovaskuler, penyakit neurologis, trauma, tumor)', 'Psikosis Korsakoff', 'Demensia multi infark'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Kurang motivasi untuk memulai/menyelesaikan perilaku berorientasi tujuan', 'Kurang motivasi untuk memulai/menyelesaikan perilaku terarah'],
+                objektif: ['Fungsi kognitif berubah progresif', 'Memori jangka pendek dan/atau panjang berubah', 'Interpretasi berubah', 'Fungsi sosial terganggu', 'Respon terhadap stimulus berubah']
+            },
+            gejalaMinor: {
+                subjektif: ['Salah persepsi'],
+                objektif: ['Gangguan otak organik']
+            },
+            kondisiKlinis: ['Cedera kepala', 'Tumor otak', 'Stroke', 'Penyakit Alzheimer', 'Penyalahgunaan zat', 'Demensia multi infark']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Konfusi',
+                kode: 'L.06054',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Fungsi kognitif meningkat', 'Tingkat kesadaran meningkat', 'Aktivitas psikomotorik membaik', 'Motivasi memulai/menyelesaikan perilaku terarah meningkat', 'Memori jangka pendek membaik', 'Memori jangka panjang membaik', 'Interpretasi membaik', 'Fungsi sosial membaik', 'Respons terhadap stimulus membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Delirium',
+                kode: 'I.06189',
+                definisi: 'Mengidentifikasi dan mengelola lingkungan terapeutik dan aman pada status konfusi akut.',
+                tindakan: {
+                    observasi: ['Identifikasi faktor risiko delirium', 'Identifikasi tipe delirium', 'Monitor status neurologis dan tingkat delirium'],
+                    terapeutik: ['Berikan pencahayaan yang baik', 'Sediakan jam dan kalender yang mudah terbaca', 'Hindari stimulus sensorik berlebihan', 'Lakukan pengekangan fisik, sesuai indikasi', 'Sediakan informasi tentang apa yang terjadi', 'Batasi pembuatan keputusan', 'Hindari memvalidasi mispersepsi', 'Nyatakan persepsi dengan cara yang tenang', 'Fokus pada apa yang dikenali dan bermakna', 'Lakukan reorientasi', 'Sediakan lingkungan fisik dan rutinitas harian yang konsisten', 'Gunakan isyarat lingkungan untuk stimulasi memori', 'Berikan informasi baru secara perlahan'],
+                    edukasi: ['Anjurkan kunjungan keluarga, jika perlu', 'Anjurkan penggunaan alat bantu sensorik'],
+                    kolaborasi: ['Kolaborasi pemberian obat ansietas atau agitasi, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui identifikasi faktor risiko delirium. Untuk mengetahui identifikasi tipe delirium. Untuk mengetahui monitor status neurologis dan tingkat delirium.',
+                    terapeutik: 'Untuk memberikan pencahayaan yang baik. Untuk menyediakan jam dan kalender yang mudah terbaca. Untuk menghindari stimulus sensorik berlebihan. Untuk melakukan pengekangan fisik. Untuk menyediakan informasi tentang apa yang terjadi. Untuk membatasi pembuatan keputusan. Untuk menghindari memvalidasi mispersepsi. Untuk menyatakan persepsi dengan cara yang tenang. Untuk memfokuskan pada apa yang dikenali. Untuk melakukan reorientasi. Untuk menyediakan lingkungan fisik dan rutinitas harian yang konsisten. Untuk menggunakan isyarat lingkungan untuk stimulasi memori. Untuk memberikan informasi baru secara perlahan.',
+                    edukasi: 'Untuk menganjurkan kunjungan keluarga, jika perlu. Untuk menganjurkan penggunaan alat bantu sensorik.',
+                    kolaborasi: 'Untuk mengkolaborasi pemberian obat ansietas atau agitasi, jika perlu.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0066',
+        keywords: ['d.0066', 'penurunan kapasitas adaptif intrakranial'],
+        diagnosis: {
+            judul: 'Penurunan Kapasitas Adaptif Intrakranial',
+            kode: 'D.0066',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Gangguan mekanisme dinamika intrakranial dalam melakukan kompensasi terhadap stimulus yang dapat menurunkan kapasitas intrakranial.',
+            penyebab: {
+                fisiologis: ['Lesi menempati ruang', 'Gangguan metabolisme', 'Edema serebral', 'Peningkatan tekanan Vena', 'Obstruksi aliran cairan serebrospinalis', 'Hipertensi intrakranial idiopatik'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Sakit kepala'],
+                objektif: ['Tekanan darah meningkat dengan tekanan nadi (pulse pressure) melebar', 'Bradikardi', 'Pola nafas irreguler', 'Tingkat kesadaran menurun', 'Respon pupil melambat atau tidak sama', 'Refleks neurologis terganggu']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Gelisah', 'Agitasi', 'Muntah (tanpa disertai mual)', 'Tampak lesu/lemah', 'Fungsi kognitif terganggu', 'Tekanan intrakranial (TIK) ≥20 mmHg', 'Papiledema', 'Postur deserebrasi (ekstensi)']
+            },
+            kondisiKlinis: ['Cedera kepala', 'Iskemik serebral', 'Tumor serebral', 'Hidrosefalus', 'Hematoma kranial', 'Pembentukan arteriovenous', 'Edema vasogenik atau sitotoksik serebral', 'Hiperemia', 'Obstruksi aliran vena']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kapasitas Adaptif Intrakranial',
+                kode: 'L.06049',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Tingkat kesadaran meningkat', 'Fungsi kognitif meningkat', 'Sakit kepala menurun', 'Bradikardi menurun', 'Gelisah menurun', 'Agitasi menurun', 'Muntah menurun', 'Tekanan darah membaik', 'Tekanan nadi membaik', 'Pola napas membaik', 'Respon pupil membaik', 'Refleks neurologi membaik', 'Tekanan intrakranial membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Peningkatan Tekanan Intrakranial',
+                kode: 'I.06194',
+                definisi: 'Mengidentifikasi dan mengelola peningkatan tekanan dalam rongga kranial.',
+                tindakan: {
+                    observasi: ['Identifikasi penyebab peningkatan TIK', 'Monitor tanda/gejala peningkatan TIK', 'Monitor MAP (Mean Arterial Pressure)', 'Monitor CVP (Central Venous Pressure)', 'Monitor PAWP', 'Monitor PAP', 'Monitor ICP (Intra Cranial Pressure)', 'Monitor CPP (Cerebral Perfusion Pressure)', 'Monitor gelombang ICP', 'Monitor status pernapasan', 'Monitor intake dan output cairan', 'Monitor cairan serebro spinalis'],
+                    terapeutik: ['Minimalkan stimulus dengan menyediakan lingkungan yang tenang', 'Berikan posisi semi fowler', 'Hindari manuver valsava', 'Cegah terjadinya kejang', 'Hindari penggunaan PEEP', 'Hindari pemberian cairan IV hipotonik', 'Atur ventilator agar PaCO² optimal', 'Pertahankan suhu tubuh normal'],
+                    kolaborasi: ['Kolaborasi pemberian sedasi dan anti konvulsan, jika perlu', 'Kolaborasi pemberian diuretik osmosis, jika perlu', 'Kolaborasi pemberian pelunak tinja, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui penyebab peningkatan TIK. Untuk mengetahui tanda dan gejala peningkatan TIK. Untuk memeriksa apakah aliran darah tercukupi. Untuk memandu pemberian cairan pada pasien sakit serius. Sebagai penentu utama resistensi pembuluh darah paru. Untuk menjaga aliran darah dan oksigen ke otak. Untuk mengukur tekanan yang ditransmisikan ke jaringan otak. Untuk menangani cedera kepala. Untuk mencegah terjadinya fase kompensasi ke fase dekompensasi. Untuk mengetahui irama napas. Untuk mengukur jumlah cairan yang masuk dan keluar. Untuk melindungi sistem saraf pusat.',
+                    terapeutik: 'Untuk meminimalkan stimulus agar pasien lebih tenang. Memberikan rasa nyaman pada pasien. Agar pasien tidak mengalami hipotensi. Agar pasien tidak rentan cedera. Untuk mencegah atelektasis. Untuk menghindari terjadinya hiponatremia. Agar pasien mendapat asupan oksigen yang cukup. Agar dapat mempengaruhi laju reaksi kimia dalam sel-sel tubuh.',
+                    kolaborasi: 'Untuk menghambat penyebaran kejang di otak. Untuk mencegah ginjal menyerap cairan lagi. Untuk meningkatkan penyerapan air ke feses.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0067',
+        keywords: ['d.0067', 'risiko disfungsi neurovaskuler perifer'],
+        diagnosis: {
+            judul: 'Risiko Disfungsi Neurovaskuler Perifer',
+            kode: 'D.0067',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Beresiko mengalami gangguan sirkulasi, sensasi dan pergerakan pada ekstremitas.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Hiperglikemia', 'Obstruksi vaskuler', 'Fraktur', 'Imobilisasi', 'Penekanan mekanis (mis. torniket, gips, balutan, restraint)', 'Pembedahan ortopedi', 'Trauma', 'Luka bakar'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Diabetes melitus', 'Obstruksi vaskuler', 'Fraktur', 'Pembedahan ortopedi', 'Trauma', 'Luka bakar']
+        },
+        luaran: {
+            utama: {
+                judul: 'Neurovaskuler Perifer',
+                kode: 'L.06051',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Sirkulasi arteri meningkat', 'Sirkulasi vena meningkat', 'Pergerakan sendi meningkat', 'Pergerakan ekstremitas meningkat', 'Nyeri menurun', 'Perdarahan menurun', 'Luka tekan menurun', 'Frekuensi nadi membaik', 'Suhu tubuh membaik', 'Warna kulit membaik', 'Tekanan darah membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Sensasi Perifer',
+                kode: 'I.06195',
+                definisi: 'Mengidentifikasi dan mengelola ketidaknyamanan pada perubahan sensasi perifer.',
+                tindakan: {
+                    observasi: ['Identifikasi penyebab perubahan sensasi', 'Identifikasi penggunaan alat pengikat, prostesis, sepatu, dan pakaian', 'Periksa perbedaan sensasi tajam atau tumpul', 'Periksa perbedaan sensasi panas atau dingin', 'Periksa kemampuan mengidentifikasi lokasi dan tekstur benda', 'Monitor terjadinya parestesia, jika perlu', 'Monitor perubahan kulit', 'Monitor adanya tromboflebitis dan tromboemboli vena'],
+                    terapeutik: ['Hindari pemakaian benda-benda yang berlebihan suhunya (terlalu panas atau dingin)'],
+                    edukasi: ['Anjurkan penggunaan termometer untuk menguji suhu air', 'Anjurkan penggunaan sarung tangan termal saat memasak', 'Anjurkan memakai sepatu lembut dan bertumit rendah'],
+                    kolaborasi: ['Kolaborasi pemberian analgestik, jika perlu', 'Kolaborasi pemberian kortikosteroid, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui penyebab dari setiap perubahan yang terjadi pada gangguan sensasi. Untuk mengetahui tingkat kenyamanan pasien. Untuk mengetahui tingkat kepekaan/respons pasien. Untuk mengetahui perbedaan respons pasien. Untuk mengukur seberapa peka pasien. Untuk mengecek respons tanggap pasien. Untuk mengetahui perubahan apa saja yang dapat terjadi di permukaan kulit. Untuk menghindari bertambahnya diagnosis baru.',
+                    terapeutik: 'Agar pasien bisa tetap merasa nyaman, juga aman dan menghindari risiko gangguan kesehatan lainnya.',
+                    edukasi: 'Tujuannya agar pasien bisa mengetahui temperatur pada air. Tujuannya agar pasien terhindar dari cipratan minyak atau berkontak langsung dengan peralatan dapur yang panas. Tujuannya agar pasien dapat merasa nyaman dan tidak terjadi lesi pada kulit.',
+                    kolaborasi: 'Bertujuan untuk mengurangi tingkatan nyeri pada pasien. Bertujuan untuk menghambat peradangan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0068',
+        keywords: ['d.0068', 'risiko konfusi akut'],
+        diagnosis: {
+            judul: 'Risiko Konfusi Akut',
+            kode: 'D.0068',
+            kategori: 'Fisiologis',
+            subkategori: 'Neurosensori',
+            definisi: 'Beresiko mengalami gangguan kesadaran, perhatian, kognisi dan persepsi yang reversibel dan terjadi dalam periode waktu singkat.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Usia di atas 60 tahun', 'Perubahan fungsi kognitif', 'Perubahan siklus tidur-bangun', 'Dehidrasi', 'Demensia', 'Riwayat stroke', 'Gangguan fungsi metabolik', 'Gangguan mobilitas', 'Penggunaan restraint yang tidak tepat', 'Infeksi', 'Malnutrisi', 'Nyeri', 'Efek agen farmakologis', 'Deprivasi sensori', 'Penyalahgunaan zat'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Cedera kepala', 'Stroke', 'Penyakit Alzheimer', 'Penyalahgunaan zat', 'Demensia']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Konfusi',
+                kode: 'L.06054',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Respon terhadap stimulus membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nyeri',
+                kode: 'I.08238',
+                definisi: 'Mengidentifikasi dan mengelola pengalaman sensorik atau emosional yang berkaitan dengan kerusakan jaringan atau fungsional dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan.',
+                tindakan: {
+                    observasi: ['Identifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri', 'Identifikasi skala nyeri', 'Identifikasi respon nyeri non verbal', 'Identifikasi faktor yang memperberat dan memperingan nyeri'],
+                    terapeutik: ['Berikan teknik nonfarmakologis untuk mengurangi rasa nyeri', 'Kontrol lingkungan yang memperberat rasa nyeri'],
+                    edukasi: ['Jelaskan penyebab, periode, dan pemicu nyeri', 'Jelaskan strategi meredakan nyeri', 'Anjurkan memonitor nyeri secara mandiri', 'Ajarkan teknik nonfarmakologis untuk mengurangi rasa nyeri'],
+                    kolaborasi: ['Kolaborasi pemberian analgetik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mencari lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri pada pasien. Skala nyeri adalah di mana nyeri adalah aktivitas sensorik dan emosional. Non verbal adalah proses menyampaikan maksud atau tujuan tanpa menggunakan kata-kata. Faktor yang memperberat nyeri ialah seperti alkohol.',
+                    terapeutik: 'Nonfarmakologis adalah terapi yang tidak menggunakan obat-obatan. Suhu adalah besaran yang menyatakan derajat panas dingin suatu benda.',
+                    edukasi: 'Periode adalah waktu yang diperlukan benda untuk melakukan satu getaran sempurna. Strategi adalah perencanaan (planning) dan manajemen untuk mencapai suatu tujuan. Memonitor adalah memiliki tujuan khusus yaitu seperti mengecek, mencermati, memantau. Teknik nonfarmakologi adalah teknik yang tidak menggunakan obat-obatan.',
+                    kolaborasi: 'Analgetik adalah senyawa atau obat yang digunakan pasien untuk mengobati atau mengurangi rasa nyeri.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0069',
+        keywords: ['d.0069', 'disfungsi seksual'],
+        diagnosis: {
+            judul: 'Disfungsi Seksual',
+            kode: 'D.0069',
+            kategori: 'Fisiologis',
+            subkategori: 'Reproduksi dan Seksualitas',
+            definisi: 'Perubahan fungsi seksual selama fase respon seksual berupa hasrat, terangsang, orgasme, dan/atau relaksasi yang dirasa tidak memuaskan, tidak bermakna atau tidak adekuat.',
+            penyebab: {
+                fisiologis: ['Perubahan fungsi/struktur tubuh', 'Perubahan biopsikososial seksualitas', 'Ketiadaan model peran', 'Model peran tidak dapat mempengaruhi', 'Kurang privasi', 'Ketiadaan pasangan', 'Kesalahan informasi', 'Kelainan seksualitas', 'Konflik nilai', 'Penganiayaan fisik', 'Kurang terpapar informasi'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan aktivitas seksual berubah', 'Mengungkapkan eksitasi seksual berubah', 'Merasa hubungan seksual tidak memuaskan', 'Mengungkapkan peran seksual berubah', 'Mengeluhkan hasrat seksual menurun', 'Mengungkapkan fungsi seksual berubah', 'Mengeluh nyeri saat berhubungan seksual (dispareunia)'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Mengungkapkan ketertarikan pasangan berubah', 'Mengeluh hubungan seksual terbatas', 'Mencari informasi tentang kemampuan mencapai kepuasan seksual'],
+                objektif: []
+            },
+            kondisiKlinis: ['Gangguan endokrin, perkemihan, neuromuskuler, muskuloskeletal, kardiovaskuler', 'Trauma genital', 'Pembedahan pelvis', 'Kanker', 'Menopause', 'Gangguan psikiatrik']
+        },
+        luaran: {
+            utama: {
+                judul: 'Fungsi Seksual',
+                kode: 'L.07055',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kepuasan hubungan seksual meningkat', 'Verbalisasi aktivitas seksual berubah membaik', 'Verbalisasi eksitasi peran seksual berubah membaik', 'Verbalisasi peran seksual berubah membaik', 'Verbalisasi fungsi seksual berubah membaik', 'Keluhan nyeri saat berhubungan seksual (dispareunia) menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Konseling Seksualitas',
+                kode: 'I.07214',
+                definisi: 'Memberikan bimbingan seksual pada pasangan sehingga mampu menjalankan fungsinya secara optimal.',
+                tindakan: {
+                    observasi: ['Identifikasi waktu disfungsi seksual dan kemungkinan penyebab', 'Monitor stres, kecemasan, depresi dan penyebab disfungsi seksual'],
+                    terapeutik: ['Berikan kesempatan kepada pasangan untuk menceritakan permasalahan seksual', 'Berikan saran yang sesuai kebutuhan pasangan dengan menggunakan bahasa yang mudah diterima, dipahami dan tidak menghakimi'],
+                    edukasi: ['Jelaskan efek pengobatan, kesehatan dan penyakit terhadap disfungsi seksual'],
+                    kolaborasi: ['Kolaborasi dengan spesialis seksologi, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Disfungsi seksual adalah perubahan fungsi seksual selama fase respon seksual. Stres, kecemasan, depresi yang dipengaruhi oleh faktor lingkungan merupakan salah satu bagian dari faktor psikologis.',
+                    terapeutik: 'Memberikan kesempatan kepada pasangan untuk menceritakan permasalahan seksual agar terciptanya keterbukaan dalam hubungan. Memberikan saran yang sesuai kebutuhan klien agar klien dan pasangan mengetahui tindakan apa saja yang harus dilakukan.',
+                    edukasi: 'Pengobatan seksual bertujuan untuk mengatasi masalah utama yang menyebabkan disfungsi seksual.',
+                    kolaborasi: 'Spesialis seksologi merupakan dokter yang mempunyai keahlian khusus seputar hubungan seksual dan kelainan seksual.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0070',
+        keywords: ['d.0070', 'kesiapan persalinan'],
+        diagnosis: {
+            judul: 'Kesiapan Persalinan',
+            kode: 'D.0070',
+            kategori: 'Fisiologis',
+            subkategori: 'Reproduksi dan Seksualitas',
+            definisi: 'Pola mempersiapkan, mempertahankan dan memperkuat proses kehamilan dan persalinan serta perawatan bayi baru lahir.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Menyatakan keinginan untuk menerapkan gaya hidup yang tepat untuk persalinan', 'Menyatakan keinginan untuk menerapkan penatalaksanaan gejala ketidaknyamanan selama persalinan', 'Menyatakan rasa percaya diri menjalani persalinan'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Menunjukkan perilaku proaktif selama persiapan persalinan']
+            },
+            kondisiKlinis: ['Status kesehatan ibu sehat', 'Status kesehatan janin sehat']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Antepartum',
+                kode: 'L.07059',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Nausea membaik', 'Muntah membaik', 'Edema membaik', 'Nyeri abdomen membaik', 'Nyeri epigastrik membaik', 'Perdarahan vagina membaik', 'Konstipasi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Persalinan',
+                kode: 'I.12437',
+                definisi: 'Memberikan informasi tentang proses persalinan.',
+                tindakan: {
+                    observasi: ['Identifikasi tingkat pengetahuan', 'Identifikasi pemahaman ibu tentang persalinan'],
+                    terapeutik: ['Sediakan materi dan media pendidikan kesehatan', 'Jadwalkan pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya', 'Berikan reinforcement positif terhadap perubahan perilaku ibu'],
+                    edukasi: ['Jelaskan metode persalinan yang ibu inginkan', 'Jelaskan persiapan dan tempat persalinan', 'Anjurkan ibu mengikuti kelas ibu hamil pada usia kehamilan lebih dari 36 minggu', 'Anjurkan ibu menggunakan teknik manajemen nyeri persalinan tiap kala', 'Anjurkan ibu cukup nutrisi', 'Ajarkan teknik relaksasi untuk meredakan kecemasan dan ketidaknyamanan persalinan', 'Ajarkan ibu cara mengenali tanda-tanda persalinan', 'Ajarkan ibu mengenali tanda bahaya persalinan'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui tingkat pengetahuan ibu. Untuk mengetahui tingkat pemahaman ibu mengenai persalinan.',
+                    terapeutik: 'Bertujuan untuk mempermudah dalam memberikan pemahaman kepada ibu. Bertujuan untuk membuat kontrak waktu dengan pasien yang terjadwal. Bertujuan untuk memberikan kesempatan pada pasien untuk bertanya hal yang belum dipahami. Bertujuan untuk memberikan penghargaan dan motivasi pada perubahan perilaku ibu.',
+                    edukasi: 'Bertujuan untuk memberikan pengetahuan pada ibu tentang metode persalinan yang dipilih. Bertujuan untuk memberikan pengetahuan kepada ibu mengenai apa saja yang disiapkan untuk persalinan dan tempat persalinan. Bertujuan untuk memberikan pengetahuan kepada ibu tentang perkembangan kehamilannya. Bertujuan untuk mengurangi rasa nyeri yang dirasakan ibu hamil tiap kala. Bertujuan untuk mempertahankan derajat kesehatan ibu dan janin sampai proses persalinan tiba. Bertujuan untuk meredakan kecemasan dan ketidaknyamanan pada saat persalinan. Bertujuan untuk mencegah persalinan di luar waktu yang diperkirakan. Bertujuan untuk mendeteksi dini kemungkinan tanda bahaya dan komplikasi yang akan terjadi.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0071',
+        keywords: ['d.0071', 'pola seksual tidak efektif'],
+        diagnosis: {
+            judul: 'Pola Seksual Tidak Efektif',
+            kode: 'D.0071',
+            kategori: 'Fisiologis',
+            subkategori: 'Reproduksi dan Seksualitas',
+            definisi: 'Kekhawatiran individu melakukan hubungan seksual yang berisiko menyebabkan perubahan kesehatan.',
+            penyebab: {
+                fisiologis: ['Kurang privasi', 'Ketiadaan pasangan', 'Konflik orientasi seksual', 'Ketakutan hamil', 'Ketakutan terinfeksi penyakit menular seksual', 'Hambatan hubungan dengan pasangan', 'Kurang terpapar informasi tentang seksualitas'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh sulit melakukan aktivitas seksual', 'Mengungkapkan aktivitas seksual berubah', 'Mengungkapkan perilaku seksual berubah', 'Orientasi seksual berubah'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Mengungkapkan hubungan dengan pasangan berubah'],
+                objektif: ['Konflik nilai']
+            },
+            kondisiKlinis: ['Mastektomi', 'Histerektomi', 'Kanker', 'Kondisi yang menyebabkan paralisis', 'Penyakit menular seksual (mis. sifilis, gonore, AIDS)']
+        },
+        luaran: {
+            utama: {
+                judul: 'Identitas Seksual',
+                kode: 'L.07056',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Menunjukkan pendirian seksual yang jelas', 'Integrasi orientasi seksual ke dalam kehidupan sehari-hari', 'Menyusun batasan-batasan sesuai jenis kelamin']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Seksualitas',
+                kode: 'I.12447',
+                definisi: 'Memberikan informasi dalam memahami dimensi fisik dan psikososial seksualitas.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan menerima informasi'],
+                    terapeutik: ['Sediakan materi dan media Pendidikan Kesehatan', 'Jadwalkan Pendidikan Kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya'],
+                    edukasi: ['Jelaskan anatomi dan fisiologi sistem reproduksi laki-laki dan perempuan', 'Jelaskan perkembangan emosi anak dan remaja', 'Jelaskan konsekuensi negatif mengasuh anak pada usia dini (mis. kemiskinan, kehilangan karir, dan pendidikan)', 'Jelaskan risiko tertular penyakit menular seksual dan AIDS akibat seks bebas', 'Anjurkan anak/remaja tidak melakukan aktivitas seksual di luar nikah'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Kesiapan adalah kesediaan untuk memberi respon atau bereaksi. Informasi adalah pesan atau kumpulan pesan.',
+                    terapeutik: 'Pendidikan kesehatan adalah profesi yang mendidik masyarakat tentang kesehatan. Kesepakatan merupakan persesuaian pernyataan kehendak. Bertanya adalah meminta keterangan.',
+                    edukasi: 'Fisiologi adalah ilmu pengetahuan yang mempelajari tentang susunan tubuh. Emosi adalah perasaan intens yang ditujukan kepada seseorang atau sesuatu. Konsekuensi logis adalah hubungan antara suatu kalimat dan kalimat lain. Risiko adalah bahaya, akibat atau konsekuensi. Persetubuhan atau Hubungan Seksual artinya tindakan sanggama.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0072',
+        keywords: ['d.0072', 'risiko disfungsi seksual'],
+        diagnosis: {
+            judul: 'Risiko Disfungsi Seksual',
+            kode: 'D.0072',
+            kategori: 'Fisiologis',
+            subkategori: 'Reproduksi dan Seksualitas',
+            definisi: 'Berisiko mengalami perubahan fungsi seksual selama fase respon seksual berupa hasrat, terangsang orgasme dan relaksasi yang dipandang tidak memuaskan, tidak bermakna tidak adekuat.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Biologis: Gangguan neurologi, Gangguan urologi, Gangguan endokrin, Keganasan, Faktor ginekologi (mis. kehamilan, pasca persalinan), Efek agen farmakologis'],
+                psikologis: ['Psikologis: Depresi, Kecemasan, Penganiayaan psikologis/seksual, Penyalahgunaan obat/zat'],
+                situasional: ['Situasional: Konflik hubungan, Kurangnya privasi, Pola seksual pasangan menyimpang, Ketiadaan pasangan, Ketidakadekuatan edukasi, Konflik nilai personal dalam keluarga, budaya dan agama']
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Diabetes melitus', 'Penyakit jantung', 'Penyakit paru', 'Stroke', 'Kehamilan', 'Kanker', 'Gangguan endokrin, perkemihan, neuromuskular, muskuloskeletal, kardiovaskuler', 'Trauma genital', 'Pembedahan pelvis', 'Menopause', 'Gangguan psikiatrik']
+        },
+        luaran: {
+            utama: {
+                judul: 'Fungsi Seksual',
+                kode: 'L.07055',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kepuasan hubungan seksual membaik', 'Mencari informasi untuk mencapai kepuasan seksual membaik', 'Verbalisasi aktivitas seksual berubah membaik', 'Verbalisasi eksitasi seksual berubah membaik', 'Verbalisasi peran seksual berubah membaik', 'Verbalisasi fungsi seksual berubah membaik', 'Keluhan nyeri saat berhubungan seksual (dispareunia) menurun', 'Keluhan hubungan seksual terbatas membaik', 'Keluhan sulit melakukan hubungan seksual membaik', 'Konflik nilai membaik', 'Hasrat seksual membaik', 'Orientasi seksual membaik', 'Ketertarikan pada pasangan membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Seksualitas',
+                kode: 'I.12447',
+                definisi: 'Memberikan informasi dalam memahami dimensi fisik dan psikososial seksualitas.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan informasi dalam memahami menerima informasi'],
+                    terapeutik: ['Sediakan materi dan media pendidikan kesehatan', 'Jadwalkan pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya', 'Fasilitasi kesadaran keluarga terhadap anak dan remaja serta pengaruh media'],
+                    edukasi: ['Jelaskan anatomi dan fisiologi sistem reproduksi laki-laki dan perempuan', 'Jelaskan perkembangan seksualitas sepanjang siklus kehidupan', 'Jelaskan perkembangan emosi masa anak dan remaja', 'Jelaskan pengaruh tekanan kelompok dan sosial terhadap aktivitas seksual', 'Jelaskan konsekuensi negatif mengasuh anak pada usia dini', 'Jelaskan risiko tertular penyakit menular seksual dan AIDS akibat seks bebas', 'Anjurkan orang tua menjadi edukator seksualitas bagi anak-anaknya', 'Anjurkan anak/remaja tidak melakukan seksual di luar nikah', 'Ajarkan keterampilan komunikasi asertif untuk menolak tekanan teman sebaya dan sosial dalam aktivitas seksual'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui Kepuasan hubungan seksual membaik. Untuk Mencari informasi capaian kepuasan seksual. Untuk mengetahui Verbalisasi aktivitas seksual berubah.',
+                    terapeutik: '',
+                    edukasi: '',
+                    kolaborasi: ''
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0073',
+        keywords: ['d.0073', 'risiko kehamilan tidak dikehendaki'],
+        diagnosis: {
+            judul: 'Risiko Kehamilan Tidak Dikehendaki',
+            kode: 'D.0073',
+            kategori: 'Fisiologis',
+            subkategori: 'Reproduksi dan Seksualitas',
+            definisi: 'Beresiko mengalami kehamilan yang tidak diharapkan baik karena alasan waktu yang tidak tepat atau karena kehamilan tidak diinginkan.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Pemerkosaan', 'Hubungan seksual sedarah (incest)', 'Gangguan jiwa', 'Kegagalan penggunaan alat kontrasepsi', 'Kekerasan dalam rumah tangga (KDRT)', 'Tidak menggunakan alat kontrasepsi', 'Faktor sosial-ekonomi'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Penyakit menular seksual', 'Gangguan jiwa', 'Kegagalan penggunaan alat kontrasepsi', 'Kekerasan dalam rumah tangga (KDRT)']
+        },
+        luaran: {
+            utama: {
+                judul: 'Penerimaan Kehamilan',
+                kode: 'L.07057',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Verbalisasi penerimaan kehamilan meningkat', 'Verbalisasi perasaan yang dialami meningkat', 'Perilaku mencari perawatan kehamilan meningkat', 'Menyusun perencanaan kehamilan meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Keluarga Berencana',
+                kode: 'I.12381',
+                definisi: 'Memberikan informasi dan memfasilitasi ibu dan pasangan dalam penggunaan alat kontrasepsi untuk mengatur jarak kelahiran.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan dan kemampuan menerima informasi', 'Identifikasi pengetahuan tentang alat kontrasepsi'],
+                    terapeutik: ['Sediakan materi dan media pendidikan kesehatan', 'Jadwalkan pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya', 'Lakukan penapisan pada ibu dan pasangan untuk penggunaan alat kontrasepsi', 'Lakukan pemeriksaan fisik', 'Fasilitasi ibu dan pasangan dalam mengambil keputusan dalam menggunakan alat kontrasepsi', 'Diskusikan pertimbangan agama, budaya, perkembangan, sosial ekonomi terhadap pemilihan alat kontrasepsi'],
+                    edukasi: ['Jelaskan tentang sistem reproduksi', 'Jelaskan metode-metode alat kontrasepsi', 'Jelaskan aktivitas seksualitas setelah mengikuti program KB'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui kesiapan dan kemampuan klien dalam menerima informasi. Untuk mengetahui pengetahuan pasien tentang alat kontrasepsi.',
+                    terapeutik: 'Materi dan media pendidikan untuk membantu mempermudah pasien dalam menerima informasi kesehatan. Untuk membuat kontrak waktu dengan pasien yang terjadwal. Untuk memberikan kesempatan pada klien untuk bertanya hal yang belum dipahami. Agar tingkat pengetahuan klien tentang penggunaan alat kontrasepsi meningkat. Untuk mengetahui tentang kondisi pasien. Agar klien mudah untuk mengambil keputusan dalam menggunakan alat kontrasepsi. Agar klien tepat mengambil keputusan untuk memilih alat kontrasepsi atas pertimbangan-pertimbangan yang ada.',
+                    edukasi: 'Agar klien dapat mengetahui apa itu sistem reproduksi. Agar klien dapat mengetahui metode-metode alat kontrasepsi. Agar klien dapat mengetahui aktivitas seksualitas apa saja yang bisa dilakukan setelah mengikuti program KB.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0074',
+        keywords: ['d.0074', 'gangguan rasa nyaman'],
+        diagnosis: {
+            judul: 'Gangguan Rasa Nyaman',
+            kode: 'D.0074',
+            kategori: 'Psikologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Perasaan kurang senang, lega dan sempurna dalam dimensi fisik, psikospiritual, lingkungan dan sosial.',
+            penyebab: {
+                fisiologis: ['Gejala penyakit', 'Kurang pengendalian situasional/lingkungan', 'Ketidakadekuatan sumber daya (mis. dukungan finansial, sosial, dan pengetahuan)', 'Kurangnya privasi', 'Gangguan stimulus lingkungan', 'Efek samping terapi', 'Gangguan adaptasi kehamilan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh tidak nyaman'],
+                objektif: ['Gelisah']
+            },
+            gejalaMinor: {
+                subjektif: ['Mengeluh sulit tidur', 'Tidak mampu rileks', 'Mengeluh kedinginan/kepanasan', 'Merasa gatal', 'Mengeluh mual', 'Mengeluh lelah'],
+                objektif: ['Menunjukkan gejala distres', 'Tampak merintih/menangis', 'Pola eliminasi berubah', 'Postur tubuh berubah', 'Iritabilitas']
+            },
+            kondisiKlinis: ['Penyakit Kronis', 'Keganasan', 'Distres psikologis', 'Kehamilan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Kenyamanan',
+                kode: 'L.08064',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Keluhan tidak nyaman menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Pengaturan Posisi',
+                kode: 'I.01019',
+                definisi: 'Menempatkan bagian tubuh untuk meningkatkan kesehatan fisiologis dan/atau psikologis.',
+                tindakan: {
+                    observasi: ['Monitor status oksigenasi sebelum dan sesudah mengubah posisi', 'Monitor alat traksi agar selalu tepat'],
+                    terapeutik: ['Tempatkan pada matras/tempat tidur terapeutik yang tepat', 'Tempatkan pada posisi terapeutik', 'Tempatkan objek yang sering digunakan dalam jangkauan', 'Berikan bantal yang tepat pada leher', 'Hindari menempatkan pada posisi yang dapat meningkatkan nyeri', 'Ubah posisi pada setiap dua jam'],
+                    edukasi: ['Informasikan saat akan dilakukan perubahan posisi', 'Ajarkan cara menggunakan postur yang baik dan mekanika tubuh yang baik selama melakukan perubahan posisi'],
+                    kolaborasi: ['Kolaborasi pemberian premedikasi sebelum mengubah posisi, jika perlu']
+                },
+                rasional: {
+                    terapeutik: 'Efek terapeutik adalah hasil penanganan medis yang sesuai dengan apa yang diinginkan. Kenyamanan adalah suatu kondisi perasaan seseorang yang merasa nyaman. Nyeri (Pain) adalah kondisi perasaan yang tidak menyenangkan. Kenyamanan terhadap suatu posisi adalah suatu kondisi perasaan seseorang yang merasa nyaman.',
+                    edukasi: 'Informasi adalah pesan atau kumpulan pesan yang terdiri dari order sekuens dari simbol.',
+                    kolaborasi: 'Premedikasi adalah pemberian obat sebelum induksi anestesia dengan tujuan untuk melancarkan induksi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0075',
+        keywords: ['d.0075', 'ketidaknyamanan pasca partum'],
+        diagnosis: {
+            judul: 'Ketidaknyamanan Pasca Partum',
+            kode: 'D.0075',
+            kategori: 'Fisiologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Perasaan tidak nyaman berhubungan dengan kondisi setelah melahirkan.',
+            penyebab: {
+                fisiologis: ['Trauma perineum selama persalinan dan kelahiran', 'Involusi uterus, proses pengembalian ukuran rahim ke ukuran semula', 'Pembengkakan payudara dimana alveoli mulai terisi ASI', 'Kekurangan dukungan dari keluarga dan tenaga kesehatan', 'Ketidaktepatan posisi duduk', 'Faktor budaya'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh tidak nyaman'],
+                objektif: ['Tampak meringis', 'Terdapat kontraksi uterus', 'Luka episiotomi', 'Payudara bengkak']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Tekanan darah meningkat', 'Frekuensi nadi meningkat', 'Berkeringat berlebihan', 'Menangis/merintih', 'Haemorroid']
+            },
+            kondisiKlinis: ['Kondisi pasca persalinan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Kenyamanan Pasca Partum',
+                kode: 'L.07061',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Keluhan tidak nyaman menurun', 'Frekuensi darah meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nyeri',
+                kode: 'I.08238',
+                definisi: 'Mengidentifikasi dan mengelola pengalaman sensori atau emosional yang berkaitan dengan kerusakan jaringan atau fungsional dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan.',
+                tindakan: {
+                    observasi: ['Identifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri', 'Identifikasi skala nyeri', 'Identifikasi respons nyeri non verbal', 'Identifikasi faktor yang memperberat dan memperingan nyeri', 'Identifikasi pengetahuan dan keyakinan tentang nyeri'],
+                    terapeutik: ['Berikan teknik nonfarmakologis untuk mengurangi rasa nyeri', 'Kontrol lingkungan yang memperberat rasa nyeri', 'Pertimbangkan jenis dan sumber nyeri dalam pemilihan strategi meredam nyeri'],
+                    edukasi: ['Jelaskan penyebab, periode, dan pemicu nyeri', 'Jelaskan strategi meredam nyeri', 'Anjurkan memonitor nyeri secara mandiri', 'Anjurkan menggunakan analgetik secara tepat', 'Anjurkan teknik nonfarmakologis untuk mengurangi rasa nyeri'],
+                    kolaborasi: ['Kolaborasi pemberian analgetik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Dengan mengidentifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri, perawat dapat menentukan intervensi yang tepat. Dengan mengetahui skala nyeri, kita dapat menentukan intervensi berdasarkan tingkat keparahan. Dengan mengetahui faktor yang memperberat dan memperingan nyeri kita dapat mengantisipasi agar nyeri tidak menjadi lebih berat. Terapi komplementer adalah bidang ilmu kesehatan yang bertujuan untuk menangani berbagai penyakit dengan teknik tradisional. Dengan memantau efek samping yang ditimbulkan oleh analgetik, kita dapat meminimalisir efek yang tidak diinginkan.',
+                    terapeutik: 'Dengan memberikan teknik non farmakologis, kita dapat mengurangi kemungkinan dari terjadinya efek yang merugikan. Dengan mengontrol lingkungan, kita dapat mengantisipasi agar nyeri tidak menjadi parah. Mempertimbangkan jenis dan sumber nyeri dilakukan agar intervensi lebih efektif.',
+                    edukasi: 'Menjelaskan penyebab, periode, dan pemicu nyeri dilakukan agar klien dapat mengenali dan menghindari hal-hal yang dapat memicu nyeri. Dengan mengajarkan strategi meredakan nyeri, diharapkan klien dapat melakukannya secara mandiri. Dilakukan agar klien dapat melakukan teknik non farmakologis secara mandiri.',
+                    kolaborasi: 'Pemberian analgetik bisa diberikan ketika teknik non farmakologis tidak efektif.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0076',
+        keywords: ['d.0076', 'nausea', 'mual'],
+        diagnosis: {
+            judul: 'Nausea',
+            kode: 'D.0076',
+            kategori: 'Psikologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Perasaan tidak nyaman pada bagian belakang tenggorokan atau lambung yang dapat mengakibatkan muntah.',
+            penyebab: {
+                fisiologis: ['Gangguan biokimiawi (mis. uremia, ketoasidosis diabetik)', 'Gangguan pada esofagus', 'Distensi lambung', 'Iritasi lambung', 'Gangguan pankreas', 'Peregangan kapsul limpa', 'Tumor terlokalisasi', 'Peningkatan tekanan intraabdominal', 'Peningkatan tekanan intrakranial', 'Peningkatan tekanan intraorbital (mis. glaukoma)', 'Mabuk perjalanan', 'Kehamilan', 'Aroma tidak sedap', 'Rasa makanan/minuman yang tidak enak', 'Stimulus penglihatan tidak menyenangkan'],
+                psikologis: ['Faktor psikologis (mis. kecemasan, ketakutan, stres)'],
+                situasional: ['Efek agen farmakologis', 'Efek toksin']
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh mual', 'Merasa ingin muntah', 'Tidak berniat makan'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa asam di mulut', 'Sensasi panas/dingin', 'Sering menelan'],
+                objektif: ['Saliva meningkat', 'Pucat', 'Diaforesis', 'Takikardia', 'Pupil dilatasi']
+            },
+            kondisiKlinis: ['Meningitis', 'Labirinitis', 'Uremia', 'Ketoasidosis diabetik', 'Ulkus peptikum', 'Penyakit esofagus', 'Tumor intraabdomen', 'Penyakit Meniere', 'Neuroma akustik', 'Tumor otak', 'Kanker', 'Glaukoma']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Nausea',
+                kode: 'L.08065',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Perasaan ingin muntah menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Mual',
+                kode: 'I.08239', // Disesuaikan dari PDF
+                definisi: 'Mengidentifikasi dan mengelola perasaan tidak nyaman pada bagian belakang tenggorokan atau lambung yang mengakibatkan muntah.',
+                tindakan: {
+                    observasi: ['Identifikasi pengalaman mual'],
+                    terapeutik: ['Berikan makanan dalam jumlah kecil dan menarik'],
+                    edukasi: ['Anjurkan istirahat dan tidur yang cukup'],
+                    kolaborasi: ['Pemberian antiemetik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mual psikologis terjadi sebelum kemoterapi mulai secara umum tidak berespon terhadap anti emetik.',
+                    terapeutik: 'Pasien dapat menerima makanan yang diberikan ahli gizi meskipun makanan sedikit akan tetapi bergizi serta menarik ketika dilihat.',
+                    edukasi: 'Istirahat adalah aktivitas dan bukan keadaan tidak melakukan apa-apa. Sedangkan tidur proses dimana mengembalikan energi yang hilang.',
+                    kolaborasi: 'Pemberian anti emetik merupakan pemberian obat yang diberikan untuk menghilangkan terjadinya mual.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0077',
+        keywords: ['nyeri akut', 'nyeri', 'akut', 'sakit', 'd.0077'],
+        diagnosis: {
+            judul: 'Nyeri Akut',
+            kode: 'D.0077',
+            kategori: 'Psikologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Pengalaman sensorik atau emosional yang berkaitan dengan kerusakan jaringan aktual atau fungsional, dengan onset mendadak atau lambat dan berintensitas ringan hingga berat yang berlangsung kurang dari 3 bulan.',
+            penyebab: {
+                fisiologis: ['Agen pencedera fisiologis (mis. inflamasi, iskemia, neoplasma)', 'Agen pencedera kimiawi (mis. terbakar, bahan kimia iritan)', 'Agen pencedera fisik (mis. abses, amputasi, terbakar, terpotong, mengangkat berat, prosedur operasi, trauma, latihan fisik berlebihan)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh nyeri'],
+                objektif: ['Tampak meringis', 'Bersikap protektif (mis. waspada, posisi menghindari nyeri)', 'Gelisah', 'Frekuensi nadi meningkat', 'Sulit tidur']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Tekanan darah meningkat', 'Pola nafas berubah', 'Nafsu makan berubah', 'Proses berpikir terganggu', 'Menarik diri', 'Berfokus pada diri sendiri', 'Diaforesis']
+            },
+            kondisiKlinis: ['Kondisi pembedahan', 'Cedera traumatis', 'Infeksi', 'Sindrom koroner akut', 'Glaukoma']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Nyeri',
+                kode: 'L.08066',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Keluhan nyeri menurun', 'Meringis menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nyeri',
+                kode: 'I.08238',
+                definisi: 'Mengidentifikasi dan mengelola pengalaman sensori atau emosional yang berkaitan dengan kerusakan jaringan atau fungsional dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan.',
+                tindakan: {
+                    observasi: ['Identifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri'],
+                    terapeutik: ['Berikan teknik non farmakologis untuk mengurangi rasa nyeri', 'Kontrol lingkungan yang memperberat rasa nyeri'],
+                    edukasi: ['Jelaskan penyebab, periode, dan pemicu nyeri', 'Jelaskan strategi meredakan nyeri', 'Ajarkan teknik non farmakologis untuk mengurangi rasa nyeri'],
+                    kolaborasi: ['Kolaborasi pemberian analgesik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mengetahui lokasi nyeri, karakteristik nyeri, berapa lama nyeri dirasakan serta kualitas dan intensitas nyeri yang dirasakan pasien untuk mengetahui penanganan apa yang akan diberikan.',
+                    terapeutik: 'Agar pasien tidak akan ketergantungan pada obat. Memastikan pasien merasakan nyaman sehingga nyeri yang pasien rasakan tidak semakin parah.',
+                    edukasi: 'Dengan mengetahui penyebab, periode, dan pemicu nyeri maka pasien dapat mengatasi nyerinya sendiri. Agar pasien dapat memilih strategi untuk meredakan nyeri yang ia rasakan sendiri sesuai keinginan dan kenyamanannya. Agar pasien dapat mengetahui terapi farmakologi (obat-obatan) yang dapat digunakan.',
+                    kolaborasi: 'Memastikan terapi analgetik yang diberikan efektif dengan melakukan kolaborasi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0078',
+        keywords: ['d.0078', 'nyeri kronis'],
+        diagnosis: {
+            judul: 'Nyeri Kronis',
+            kode: 'D.0078',
+            kategori: 'Psikologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Pengalaman sensorik atau emosional yang berkaitan dengan kerusakan jaringan aktual atau fungsional, dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan, yang berlangsung lebih dari 3 bulan.',
+            penyebab: {
+                fisiologis: ['Kondisi muskuloskeletal kronis', 'Kerusakan sistem saraf', 'Penekanan saraf', 'Infiltrasi tumor', 'Ketidakseimbangan neurotransmiter, neuromodulator, dan reseptor', 'Gangguan imunitas (mis. neuropati terkait HIV, virus varicella-zoster)', 'Gangguan fungsi metabolik', 'Riwayat posisi kerja statis', 'Peningkatan indeks massa tubuh', 'Kondisi pasca trauma', 'Tekanan emosional', 'Riwayat penganiayaan', 'Riwayat penyalahgunaan obat/zat'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh nyeri', 'Merasa depresi (tertekan)'],
+                objektif: ['Tampak meringis', 'Gelisah', 'Tidak mampu menuntaskan aktivitas']
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa takut mengalami cedera berulang'],
+                objektif: ['Bersikap protektif (mis. posisi menghindari nyeri)', 'Waspada', 'Pola tidur berubah', 'Anoreksia', 'Fokus menyempit', 'Berfokus pada diri sendiri']
+            },
+            kondisiKlinis: ['Kondisi kronis (mis. arthritis rheumatoid)', 'Infeksi', 'Cedera medula spinalis']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Nyeri',
+                kode: 'L.08066',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Keluhan nyeri menurun', 'Meringis menurun', 'Sikap protektif menurun', 'Gelisah menurun', 'Kesulitan tidur menurun', 'Frekuensi nadi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nyeri',
+                kode: 'I.08238',
+                definisi: 'Mengidentifikasi dan mengelola pengalaman sensorik atau emosional yang berkaitan dengan kerusakan jaringan atau fungsional dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan.',
+                tindakan: {
+                    observasi: ['Identifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri', 'Identifikasi skala nyeri', 'Identifikasi respons nyeri non verbal', 'Identifikasi faktor yang memperberat dan memperingan nyeri', 'Identifikasi pengetahuan dan keyakinan tentang nyeri', 'Identifikasi pengaruh budaya terhadap respon nyeri', 'Identifikasi pengaruh nyeri pada kualitas hidup', 'Monitor keberhasilan terapi komplementer yang sudah diberikan', 'Monitor efek samping penggunaan analgetik'],
+                    terapeutik: ['Berikan teknik nonfarmakologis untuk mengurangi rasa nyeri', 'Kontrol lingkungan yang memperberat rasa nyeri', 'Fasilitasi istirahat dan tidur', 'Pertimbangkan jenis dan sumber nyeri dalam pemilihan strategi meredakan nyeri'],
+                    edukasi: ['Jelaskan penyebab, periode, dan pemicu nyeri', 'Jelaskan strategi meredakan nyeri', 'Anjurkan memonitor nyeri secara mandiri', 'Anjurkan menggunakan analgetik secara tepat', 'Ajarkan teknik nonfarmakologis untuk mengurangi rasa nyeri'],
+                    kolaborasi: ['Kolaborasi pemberian analgetik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui lokasi, karakteristik, durasi, frekuensi, kualitas dan intensitas nyeri. Untuk mengetahui tingkat cedera yang dirasakan oleh pasien. Untuk mengetahui tingkatan nyeri yang sebenarnya dirasakan pasien. Agar dapat mengurangi faktor-faktor yang dapat memperparah nyeri. Untuk mengetahui sejauh mana pemahaman pasien. Karena budaya pasien dapat mempengaruhi bagaimana pasien mengartikan nyeri. Untuk mencegah terjadinya penurunan kualitas hidup. Untuk mengetahui sejauh mana kemajuan yang dialami pasien. Agar ketika timbul ciri-ciri abnormal pada tubuh pasien kita dapat menghentikan pemberian obat.',
+                    terapeutik: 'Agar dapat mengurangi rasa nyeri yang dirasakan oleh pasien. Agar pasien juga mengetahui kondisinya dan mempermudah perawatan. Agar kebutuhan tidur pasien terpenuhi. Agar tindakan yang akan kita berikan sesuai dengan jenis nyeri.',
+                    edukasi: 'Agar pasien dapat menghindari penyebab dari nyeri. Agar pasien dapat meredakan nyeri secara mandiri. Agar ketika nyeri yang dirasakan klien mulai parah dia dapat memberitahu keluarga atau tenaga medis. Agar pasien dapat menghilangkan rasa nyeri. Agar dapat mengurangi rasa nyeri.',
+                    kolaborasi: 'Agar rasa nyeri yang dirasakan pasien dapat dihilangkan atau dikurangi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0079',
+        keywords: ['d.0079', 'nyeri melahirkan'],
+        diagnosis: {
+            judul: 'Nyeri Melahirkan',
+            kode: 'D.0079',
+            kategori: 'Psikologis',
+            subkategori: 'Nyeri dan Kenyamanan',
+            definisi: 'Pengalaman sensorik dan emosional yang bervariasi dari menyenangkan sampai tidak menyenangkan yang berhubungan dengan persalinan.',
+            penyebab: {
+                fisiologis: ['Dilatasi serviks', 'Pengeluaran janin'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh nyeri', 'Perineum terasa tertekan'],
+                objektif: ['Ekspresi wajah meringis', 'Berposisi meringankan nyeri', 'Uterus teraba membulat']
+            },
+            gejalaMinor: {
+                subjektif: ['Mual', 'Nafsu makan menurun/meningkat'],
+                objektif: ['Tekanan darah meningkat', 'Frekuensi nadi meningkat', 'Ketegangan otot meningkat', 'Pola tidur berubah', 'Fungsi berkemih berubah', 'Diaforesis', 'Gangguan perilaku', 'Perilaku ekspresif', 'Pupil dilatasi', 'Muntah', 'Fokus pada diri sendiri']
+            },
+            kondisiKlinis: ['Proses persalinan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Nyeri',
+                kode: 'L.08066',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Keluhan nyeri menurun', 'Meringis menurun', 'Sikap protektif menurun', 'Gelisah menurun', 'Kesulitan tidur menurun', 'Frekuensi nadi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nyeri',
+                kode: 'I.08238',
+                definisi: 'Mengidentifikasi dan mengelola pengalaman sensorik atau emosional yang berkaitan dengan kerusakan jaringan atau fungsional dengan onset mendadak atau lambat dan berintensitas ringan hingga berat dan konstan.',
+                tindakan: {
+                    observasi: ['Identifikasi lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri', 'Identifikasi skala nyeri', 'Identifikasi respon nyeri non verbal', 'Identifikasi faktor yang memperberat dan memperingan nyeri', 'Identifikasi pengetahuan dan keyakinan tentang nyeri', 'Identifikasi pengaruh budaya terhadap respon nyeri', 'Identifikasi pengaruh nyeri pada kualitas hidup', 'Monitor keberhasilan terapi komplementer yang sudah diberikan', 'Monitor efek samping penggunaan analgetik'],
+                    terapeutik: ['Berikan teknik nonfarmakologis untuk mengurangi rasa nyeri', 'Kontrol lingkungan yang memperberat rasa nyeri', 'Fasilitasi istirahat dan tidur', 'Pertimbangkan jenis dan sumber nyeri dalam pemilihan strategi meredakan nyeri'],
+                    edukasi: ['Jelaskan penyebab, periode dan pemicu nyeri', 'Jelaskan strategi meredakan nyeri', 'Anjurkan memonitor nyeri secara mandiri', 'Anjurkan menggunakan analgetik secara tepat', 'Ajarkan teknik nonfarmakologis untuk mengurangi rasa nyeri'],
+                    kolaborasi: ['Kolaborasi pemberian analgetik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui lokasi, karakteristik, durasi, frekuensi, kualitas, intensitas nyeri klien. Untuk mengetahui skala nyeri klien. Untuk mengetahui respon nyeri nonverbal klien. Untuk mengetahui faktor yang mempererat dan memperingan nyeri klien. Untuk mengetahui pengaruh budaya terhadap respon nyeri klien. Untuk mengetahui keberhasilan terapi komplementer yang sudah diberikan pada klien. Untuk mengetahui efek samping penggunaan analgetik pada klien.',
+                    terapeutik: 'Untuk mengurangi rasa nyeri dengan teknik nonfarmakologis. Agar lingkungan lebih terkontrol untuk mengurangi faktor nyeri yang dipengaruhi oleh lingkungan. Agar kualitas istirahat dan tidur klien membaik. Untuk mengetahui jenis dan sumber nyeri dalam pemilihan strategi meredakan nyeri.',
+                    edukasi: 'Memberikan informasi terkait penyebab, periode dan pemicu nyeri. Untuk menginformasikan penggunaan analgetik secara tepat. Untuk menginformasikan teknik nonfarmakologis untuk mengurangi rasa nyeri.',
+                    kolaborasi: ''
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0080',
+        keywords: ['d.0080', 'ansietas', 'cemas', 'khawatir', 'gelisah'],
+        diagnosis: {
+            judul: 'Ansietas',
+            kode: 'D.0080',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Kondisi emosi dan pengalaman subjektif individu terhadap objek yang tidak jelas dan spesifik akibat antisipasi bahaya yang memungkinkan individu melakukan tindakan untuk menghadapi ancaman.',
+            penyebab: {
+                fisiologis: ['Krisis situasional', 'Kebutuhan tidak terpenuhi', 'Krisis maturasional', 'Ancaman terhadap konsep diri', 'Ancaman terhadap kematian', 'Kekhawatiran mengalami kegagalan', 'Disfungsi sistem keluarga', 'Hubungan orang tua-anak tidak memuaskan', 'Faktor keturunan (temperamen mudah teragitasi sejak lahir)', 'Penyalahgunaan zat', 'Terpapar bahaya lingkungan (mis. toksin, polutan)', 'Kurang terpapar informasi'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Merasa bingung', 'Merasa khawatir dengan akibat dari kondisi yang dihadapi', 'Sulit berkonsentrasi'],
+                objektif: ['Tampak gelisah', 'Tampak tegang', 'Sulit tidur']
+            },
+            gejalaMinor: {
+                subjektif: ['Mengeluh pusing', 'Anoreksia', 'Palpitasi', 'Merasa tidak berdaya'],
+                objektif: ['Frekuensi napas meningkat', 'Frekuensi nadi meningkat', 'Tekanan darah meningkat', 'Diaforesis', 'Tremor', 'Muka tampak pucat', 'Suara bergetar', 'Kontak mata buruk', 'Sering berkemih', 'Berorientasi pada masa lalu']
+            },
+            kondisiKlinis: ['Penyakit kronis progresif (mis. penyakit autoimun)', 'Penyakit akut', 'Hospitalisasi', 'Rencana operasi', 'Kondisi diagnosis penyakit belum jelas', 'Penyakit neurologis', 'Tahap tumbuh kembang']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Ansietas',
+                kode: 'L.09093',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Verbalisasi kebingungan menurun', 'Verbalisasi khawatir akibat kondisi yang dihadapi menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Reduksi Ansietas',
+                kode: 'I.09314',
+                definisi: 'Meminimalkan kondisi individu dan pengalaman subyektif terhadap objek yang tidak jelas dan spesifik akibat antisipasi bahaya yang memungkinkan individu melakukan tindakan untuk menghadapi ancaman.',
+                tindakan: {
+                    observasi: ['Identifikasi saat tingkat ansietas berubah (mis. kondisi, waktu, stresor)', 'Monitor tanda-tanda ansietas (verbal dan nonverbal)'],
+                    terapeutik: ['Ciptakan suasana terapeutik untuk menumbuhkan kepercayaan', 'Pahami situasi yang membuat ansietas'],
+                    edukasi: ['Jelaskan prosedur, termasuk sensasi yang mungkin dialami', 'Anjurkan mengungkapkan perasaan dan persepsi', 'Latih teknik relaksasi'],
+                    kolaborasi: ['Kolaborasi pemberian obat antiansietas, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mencegah ansietas memburuk. Untuk mengetahui terjadinya ansietas.',
+                    terapeutik: 'Untuk menumbuhkan rasa percaya pasien kepada perawat. Untuk mengetahui situasi yang menyebabkan ansietas.',
+                    edukasi: 'Untuk menghindari kecemasan pada pasien. Untuk mengurangi beban yang dirasakan pasien. Untuk dapat tetap tenang saat terjadi ansietas.',
+                    kolaborasi: 'Untuk mengurangi ansietas.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0081',
+        keywords: ['d.0081', 'berduka'],
+        diagnosis: {
+            judul: 'Berduka',
+            kode: 'D.0081',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Respon psikososial yang ditunjukkan oleh klien akibat kehilangan (orang, objek, fungsi, status, bagian tubuh atau hubungan).',
+            penyebab: {
+                fisiologis: ['Kematian keluarga atau orang yang berarti', 'Antisipasi kematian keluarga atau orang yang berarti', 'Kehilangan (objek, pekerjaan, fungsi, status, bagian tubuh, hubungan sosial)', 'Antisipasi kehilangan (objek, pekerjaan, fungsi, status, bagian tubuh, hubungan sosial)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Merasa sedih', 'Merasa bersalah atau menyalahkan orang lain', 'Tidak menerima kehilangan', 'Merasa tidak ada harapan'],
+                objektif: ['Menangis', 'Pola tidur berubah', 'Tidak mampu berkonsentrasi']
+            },
+            gejalaMinor: {
+                subjektif: ['Mimpi buruk atau pola mimpi berubah', 'Merasa tidak berguna', 'Fobia'],
+                objektif: ['Marah', 'Tampak panik', 'Fungsi imunitas terganggu']
+            },
+            kondisiKlinis: ['Kematian anggota keluarga atau orang terdekat', 'Amputasi', 'Cedera medula spinalis', 'Kondisi kehilangan perinatal', 'Penyakit terminal (mis. kanker)', 'Putus hubungan kerja']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Berduka',
+                kode: 'L.09094',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Verbalisasi menerima kehilangan membaik', 'Verbalisasi perasaan sedih membaik', 'Verbalisasi perasaan bersalah atau menyalahkan orang lain membaik', 'Pola tidur membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Proses Berduka',
+                kode: 'I.09274',
+                definisi: 'Memfasilitasi menyelesaikan proses berduka terhadap kehilangan yang bermakna.',
+                tindakan: {
+                    observasi: ['Identifikasi proses berduka yang dialami', 'Identifikasi keterikatan pada benda yang hilang atau orang yang meninggal'],
+                    terapeutik: ['Motivasi agar mau mengungkapkan perasaan kehilangan', 'Motivasi untuk menguatkan dukungan keluarga atau orang terdekat', 'Diskusikan strategi koping yang dapat digunakan'],
+                    edukasi: ['Ajarkan melewati proses berduka secara bertahap'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Proses berduka adalah respons alami tubuh ketika seseorang kehilangan sesuatu yang penting dalam hidupnya. Kondisi ini menimbulkan berbagai emosi, seperti sedih dan kesepian. Untuk mengetahui hubungan dari klien dengan benda atau orang yang hilang/meninggal tersebut apakah sangat berarti atau tidak bagi kelangsungan hidup dari klien.',
+                    terapeutik: 'Perasaan kehilangan adalah suatu keadaan individu yang berpisah dengan sesuatu yang sebelumnya ada, kemudian menjadi tidak ada, baik terjadi sebagian atau keseluruhan. Dukungan keluarga/orang terdekat adalah suatu bentuk hubungan interpersonal yang melindungi seseorang dari efek stres yang buruk juga sikap, tindakan penerimaan keluarga terhadap anggota keluarganya. Strategi koping adalah sikap, tindakan penerimaan keluarga terhadap anggota keluarganya.',
+                    edukasi: 'Proses berduka yaitu, penyangkalan (denial), marah (anger), menawar (bargaining), depresi (depression) dan penerimaan (acceptance).'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0082',
+        keywords: ['d.0082', 'distres spiritual'],
+        diagnosis: {
+            judul: 'Distres Spiritual',
+            kode: 'D.0082',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Gangguan pada keyakinan atau sistem nilai berupa kesulitan merasakan makna dan tujuan hidup melalui hubungan dengan diri, orang lain, lingkungan atau Tuhan.',
+            penyebab: {
+                fisiologis: ['Menjelang ajal', 'Kondisi penyakit kronis', 'Kematian orang terdekat', 'Perubahan pola hidup', 'Kesepian', 'Pengasingan diri', 'Pengasingan sosial', 'Gangguan sosio-kultural', 'Peningkatan ketergantungan pada orang lain', 'Kejadian hidup yang tidak diharapkan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mempertanyakan makna/tujuan hidupnya', 'Menyatakan hidupnya terasa tidak/kurang bermakna', 'Merasa menderita/tidak berdaya'],
+                objektif: ['Tidak mampu beribadah', 'Marah pada Tuhan']
+            },
+            gejalaMinor: {
+                subjektif: ['Menyatakan hidupnya terasa tidak/kurang tenang', 'Mengeluh tidak dapat menerima (kurang pasrah)', 'Merasa bersalah', 'Merasa terasing', 'Menyatakan telah diabaikan'],
+                objektif: ['Menolak berinteraksi dengan orang terdekat/pemimpin spiritual', 'Tidak mampu berkreativitas (mis. menyanyi, mendengarkan musik, menulis)', 'Koping tidak efektif', 'Tidak berminat pada alam/literatur spiritual']
+            },
+            kondisiKlinis: ['Penyakit kronis (mis. arthritis rheumatoid, sklerosis multipel)', 'Penyakit terminal (mis. kanker)', 'Retardasi mental', 'Kehilangan bagian tubuh', 'Sudden infant death syndrome (SIDS)', 'Kelahiran mati, kematian janin, keguguran', 'Kemandulan', 'Gangguan psikiatrik']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Spiritual',
+                kode: 'L.09091',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Verbalisasi makna dan tujuan hidup meningkat', 'Verbalisasi kepuasan terhadap makna hidup meningkat', 'Verbalisasi perasaan keberdayaan meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Spiritual',
+                kode: 'I.09276',
+                definisi: 'Memfasilitasi peningkatan perasaan seimbang dan terhubung dengan kekuatan yang lebih besar.',
+                tindakan: {
+                    observasi: ['Identifikasi perasaan khawatir, kesepian dan ketidakberdayaan', 'Identifikasi pandangan tentang hubungan antara spiritual dan kesehatan', 'Identifikasi harapan dan kekuatan pasien', 'Identifikasi ketaatan dalam beragama'],
+                    terapeutik: ['Berikan kesempatan mengekspresikan perasaan tentang penyakit dan kematian', 'Berikan kesempatan mengekspresikan dan meredakan marah secara tepat', 'Yakinkan bahwa perawat bersedia mendukung selama masa ketidakberdayaan', 'Sediakan privasi dan waktu tenang untuk aktivitas spiritual', 'Diskusikan keyakinan tentang makna dan tujuan hidup, jika perlu', 'Fasilitasi melakukan kegiatan ibadah'],
+                    edukasi: ['Anjurkan berinteraksi dengan keluarga, teman, dan/atau orang lain', 'Anjurkan berpartisipasi dalam kelompok pendukung', 'Ajarkan metode relaksasi, meditasi, dan imajinasi terbimbing'],
+                    kolaborasi: ['Atur kunjungan dengan rohaniawan (mis. ustadz, pendeta, romo, biksu)']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui tingkat distres spiritual yang dialami pasien dan memberikan dukungan emosional yang sesuai. Untuk mengetahui sejauh mana keyakinan pasien mempengaruhi persepsi dan koping terhadap penyakitnya. Untuk mengetahui sumber motivasi dan inspirasi pasien dalam menghadapi kesulitan. Untuk mengetahui seberapa sering pasien melakukan aktivitas spiritual yang sesuai dengan agamanya.',
+                    terapeutik: 'Untuk membantu pasien mengeluarkan emosi negatif yang dapat menimbulkan distres spiritual. Untuk mencegah pasien menyalahkan diri sendiri, orang lain, atau Tuhan atas kondisinya. Untuk meningkatkan rasa percaya diri dan kepercayaan pasien terhadap perawat. Untuk memfasilitasi pasien melakukan doa, meditasi, atau ibadah lainnya. Untuk membantu pasien menemukan makna hidup yang lebih dalam. Untuk memenuhi kebutuhan spiritual pasien sesuai dengan agama atau keyakinannya.',
+                    edukasi: 'Untuk meningkatkan dukungan sosial dan mengurangi rasa kesepian atau terisolasi. Untuk memberikan kesempatan berbagi pengalaman, informasi, dan saran. Untuk mengurangi stres, meningkatkan konsentrasi, dan menciptakan suasana positif bagi pasien.',
+                    kolaborasi: 'Untuk memberikan bimbingan spiritual.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0083',
+        keywords: ['d.0083', 'gangguan citra tubuh'],
+        diagnosis: {
+            judul: 'Gangguan Citra Tubuh',
+            kode: 'D.0083',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Perubahan persepsi tentang penampilan, struktur dan fungsi fisik individual.',
+            penyebab: {
+                fisiologis: ['Perubahan struktur/bentuk tubuh (mis. amputasi, trauma, luka bakar, obesitas, jerawat)', 'Perubahan fungsi tubuh (mis. proses penyakit, kehamilan, kelumpuhan)', 'Perubahan fungsi kognitif', 'Ketidaksesuaian budaya, keyakinan atau sistem nilai', 'Transisi perkembangan', 'Gangguan psikososial', 'Efek tindakan/pengobatan (mis. pembedahan, kemoterapi, terapi radiasi)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan kecacatan/kehilangan bagian tubuh'],
+                objektif: ['Kehilangan bagian tubuh', 'Fungsi/struktur tubuh berubah/hilang']
+            },
+            gejalaMinor: {
+                subjektif: ['Tidak mau mengungkapkan kecacatan/kehilangan bagian tubuh', 'Mengungkapkan perasaan negatif tentang perubahan tubuh', 'Mengungkapkan kekhawatiran pada penolakan/reaksi orang lain', 'Mengungkapkan perubahan gaya hidup'],
+                objektif: ['Menyembunyikan/menunjukkan bagian tubuh secara berlebihan', 'Menghindari melihat dan/atau menyentuh bagian tubuh', 'Fokus berlebihan pada perubahan tubuh', 'Respon nonverbal pada perubahan dan persepsi tubuh', 'Fokus pada penampilan dan kekuatan masa lalu', 'Hubungan sosial berubah']
+            },
+            kondisiKlinis: ['Mastektomi', 'Amputasi', 'Jerawat', 'Parut atau luka bakar yang terlihat', 'Obesitas', 'Hiperpigmentasi pada kehamilan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Citra Tubuh',
+                kode: 'L.09067',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Melihat bagian tubuh membaik', 'Menyentuh bagian tubuh membaik', 'Verbalisasi kecacatan bagian tubuh menurun', 'Verbalisasi kehilangan bagian tubuh menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Citra Tubuh',
+                kode: 'I.09305',
+                definisi: 'Meningkatkan perbaikan perubahan persepsi terhadap fisik pasien.',
+                tindakan: {
+                    observasi: ['Identifikasi harapan citra tubuh berdasarkan tahap perkembangan', 'Identifikasi budaya, agama, jenis kelamin, dan umur terkait citra tubuh', 'Identifikasi perubahan citra tubuh yang mengakibatkan isolasi sosial', 'Monitor frekuensi pernyataan kritik terhadap diri sendiri', 'Monitor apakah pasien bisa melihat bagian tubuh yang berubah'],
+                    terapeutik: ['Diskusikan perubahan tubuh dan fungsinya', 'Diskusikan perbedaan penampilan fisik terhadap harga diri', 'Diskusikan perubahan akibat pubertas, kehamilan dan penuaan', 'Diskusikan kondisi stres yang mempengaruhi citra tubuh (mis. luka, penyakit, pembedahan)', 'Diskusikan cara mengembangkan harapan citra tubuh secara realistis', 'Diskusikan persepsi pasien dan keluarga tentang perubahan citra tubuh'],
+                    edukasi: ['Jelaskan kepada keluarga tentang perawatan perubahan citra tubuh', 'Anjurkan mengungkapkan gambaran diri terhadap citra tubuh', 'Anjurkan menggunakan alat bantu (mis. pakaian, wig, kosmetik)', 'Anjurkan mengikuti kelompok pendukung (mis. kelompok sebaya)', 'Latih fungsi tubuh yang dimiliki', 'Latih peningkatan penampilan diri (mis. berdandan)', 'Latih pengungkapan kemampuan diri kepada orang lain maupun kelompok'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengidentifikasi harapan citra tubuh berdasarkan tahap perkembangan. Untuk mengidentifikasi budaya, agama, jenis kelamin, dan umur terkait citra tubuh. Untuk mengidentifikasi perubahan citra tubuh yang mengakibatkan isolasi sosial. Untuk memonitor frekuensi pernyataan kritik terhadap diri sendiri. Untuk memonitor apakah pasien bisa melihat bagian tubuh yang berubah.',
+                    terapeutik: 'Untuk mendiskusikan perubahan tubuh dan fungsinya. Untuk mendiskusikan perbedaan penampilan fisik terhadap harga diri. Untuk mendiskusikan perubahan akibat pubertas, kehamilan dan penuaan. Untuk mendiskusikan kondisi stres yang mempengaruhi citra tubuh. Untuk mendiskusikan cara mengembangkan harapan citra tubuh secara realistis. Untuk mendiskusikan persepsi pasien dan keluarga tentang perubahan citra tubuh.',
+                    edukasi: 'Untuk menjelaskan kepada keluarga tentang perawatan perubahan citra tubuh. Untuk menganjurkan mengungkapkan gambaran diri terhadap citra tubuh. Untuk menganjurkan menggunakan alat bantu. Untuk menganjurkan mengikuti kelompok pendukung. Untuk melatih fungsi tubuh yang dimiliki. Untuk melatih meningkatkan penampilan diri. Untuk melatih mengungkapkan kemampuan diri kepada orang lain maupun kelompok.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0084',
+        keywords: ['d.0084', 'gangguan identitas diri'],
+        diagnosis: {
+            judul: 'Gangguan Identitas Diri',
+            kode: 'D.0084',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Tidak mampu mempertahankan keutuhan persepsi terhadap identitas diri.',
+            penyebab: {
+                fisiologis: ['Gangguan peran sosial', 'Tidak terpenuhinya tugas perkembangan', 'Gangguan neurologis', 'Ketidakadekuatan stimulasi sensori'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Persepsi terhadap diri berubah', 'Bingung dengan nilai-nilai budaya, tujuan hidup, jenis kelamin, dan/atau nilai-nilai ideal', 'Perasaan yang fluktuatif terhadap diri'],
+                objektif: ['Perilaku tidak konsisten', 'Hubungan yang tidak efektif', 'Strategi koping tidak efektif', 'Penampilan peran tidak efektif']
+            },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Gangguan autistik', 'Gangguan orientasi seksual', 'Periode perkembangan remaja', 'Cedera kepala', 'Trauma toraks', 'Guillain-Barré syndrome', 'Sklerosis multipel', 'Myasthenia gravis', 'Stroke', 'Kuadriplegia', 'Intoksikasi alkohol']
+        },
+        luaran: {
+            utama: {
+                judul: 'Identitas Diri',
+                kode: 'L.09070',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Perilaku konsisten membaik', 'Perasaan fluktuatif terhadap diri menurun', 'Persepsi terhadap diri membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Orientasi Realita',
+                kode: 'I.09297',
+                definisi: 'Meningkatkan kesadaran terhadap identitas diri, waktu, dan lingkungan.',
+                tindakan: {
+                    observasi: ['Monitor perubahan orientasi', 'Monitor perubahan kognitif dan perilaku'],
+                    terapeutik: ['Perkenalkan nama saat memulai interaksi', 'Orientasikan orang, tempat, dan waktu', 'Hadirkan realita (mis. beri penjelasan alternatif, hindari perdebatan)', 'Sediakan lingkungan dan rutinitas secara konsisten', 'Atur stimulasi sensorik dan lingkungan (mis. kunjungan, pemandangan, suara, dan pencahayaan, bau, dan sentuhan)', 'Gunakan simbol dalam mengorientasikan lingkungan (mis. tanda, gambar, dan warna)', 'Libatkan dalam terapi kelompok orientasi', 'Berikan waktu istirahat dan tidur yang cukup, sesuai kebutuhan', 'Fasilitasi akses informasi (mis. televisi, surat kabar, radio), jika perlu'],
+                    edukasi: ['Anjurkan perawatan diri secara mandiri', 'Anjurkan penggunaan alat bantu (mis. kacamata, alat bantu dengar, gigi palsu)', 'Ajarkan keluarga dalam perawatan orientasi realita'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Memantau perubahan orientasi membantu perawat dalam mendeteksi adanya gangguan kognitif. Pemantauan rutin dapat membantu mendeteksi perubahan negatif atau penurunan dalam kognitif dan perilaku seseorang.',
+                    terapeutik: 'Menggunakan nama pasien saat berbicara dapat memudahkan komunikasi. Pasien yang tahu di mana mereka berada cenderung merasa lebih aman dan nyaman. Penjelasan alternatif dapat membantu pasien untuk lebih memahami kondisi mereka. Menghindari perdebatan dapat membantu mencegah konflik. Rutinitas yang konsisten dapat membantu mengurangi kecemasan pasien. Stimulus sensorik yang tepat dapat meningkatkan kualitas hidup pasien. Pencahayaan, suara, bau, dan sentuhan dapat mempengaruhi tingkat stres dan kecemasan. Simbol dapat digunakan untuk menggambarkan informasi penting. Kelompok orientasi dapat memberikan tempat bagi pasien untuk berbagi pengalaman. Tidur yang cukup diperlukan untuk fungsi kognitif yang optimal. Menyediakan akses televisi, radio dan surat kabar dapat membantu pasien mengisi waktu mereka.',
+                    edukasi: 'Mendorong pasien untuk merawat dirinya sendiri membantu mereka mengembangkan kemandirian. Dengan menggunakan alat bantu yang sesuai, pasien dapat menjaga kualitas hidup mereka. Pasien dengan gangguan kognitif sering mengalami kecemasan dan kebingungan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0085',
+        keywords: ['d.0085', 'gangguan persepsi sensori'],
+        diagnosis: {
+            judul: 'Gangguan Persepsi Sensori',
+            kode: 'D.0085',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Perubahan persepsi terhadap stimulasi baik internal maupun eksternal yang disertai dengan respon yang berkurang, berlebihan atau terdistorsi.',
+            penyebab: {
+                fisiologis: ['Gangguan penglihatan', 'Gangguan pendengaran', 'Gangguan penghidu', 'Gangguan perabaan', 'Hipoksia serebral', 'Penyalahgunaan zat', 'Usia lanjut', 'Pemajanan toksin lingkungan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mendengar suara bisikan atau melihat bayangan', 'Merasakan sesuatu melalui indera perabaan, penciuman atau pengecapan'],
+                objektif: ['Distorsi sensori', 'Respons tidak sesuai', 'Bersikap seolah melihat, mendengar, mengecap, meraba atau mencium sesuatu']
+            },
+            gejalaMinor: {
+                subjektif: ['Menyatakan kesal'],
+                objektif: ['Menyendiri', 'Melamun', 'Konsentrasi buruk', 'Disorientasi waktu, tempat, orang atau situasi', 'Curiga', 'Melihat ke satu arah', 'Mondar-mandir', 'Bicara sendiri']
+            },
+            kondisiKlinis: ['Glaukoma', 'Katarak', 'Gangguan refraksi', 'Trauma okuler', 'Trauma pada saraf kranialis', 'Infeksi okuler', 'Presbikusis', 'Malfungsi alat bantu dengar', 'Delirium', 'Demensia', 'Gangguan amnestik', 'Penyakit terminal', 'Gangguan psikotik']
+        },
+        luaran: {
+            utama: {
+                judul: 'Fungsi Sensori',
+                kode: 'L.06048',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Ketajaman pendengaran meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Halusinasi',
+                kode: 'I.09288',
+                definisi: 'Mengidentifikasi dan mengelola peningkatan keamanan, kenyamanan dan orientasi realita.',
+                tindakan: {
+                    observasi: ['Monitor perilaku yang mengindikasikan halusinasi', 'Monitor isi halusinasi (mis. kekerasan atau membahayakan diri)'],
+                    terapeutik: ['Pertahankan lingkungan yang aman', 'Diskusikan perasaan dan respon terhadap halusinasi'],
+                    edukasi: ['Anjurkan memonitor sendiri situasi terjadi halusinasi', 'Anjurkan melakukan distraksi (mis. mendengarkan musik, melakukan aktivitas, dan teknik relaksasi)', 'Ajarkan pasien dan keluarga cara mengontrol halusinasi'],
+                    kolaborasi: ['Kolaborasi pemberian obat antipsikotik dan antiansietas, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Halusinasi adalah gangguan persepsi yang menyebabkan seseorang melihat, mendengar, atau mencium sesuatu yang sebenarnya tidak ada. Halusinasi juga bisa disertai oleh delusi, yaitu keyakinan terhadap sesuatu yang tidak ada.',
+                    terapeutik: 'Lingkungan yang nyaman bagi penderita halusinasi sangatlah penting. Halusinasi adalah sensasi yang diciptakan oleh pikiran seseorang tanpa adanya sumber yang nyata.',
+                    edukasi: 'Pasien diajarkan memonitor diri sendiri saat terjadi halusinasi tujuannya yaitu agar klien bisa mengontrol dirinya. Teknik distraksi terdiri dari 3, yaitu: distraksi melawan dengan suara keras, distraksi menghindar melalui bercakap-cakap dengan orang lain dan distraksi mengalihkan dengan melakukan aktivitas terjadwal. Cara mengontrol halusinasi klien bisa dengan cara menghardik, bercakap-cakap, atau melakukan kegiatan terjadwal.',
+                    kolaborasi: 'Apabila halusinasi yang dirasakan klien tidak membaik dan sudah diupayakan, klien bisa diberikan obat antiansietas atau antipsikotik.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0086',
+        keywords: ['d.0086', 'harga diri rendah kronis'],
+        diagnosis: {
+            judul: 'Harga Diri Rendah Kronis',
+            kode: 'D.0086',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Evaluasi atau perasaan negatif terhadap diri sendiri atau kemampuan klien seperti tidak berarti, tidak berharga, tidak berdaya yang berlangsung dalam waktu yang lama dan terus-menerus.',
+            penyebab: {
+                fisiologis: ['Terpapar situasi traumatis', 'Kegagalan berulang', 'Kurangnya pengakuan dari orang lain', 'Ketidakefektifan mengatasi masalah kehilangan', 'Gangguan psikiatri', 'Penguatan negatif berulang', 'Ketidaksesuaian budaya'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Menilai diri negatif', 'Merasa malu/bersalah', 'Merasa tidak mampu melakukan apapun', 'Meremehkan kemampuan mengatasi masalah', 'Merasa tidak memiliki kelebihan atau kemampuan positif', 'Melebih-lebihkan penilaian negatif tentang diri sendiri', 'Menolak penilaian positif tentang diri sendiri'],
+                objektif: ['Enggan mencoba hal baru', 'Berjalan menunduk', 'Postur tubuh menunduk']
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa sulit konsentrasi', 'Sulit tidur', 'Mengungkapkan keputusasaan'],
+                objektif: ['Kontak mata kurang', 'Lesu dan tidak bergairah', 'Berbicara pelan dan lirih', 'Pasif', 'Perilaku tidak asertif', 'Mencari penguatan secara berlebihan', 'Bergantung pada pendapat orang lain', 'Sulit membuat keputusan', 'Sering kali mencari penegasan']
+            },
+            kondisiKlinis: ['Cedera traumatis', 'Pembedahan', 'Kehamilan', 'Stroke', 'Penyalahgunaan zat', 'Demensia', 'Penyakit kronis', 'Pengalaman tidak menyenangkan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Harga Diri',
+                kode: 'L.09069',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Penilaian diri positif meningkat', 'Perasaan memiliki kelebihan atau kemampuan positif meningkat', 'Penerimaan penilaian positif terhadap diri sendiri meningkat', 'Minat mencoba hal baru meningkat', 'Berjalan menampakkan wajah meningkat', 'Postur tubuh menampakkan wajah meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Perilaku',
+                kode: 'I.12463',
+                definisi: 'Mengidentifikasi dan mengelola perilaku negatif.',
+                tindakan: {
+                    observasi: ['Identifikasi harapan untuk mengendalikan perilaku'],
+                    terapeutik: ['Diskusikan tanggung jawab terhadap perilaku', 'Jadwalkan kegiatan terstruktur', 'Ciptakan dan pertahankan lingkungan dan kegiatan perawatan konsisten setiap dinas', 'Tingkatkan aktivitas fisik sesuai kemampuan', 'Batasi jumlah pengunjung', 'Bicara dengan nada rendah dan tenang', 'Lakukan kegiatan pengalihan terhadap sumber agitasi', 'Cegah perilaku pasif dan agresif', 'Beri penguatan positif terhadap keberhasilan mengendalikan perilaku', 'Lakukan pengekangan fisik sesuai indikasi', 'Hindari bersikap menyudutkan dan menghentikan pembicaraan', 'Hindari sikap mengancam dan berdebat', 'Hindari berdebat atau menawar batas perilaku yang telah ditetapkan'],
+                    edukasi: ['Informasikan keluarga bahwa keluarga sebagai dasar pembentukan kognitif'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui intervensi yang akan dilakukan selanjutnya.',
+                    terapeutik: 'Mengarahkan klien dalam mempertanggungjawabkan perilaku yang diperbuatnya. Untuk menata kegiatan yang teratur pada klien. Untuk mempertahankan kenyamanan dan kepercayaan klien. Aktivitas terstruktur membatasi kecemasan klien. Untuk menjaga kenyamanan dan ketenangan klien. Untuk mencegah rasa intimidasi karena tersinggung. Untuk mengontrol emosi klien. Untuk meningkatkan rasa percaya diri. Untuk membuat klien merasa senang dan menjadi lebih semangat. Untuk membatasi gerakan klien apabila berperilaku di luar kendali. Mencegah rasa intimidasi karena tersinggung.',
+                    edukasi: 'Untuk membantu koping keluarga menjadi lebih efektif dan untuk memberitahukan bahwa peran orang tua sangat dibutuhkan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0087',
+        keywords: ['d.0087', 'harga diri rendah situasional'],
+        diagnosis: {
+            judul: 'Harga Diri Rendah Situasional',
+            kode: 'D.0087',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Evaluasi atau perasaan negatif terhadap diri sendiri atau kemampuan klien sebagai respon terhadap situasi saat ini.',
+            penyebab: {
+                fisiologis: ['Perubahan pada citra tubuh', 'Perubahan peran sosial', 'Ketidakadekuatan pemahaman', 'Perilaku tidak konsisten dengan nilai', 'Kegagalan hidup berulang', 'Riwayat kehilangan', 'Riwayat penolakan', 'Transisi perkembangan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Menilai diri negatif (mis. tidak merasa berguna, tidak tertolong)', 'Merasa malu/bersalah', 'Melebih-lebihkan penilaian negatif tentang diri sendiri', 'Menolak penilaian positif tentang diri sendiri'],
+                objektif: ['Berbicara pelan dan lirih', 'Menolak berinteraksi dengan orang lain', 'Berjalan menunduk', 'Postur tubuh menunduk']
+            },
+            gejalaMinor: {
+                subjektif: ['Sulit berkonsentrasi'],
+                objektif: ['Kontak mata kurang', 'Lesu dan tidak bergairah', 'Pasif', 'Tidak mampu membuat keputusan']
+            },
+            kondisiKlinis: ['Cedera traumatis', 'Pembedahan', 'Kehamilan', 'Kondisi baru terdiagnosis (mis. diabetes melitus)', 'Stroke', 'Penyalahgunaan zat', 'Demensia', 'Pengalaman tidak menyenangkan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Harga Diri',
+                kode: 'L.09069',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Penilaian diri positif meningkat', 'Perasaan memiliki kelebihan atau kemampuan positif meningkat', 'Penerimaan penilaian positif terhadap diri sendiri meningkat', 'Minat mencoba hal baru meningkat', 'Berjalan menampakkan wajah meningkat', 'Postur tubuh menampakkan wajah meningkat', 'Perasaan malu menurun', 'Perasaan bersalah menurun', 'Perasaan tidak mampu melakukan apapun menurun', 'Meremehkan kemampuan mengatasi masalah menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Perilaku',
+                kode: 'I.12463',
+                definisi: 'Mengidentifikasi dan mengelola perilaku negatif.',
+                tindakan: {
+                    observasi: ['Identifikasi harapan untuk mengendalikan perilaku'],
+                    terapeutik: ['Diskusikan tanggung jawab terhadap perilaku', 'Jadwalkan kegiatan terstruktur', 'Ciptakan dan pertahankan lingkungan dan kegiatan perawatan konsisten setiap dinas', 'Tingkatkan aktivitas fisik sesuai kemampuan', 'Batasi jumlah pengunjung', 'Bicara dengan nada rendah dan tenang', 'Lakukan kegiatan pengalihan terhadap sumber agitasi', 'Cegah perilaku pasif dan agresif', 'Beri penguatan positif terhadap keberhasilan mengendalikan perilaku', 'Lakukan pengekangan fisik sesuai indikasi', 'Hindari bersikap menyudutkan dan menghentikan pembicaraan', 'Hindari sikap mengancam dan berdebat', 'Hindari berdebat atau menawar batas perilaku yang telah ditetapkan'],
+                    edukasi: ['Informasikan keluarga bahwa keluarga sebagai dasar pembentukan kognitif'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Dengan mengidentifikasi harapan pasien bisa untuk mengetahui seberapa besar harapan pasien untuk mengendalikan perilaku.',
+                    terapeutik: 'Dengan mendiskusikan tanggung jawab agar pasien mempunyai tanggung jawab atas diri sendiri. Dengan menjadwalkan kegiatan agar pasien mengikuti kegiatan secara teratur. Dengan menciptakan lingkungan dan perawatan yang konsisten, pasien dapat melakukan kegiatan dan perawatan dengan nyaman dan teratur. Dengan meningkatkan aktivitas dapat membuat pasien beraktivitas dan mempunyai kegiatan. Dengan penguatan positif membuat pasien menjadi lebih semangat. Dengan menghindari untuk bersikap menyudutkan klien serta mengancam dan berdebat dengan klien agar klien merasa dihargai, merasa aman dan nyaman untuk diberikan perawatan.',
+                    edukasi: ''
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0088',
+        keywords: ['d.0088', 'keputusasaan'],
+        diagnosis: {
+            judul: 'Keputusasaan',
+            kode: 'D.0088',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Kondisi individu yang memandang adanya keterbatasan atau tidak tersedianya alternatif pemecahan masalah yang dihadapi.',
+            penyebab: {
+                fisiologis: ['Stres jangka panjang', 'Penurunan kondisi fisiologis', 'Kehilangan kepercayaan pada kekuatan spiritual', 'Kehilangan kepercayaan pada nilai-nilai penting', 'Pembatasan aktivitas jangka panjang', 'Pengasingan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan keputusasaan'],
+                objektif: ['Kurang terlibat dalam aktivitas perawatan', 'Afek datar']
+            },
+            gejalaMinor: {
+                subjektif: ['Sulit tidur', 'Selera makan menurun'],
+                objektif: ['Berperilaku pasif', 'Kurang inisiatif', 'Meninggalkan lawan bicara', 'Mengangkat bahu sebagai respon pada lawan bicara']
+            },
+            kondisiKlinis: ['Penyakit kronis', 'Penyakit terminal', 'Penyakit yang tidak dapat disembuhkan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Harapan',
+                kode: 'L.09068',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Keterlibatan dalam aktivitas perawatan meningkat', 'Verbalisasi keputusasaan menurun', 'Perilaku pasif menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Emosional',
+                kode: 'I.09256',
+                definisi: 'Memfasilitasi penerimaan kondisi emosional selama masa stres.',
+                tindakan: {
+                    observasi: ['Identifikasi fungsi marah, frustasi, dan amuk bagi pasien', 'Identifikasi hal yang telah memicu emosi'],
+                    terapeutik: ['Fasilitasi mengungkapkan perasaan cemas, marah, atau sedih', 'Buat pernyataan suportif atau empati selama fase berduka', 'Lakukan sentuhan untuk memberikan dukungan (mis. merangkul, menepuk-nepuk)', 'Tetap bersama pasien dan pastikan keamanan selama ansietas, jika perlu', 'Kurangi tuntutan berpikir saat sakit atau lelah'],
+                    edukasi: ['Jelaskan konsekuensi tidak menghadapi rasa bersalah dan malu', 'Anjurkan mengungkapkan perasaan yang dialami (mis. ansietas, marah, sedih)', 'Anjurkan mengungkapkan pengalaman emosional sebelumnya dan pola respons yang biasa digunakan', 'Ajarkan penggunaan mekanisme pertahanan yang tepat'],
+                    kolaborasi: ['Rujuk untuk konseling, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Agar dapat merancang perawatan yang lebih efektif dan sesuai. Untuk mengetahui apa yang memicu perasaan emosi.',
+                    terapeutik: 'Untuk mengidentifikasi sumber ketidaknyamanan atau stres. Untuk menunjukkan rasa peduli dan memperhatikan perasaan dari pasien. Dapat memberikan perasaan nyaman dan aman. Untuk mendukung mereka dalam menghadapi perasaan yang sulit. Dapat mempercepat proses penyembuhan dan pemulihan.',
+                    edukasi: 'Ketidakmampuan untuk menghadapinya dengan baik dapat berdampak buruk. Mengungkapkan perasaan yang dirasakan dapat membantu meredakan tekanan emosional. Membantu mengidentifikasi pola respons yang mungkin sudah menjadi kebiasaan. Ketika digunakan secara tepat, mekanisme pertahanan dapat membantu individu mengatasi stres.',
+                    kolaborasi: 'Membantu mendapatkan bantuan profesional yang dibutuhkan untuk mengatasi masalah kesehatan mental.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0089',
+        keywords: ['d.0089', 'kesiapan peningkatan konsep diri'],
+        diagnosis: {
+            judul: 'Kesiapan Peningkatan Konsep Diri',
+            kode: 'D.0089',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Pola persepsi diri yang cukup untuk merasa sejahtera dan dapat ditingkatkan.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Mengekspresikan keinginan untuk meningkatkan konsep diri', 'Mengekspresikan kepuasan dengan diri, harga diri, penampilan peran, citra tubuh, dan identitas pribadi'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa percaya diri', 'Menerima kelebihan dan keterbatasan'],
+                objektif: ['Tindakan sesuai dengan perasaan dan pikiran yang diekspresikan']
+            },
+            kondisiKlinis: ['Perilaku upaya peningkatan kesehatan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Konsep Diri',
+                kode: 'L.09076',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Verbalisasi kepuasan terhadap diri meningkat', 'Verbalisasi kepuasan terhadap harga diri meningkat', 'Verbalisasi kepuasan terhadap penampilan peran meningkat', 'Verbalisasi kepuasan terhadap citra tubuh meningkat', 'Verbalisasi kepuasan terhadap identitas diri meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Harga Diri',
+                kode: 'I.09308',
+                definisi: 'Meningkatkan penilaian perasaan/persepsi terhadap diri sendiri atau kemampuan diri.',
+                tindakan: {
+                    observasi: ['Identifikasi budaya, agama, ras, jenis kelamin, dan usia terhadap harga diri', 'Monitor verbalisasi yang merendahkan diri sendiri', 'Monitor tingkat harga diri setiap waktu, sesuai kebutuhan'],
+                    terapeutik: ['Motivasi terlibat dalam verbalisasi positif untuk diri sendiri', 'Motivasi menerima tantangan atau hal baru', 'Diskusikan pernyataan tentang harga diri', 'Diskusikan kepercayaan terhadap penilaian diri', 'Diskusikan pengalaman yang meningkatkan harga diri', 'Diskusikan persepsi negatif diri', 'Diskusikan alasan mengkritik diri atau rasa bersalah', 'Diskusikan penetapan tujuan realistis untuk mencapai harga diri yang lebih tinggi', 'Diskusikan bersama keluarga untuk menetapkan harapan dan batasan yang jelas', 'Berikan umpan balik positif atas peningkatan mencapai tujuan', 'Fasilitasi lingkungan dan aktivitas yang meningkatkan harga diri'],
+                    edukasi: ['Jelaskan kepada keluarga pentingnya dukungan dalam perkembangan konsep positif diri pasien', 'Anjurkan mengidentifikasi kekuatan yang dimiliki', 'Anjurkan mempertahankan kontak mata saat berkomunikasi dengan orang lain', 'Anjurkan membuka diri terhadap kritik negatif', 'Anjurkan mengevaluasi perilaku', 'Ajarkan cara mengatasi bullying', 'Latih peningkatan tanggung jawab untuk diri sendiri', 'Latih pernyataan/kemampuan positif diri', 'Latih cara berpikir dan berperilaku positif', 'Latih meningkatkan kepercayaan pada kemampuan dalam menangani situasi'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Karena mengidentifikasi budaya itu dapat meningkatkan kualitas hidup, sedangkan agama itu memiliki pengaruh yang kuat terhadap kesehatan mental. Karena ketika pasien merasa dirinya rendah dia akan mudah down. Ketika pasien merasa harga dirinya meningkat sesuai kebutuhannya maka pasien akan bisa lebih optimis.',
+                    terapeutik: 'Dengan memotivasi pasien bisa lebih mudah mengenali hal positif pada dirinya. Karena dari motivasi menerima tantangan atau hal baru dia bisa jadi lebih berkembang. Mengajak teman untuk berdiskusi tentang diri agar pasien bisa mengetahui pernyataan tentang harga dirinya. Dengan berdiskusi mengenai pengalaman siapa tahu hal itu bisa meningkatkan harga diri pasien. Apabila dengan mendiskusikan persepsi negatif diri pasien menjadi lebih tahu hal negatif apa yang ada di dalam dirinya. Supaya pasien bisa membaik perasaan setelah mengetahui alasan mengapa mengkritik diri sendiri. Dengan berdiskusi mengenai penetapan tujuan realistis, pasien akan mampu mengembangkan potensi dirinya. Dengan berdiskusi bersama keluarga tentang batasan dan harapan pasien bisa mengetahui apa saja batasan yang tidak boleh dilewati. Dengan mengatakan kalau pasien sudah mencapai tujuannya, pasien bisa lebih optimis. Memberitahu keluarga agar supaya membantu memfasilitasi lingkungan pasien.',
+                    edukasi: 'Karena dengan adanya dukungan dari keluarga pasien ini bisa lebih optimis. Karena dengan dia mampu mengidentifikasi kekuatan yang ada pada dirinya dia jadi bisa lebih mudah untuk mengembangkan kemampuan dirinya. Karena dengan mempertahankan kontak mata dia bisa jadi lebih percaya diri. Mengedukasi kepada pasien untuk bisa membuka diri dan menerima kritik negatif. Memantau perkembangan perilaku. Karena bullying dapat membawa pengaruh buruk bagi kesehatan mental. Karena dengan meningkatnya rasa tanggung jawab akan diri sendiri dia akan bisa lebih mudah mengenali dirinya sendiri. Dengan dia mengetahui kemampuan positif apa yang ada pada dirinya dia bisa jadi lebih mudah untuk menyatakan. Karena dengan berpikir dan berperilaku positif dia bisa lebih banyak tersenyum. Hal ini dapat membuat pasien selalu berpikir positif dan tenang.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0090',
+        keywords: ['d.0090', 'kesiapan peningkatan koping keluarga'],
+        diagnosis: {
+            judul: 'Kesiapan Peningkatan Koping Keluarga',
+            kode: 'D.0090',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Pola adaptasi anggota keluarga dalam mengatasi situasi yang dialami klien secara efektif dan menunjukkan keinginan serta kesiapan untuk meningkatkan kesehatan keluarga dan klien.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Anggota keluarga menetapkan tujuan untuk meningkatkan gaya hidup sehat', 'Anggota keluarga menetapkan sasaran untuk meningkatkan kesehatan'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Anggota keluarga mengidentifikasi pengalaman yang mengoptimalkan kesejahteraan', 'Anggota keluarga berupaya menjelaskan dampak krisis terhadap perkembangan', 'Anggota keluarga mengungkapkan minat dalam membuat kontak dengan orang lain yang mengalami situasi yang sama'],
+                objektif: []
+            },
+            kondisiKlinis: ['Kelainan genetik (mis. sindrom down, fibrosis kistik)', 'Cedera traumatik (mis. amputasi, cedera spinal)', 'Kondisi kronis (mis. asma, AIDS, penyakit Alzheimer)']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping Keluarga',
+                kode: 'L.09088',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kepuasan terhadap perilaku bantuan anggota keluarga lain', 'Keterpaparan informasi', 'Perasaan diabaikan menurun', 'Kekhawatiran tentang anggota keluarga menurun', 'Perilaku mengabaikan anggota keluarga menurun', 'Kemampuan memenuhi kebutuhan anggota keluarga', 'Komitmen pada perawatan/pengobatan', 'Komunikasi antara anggota keluarga', 'Perasaan tertekan (depresi) menurun', 'Perilaku menyerang (agresif) menurun', 'Perilaku menghasut menurun', 'Gejala psikomatis menurun', 'Perilaku menolak perawatan menurun', 'Perilaku bermusuhan menurun', 'Perilaku individualistik menurun', 'Ketergantungan pada anggota keluarga lain menurun', 'Perilaku overprotektif menurun', 'Toleransi membaik', 'Perilaku bertujuan membaik', 'Perilaku sehat membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Koping Keluarga',
+                kode: 'I.09260',
+                definisi: 'Memfasilitasi peningkatan nilai-nilai, minat dan tujuan dalam keluarga.',
+                tindakan: {
+                    observasi: ['Identifikasi respons emosional terhadap kondisi saat ini', 'Identifikasi beban prognosis secara psikologis', 'Identifikasi pemahaman keluarga tentang keputusan perawatan setelah pulang', 'Identifikasi kesesuaian antara harapan pasien, keluarga, dan tenaga kesehatan'],
+                    terapeutik: ['Dengarkan masalah, perasaan, dan pertanyaan keluarga', 'Terima nilai-nilai keluarga dengan cara yang tidak menghakimi', 'Diskusikan rencana medis dan perawatan', 'Fasilitasi pengungkapan perasaan antara pasien dan keluarga', 'Fasilitasi pengambilan keputusan dalam merencanakan perawatan jangka panjang', 'Fasilitasi anggota keluarga dalam mengidentifikasi dan menyelesaikan konflik nilai', 'Fasilitasi pemenuhan kebutuhan dasar keluarga', 'Fasilitasi anggota keluarga melalui proses kematian dan berduka', 'Fasilitasi memperoleh pengetahuan, keterampilan, dan peralatan yang diperlukan', 'Bersikap sebagai pengganti keluarga untuk menenangkan pasien', 'Hargai dan dukung mekanisme koping adaptif yang digunakan', 'Berikan kesempatan berkunjung bagi anggota keluarga'],
+                    edukasi: ['Informasikan kemajuan pasien secara berkala', 'Informasikan fasilitas perawatan kesehatan yang tersedia'],
+                    kolaborasi: ['Rujuk untuk terapi keluarga, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui sejauh mana keluarga mengalami stres, kecemasan, depresi. Untuk mengetahui sejauh mana keluarga menerima dan mengantisipasi kemungkinan hasil perawatan. Untuk mengetahui sejauh mana keluarga memahami dan setuju dengan rencana perawatan. Untuk mengetahui sejauh mana ada keselarasan atau ketidakselarasan antara tujuan dan nilai-nilai.',
+                    terapeutik: 'Untuk menunjukkan empati, menghargai, dan memahami perspektif keluarga. Untuk menghormati keragaman budaya, agama, dan etika keluarga. Untuk memberikan informasi yang akurat, jelas, dan lengkap. Untuk meningkatkan komunikasi, keterbukaan, dan dukungan emosional. Untuk membantu keluarga mengevaluasi pilihan-pilihan yang tersedia. Untuk membantu keluarga mengenali dan mengatasi perbedaan-perbedaan nilai. Untuk membantu keluarga mempertahankan kesejahteraan fisik, mental, dan sosial. Untuk membantu keluarga menghadapi kenyataan kehilangan. Untuk membantu keluarga memberikan perawatan yang aman dan efektif. Untuk membantu pasien merasa nyaman, tenang, dan dihargai. Untuk membantu keluarga mengembangkan strategi untuk mengatasi stres. Untuk membantu keluarga mempertahankan ikatan dan hubungan.',
+                    edukasi: 'Untuk memberikan umpan balik positif dan harapan realistis. Untuk memberikan pilihan dan sumber daya yang dapat membantu keluarga.',
+                    kolaborasi: 'Untuk memberikan bantuan profesional yang dapat membantu keluarga mengatasi masalah-masalah psikososial.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0091',
+        keywords: ['d.0091', 'kesiapan peningkatan koping komunitas'],
+        diagnosis: {
+            judul: 'Kesiapan Peningkatan Koping Komunitas',
+            kode: 'D.0091',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Pola adaptasi dan penyelesaian masalah komunitas yang memuaskan untuk memenuhi tuntutan atau kebutuhan masyarakat, serta dapat ditingkatkan untuk penatalaksanaan masalah saat ini dan mendatang.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Perencanaan aktif oleh komunitas mengenai prediksi stresor', 'Pemecahan masalah aktif oleh komunitas saat menghadapi masalah'],
+                objektif: ['Terdapat sumber-sumber daya yang adekuat untuk mengatasi stresor']
+            },
+            gejalaMinor: {
+                subjektif: ['Bersepakat bahwa komunitas bertanggung jawab terhadap penatalaksanaan stres', 'Berkomunikasi positif di antara anggota komunitas', 'Berkomunikasi positif di antara komunitas'],
+                objektif: ['Tersedia program untuk rekreasi', 'Tersedia program untuk relaksasi/bersantai']
+            },
+            kondisiKlinis: ['Penurunan tingkat penyakit, kecelakaan atau kekerasan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping Komunitas',
+                kode: 'L.09089',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Keberdayaan komunitas meningkat', 'Perencanaan komunitas meningkat', 'Insiden masalah kesehatan dalam komunitas menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Kesehatan',
+                kode: 'I.12383',
+                definisi: 'Mengajarkan pengelolaan faktor risiko penyakit dan perilaku hidup bersih serta sehat.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan dan kemampuan menerima informasi', 'Identifikasi faktor-faktor yang dapat meningkatkan dan menurunkan motivasi perilaku hidup bersih dan sehat'],
+                    terapeutik: ['Sediakan materi dan media pendidikan kesehatan', 'Jadwalkan pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya'],
+                    edukasi: ['Jelaskan faktor risiko yang dapat mempengaruhi kesehatan', 'Ajarkan perilaku hidup bersih dan sehat', 'Ajarkan strategi yang dapat digunakan untuk meningkatkan perilaku hidup bersih dan sehat'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui kesiapan dan kemampuan pasien dalam menerima informasi. Dengan identifikasi faktor-faktor yang meningkatkan motivasi dapat memacu semangat merubah perilaku sehat.',
+                    terapeutik: 'Dengan adanya materi dan media dapat memperjelas penyampaian pendidikan kesehatan. Dengan adanya kesepakatan waktu pendidikan kesehatan pasien lebih siap dan tidak mengganggu waktu pasien. Kesempatan bertanya meningkatkan pemahaman pasien tentang materi pendidikan kesehatan.',
+                    edukasi: 'Dengan mengetahui faktor risiko yang mempengaruhi kesehatan dapat meningkatkan keluarga dalam pengenalan masalah kesehatan. Dengan menerapkan perilaku hidup bersih dan sehat meningkatkan kualitas hidup keluarga. Dengan mengajarkan strategi untuk meningkatkan perilaku hidup bersih dan sehat dapat menambah minat/motivasi dalam keluarga.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0092',
+        keywords: ['d.0092', 'ketidakberdayaan'],
+        diagnosis: {
+            judul: 'Ketidakberdayaan',
+            kode: 'D.0092',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Persepsi bahwa tindakan seseorang tidak akan memengaruhi hasil secara signifikan; persepsi kurang kontrol pada situasi saat ini atau yang akan datang.',
+            penyebab: {
+                fisiologis: ['Program perawatan/pengobatan yang komplek atau jangka panjang', 'Lingkungan tidak mendukung perawatan/pengobatan', 'Interaksi interpersonal tidak memuaskan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Menyatakan frustasi atau tidak mampu melaksanakan aktivitas sebelumnya'],
+                objektif: ['Bergantung pada orang lain']
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa diasingkan', 'Menyatakan keraguan tentang kinerja peran', 'Menyatakan kurang kontrol', 'Menyatakan rasa malu', 'Merasa tertekan (depresi)'],
+                objektif: ['Tidak berpartisipasi dalam perawatan', 'Pengasingan']
+            },
+            kondisiKlinis: ['Diagnosis yang tidak terduga atau baru', 'Peristiwa traumatis', 'Diagnosis penyakit kronis', 'Diagnosis penyakit terminal', 'Rawat inap']
+        },
+        luaran: {
+            utama: {
+                judul: 'Keberdayaan',
+                kode: 'L.09071',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Verbalisasi mampu melaksanakan aktivitas meningkat', 'Verbalisasi frustasi ketergantungan pada orang lain menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Harapan',
+                kode: 'I.09307',
+                definisi: 'Meningkatkan kepercayaan pada kemampuan untuk memulai dan mempertahankan tindakan.',
+                tindakan: {
+                    observasi: ['Identifikasi harapan pasien dan keluarga dalam pencapaian hidup'],
+                    terapeutik: ['Sadarkan bahwa kondisi yang dialami memiliki nilai penting', 'Pandu mengingat kembali kenangan yang menyenangkan', 'Libatkan pasien secara aktif dalam perawatan', 'Kembangkan rencana perawatan yang melibatkan tingkat pencapaian tujuan sederhana sampai dengan kompleks', 'Berikan kesempatan kepada pasien dan keluarga terlibat dengan dukungan kelompok', 'Ciptakan lingkungan yang memudahkan mempraktikkan kebutuhan spiritual'],
+                    edukasi: ['Anjurkan mengungkapkan perasaan terhadap kondisi dengan realistis', 'Anjurkan mempertahankan hubungan (mis. menyebutkan nama orang yang dicintai)', 'Anjurkan mempertahankan hubungan terapeutik dengan orang lain', 'Latih menyusun tujuan yang sesuai dengan harapan', 'Latih cara mengembangkan spiritual diri', 'Latih cara mengenang dan menikmati masa lalu (mis. prestasi, pengalaman)'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Agar dapat merancang perawatan yang lebih efektif dan sesuai dalam mengatasi masalah yang mendasari.',
+                    terapeutik: 'Untuk mengidentifikasi sumber ketidaknyamanan atau stres yang mungkin tidak mereka sadari sebelumnya. Untuk menunjukkan rasa peduli dan memperhatikan perasaan dari pasien. Dapat memberikan perasaan nyaman dan aman. Untuk mendukung mereka dalam menghadapi perasaan yang sulit. Dapat mempercepat proses penyembuhan dan pemulihan.',
+                    edukasi: 'Mengungkapkan perasaan secara realistis membantu klien memahami kondisi mereka dengan lebih baik. Orang yang dicintai biasanya merupakan sumber penerimaan dan dukungan yang tidak tergantikan. Hubungan terapeutik memungkinkan profesional untuk secara teratur memantau perkembangan kesehatan. Melalui proses menyusun tujuan, seseorang dapat lebih jelas memahami apa yang mereka harapkan. Terlibat dalam praktik spiritual dapat membantu mengurangi stres. Mengenang dan menikmati masa lalu yang positif dapat meningkatkan mood.',
+                    kolaborasi: 'Membantu mendapatkan bantuan profesional yang dibutuhkan untuk mengatasi masalah kesehatan mental.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0093',
+        keywords: ['d.0093', 'ketidakmampuan koping keluarga'],
+        diagnosis: {
+            judul: 'Ketidakmampuan Koping Keluarga',
+            kode: 'D.0093',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Perilaku orang terdekat (anggota keluarga atau orang berarti) yang membatasi kemampuan dirinya dan klien untuk beradaptasi dengan masalah kesehatan yang dihadapi klien.',
+            penyebab: {
+                fisiologis: ['Hubungan keluarga ambivalen', 'Pola koping yang berbeda di antara klien dan orang terdekat', 'Resistensi keluarga terhadap perawatan/pengobatan yang kompleks', 'Ketidakmampuan orang terdekat mengungkapkan perasaan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Merasa diabaikan'],
+                objektif: ['Tidak memenuhi kebutuhan anggota keluarga', 'Tidak toleran', 'Mengabaikan anggota keluarga']
+            },
+            gejalaMinor: {
+                subjektif: ['Terlalu khawatir dengan anggota keluarga', 'Merasa tertekan (depresi)'],
+                objektif: ['Perilaku menyerang (agresi)', 'Perilaku menghasut (agitasi)', 'Tidak berkomitmen', 'Menunjukkan gejala psikosomatis', 'Perilaku menolak perawatan yang mengabaikan kebutuhan dasar klien', 'Mengabaikan perawatan/pengobatan', 'Perilaku bermusuhan', 'Perilaku individualistik', 'Upaya membangun hidup bermakna terganggu', 'Perilaku sehat terganggu', 'Ketergantungan anggota keluarga meningkat', 'Realitas kesehatan anggota keluarga terganggu']
+            },
+            kondisiKlinis: ['Penyakit Alzheimer', 'AIDS', 'Kelainan yang menyebabkan paralisis permanen', 'Kanker', 'Penyakit kronis (mis. kanker, arthritis reumatoid)', 'Penyalahgunaan zat', 'Krisis keluarga', 'Konflik keluarga yang belum terselesaikan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping Keluarga',
+                kode: 'L.09088',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kepuasan terhadap perilaku bantuan anggota keluarga lain meningkat', 'Keterpaparan informasi meningkat', 'Perasaan diabaikan menurun', 'Kekhawatiran tentang anggota keluarga menurun', 'Perilaku mengabaikan anggota keluarga menurun', 'Komitmen pada perawatan/pengobatan meningkat', 'Komunikasi antara anggota keluarga meningkat', 'Perasaan tertekan (depresi) menurun', 'Perilaku menyerang (agresi) menurun', 'Perilaku penghasutan menurun', 'Gejala psikosomatis menurun', 'Perilaku menolak perawatan menurun', 'Perilaku bermusuhan menurun', 'Perilaku individualistik menurun', 'Ketergantungan pada anggota keluarga lain menurun', 'Perilaku overprotektif menurun', 'Toleransi membaik', 'Perilaku bertujuan membaik', 'Perilaku sehat membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Koping Keluarga',
+                kode: 'I.09260',
+                definisi: 'Memfasilitasi peningkatan nilai-nilai, minat dan tujuan dalam keluarga.',
+                tindakan: {
+                    observasi: ['Identifikasi respons emosional terhadap kondisi saat ini', 'Identifikasi beban prognosis secara psikologis', 'Identifikasi pemahaman tentang keputusan perawatan setelah pulang', 'Identifikasi kesesuaian antara harapan pasien, keluarga, dan tenaga kesehatan'],
+                    terapeutik: ['Dengarkan masalah, perasaan, dan pertanyaan keluarga', 'Terima nilai-nilai keluarga dengan cara yang tidak menghakimi', 'Diskusikan rencana medis dan perawatan', 'Fasilitasi pengungkapan perasaan antara pasien dan keluarga atau antar anggota keluarga', 'Fasilitasi pengambilan keputusan dalam merencanakan perawatan jangka panjang, jika perlu', 'Fasilitasi anggota keluarga dalam mengidentifikasi dan menyelesaikan konflik nilai', 'Fasilitasi pemenuhan kebutuhan dasar keluarga (mis. tempat tinggal, makanan, pakaian)', 'Fasilitasi anggota keluarga melalui proses kematian dan berduka, jika perlu', 'Fasilitasi memperoleh pengetahuan, keterampilan, dan peralatan yang diperlukan untuk mempertahankan keputusan perawatan pasien', 'Bersikap sebagai pengganti keluarga untuk menenangkan pasien dan/atau jika keluarga tidak dapat memberikan perawatan', 'Hargai dan dukung mekanisme koping adaptif yang digunakan', 'Berikan kesempatan berkunjung bagi anggota keluarga'],
+                    edukasi: ['Informasikan kemajuan pasien secara berkala', 'Informasikan fasilitas perawatan kesehatan yang tersedia'],
+                    kolaborasi: ['Rujuk untuk terapi keluarga, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Emosi yang berlebihan merupakan tanda seseorang tidak siap untuk menerima hal yang terjadi. Mencari atau mencatat beberapa beban yang mungkin dapat membuat keluarga klien merasa sangat tertekan. Memastikan bahwa keluarga mampu atau tidak dalam menerima keadaan yang dialami. Ketidaksesuaian harapan yang tidak sesuai akan menyebabkan ketidaksiapan dalam menghadapi permasalahan.',
+                    terapeutik: 'Memahami bagaimana perasaan yang dialami keluarga klien saat ini. Percaya dan lapang dada melakukan yang benar dalam aturan keluarga. Menemukan titik tengah bila ada permasalahan. Bantu klien dalam mengungkapkan perasaan. Memberikan pilihan dan penjelasan bila klien dan keluarga bingung. Membantu menemukan titik tengah dari permasalahan. Memberikan rasa nyaman pada keluarga klien. Memberikan dukungan dan motivasi serta membantu dalam proses pemakaman. Agar keluarga mengetahui apa saja perkembangan yang terjadi. Memberikan situasi yang nyaman. Menerima, menghargai dan memberikan motivasi pendapat yang diutarakan. Dimana bila rasa yang sangat berat dirasakan maka pertemuanlah yang diharapkan.',
+                    edukasi: 'Berusaha meyakinkan keluarga pasien tentang keadaan selama masa perawatan. Untuk memberikan perasaan yang tenang kepada keluarga.',
+                    kolaborasi: 'Terapi keluarga merupakan konseling atau binaan yang diberikan oleh ahli psikologi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0094',
+        keywords: ['d.0094', 'koping defensif'],
+        diagnosis: {
+            judul: 'Koping Defensif',
+            kode: 'D.0094',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Proyeksi evaluasi diri untuk melindungi diri dari ancaman terhadap harga diri.',
+            penyebab: {
+                fisiologis: ['Konflik antar persepsi diri dan sistem nilai', 'Takut mengalami kegagalan', 'Takut mengalami penghinaan', 'Takut terhadap dampak situasi yang dihadapi', 'Kurangnya rasa percaya kepada orang lain', 'Kurangnya kepercayaan diri', 'Kurangnya dukungan sistem pendukung (support system)', 'Harapan yang tidak realistis'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Menyalalahkan orang lain', 'Menyangkal adanya masalah', 'Menyangkal kelemahan diri', 'Merasionalisasi kegagalan'],
+                objektif: ['Hipersensitif terhadap kritik']
+            },
+            gejalaMinor: {
+                subjektif: ['Meremehkan orang lain'],
+                objektif: ['Melemparkan tanggung jawab', 'Tawa permusuhan', 'Sikap superior terhadap orang lain', 'Tidak dapat membedakan realitas', 'Kurang minat mengikuti perawatan/pengobatan', 'Sulit membangun atau mempertahankan hubungan']
+            },
+            kondisiKlinis: ['Penyakit kronis', 'Penyalahgunaan zat', 'Attention deficit/hyperactivity disorder (ADHD)', 'Gangguan perilaku', 'Oppositional Defiant Disorder', 'Delirium']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping',
+                kode: 'L.09086',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Komunikasi jelas sesuai usia meningkat', 'Pemahaman makna situasi meningkat', 'Kemampuan membuat keputusan meningkat', 'Perhatian meningkat', 'Konsentrasi meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Harga Diri',
+                kode: 'I.09308',
+                definisi: 'Meningkatkan penilaian perasaan/persepsi terhadap diri sendiri atau kemampuan diri.',
+                tindakan: {
+                    observasi: ['Identifikasi budaya, agama, ras, jenis kelamin, dan usia terhadap harga diri', 'Monitor verbalisasi yang merendahkan diri sendiri', 'Monitor tingkat harga diri setiap waktu, sesuai kebutuhan'],
+                    terapeutik: ['Motivasi terlibat dalam verbalisasi positif untuk diri sendiri', 'Motivasi menerima tantangan atau hal baru', 'Diskusikan pernyataan tentang harga diri', 'Diskusikan kepercayaan terhadap penilaian diri', 'Diskusikan pengalaman yang meningkatkan harga diri', 'Diskusikan persepsi negatif diri', 'Diskusikan alasan mengkritik diri atau rasa bersalah', 'Diskusikan penetapan tujuan realistis untuk mencapai harga diri yang lebih tinggi', 'Diskusikan bersama keluarga untuk menetapkan harapan dan batasan yang jelas', 'Berikan umpan balik positif atas peningkatan mencapai tujuan', 'Fasilitasi lingkungan dan aktivitas yang meningkatkan harga diri'],
+                    edukasi: ['Jelaskan kepada keluarga pentingnya dukungan dalam perkembangan konsep positif diri pasien', 'Anjurkan mengidentifikasi kekuatan yang dimiliki', 'Anjurkan mempertahankan kontak mata saat berkomunikasi dengan orang lain', 'Anjurkan membuka diri terhadap kritik negatif', 'Anjurkan mengevaluasi perilaku', 'Ajarkan cara mengatasi bullying', 'Latih peningkatan tanggung jawab untuk diri sendiri', 'Latih pernyataan/kemampuan positif diri', 'Latih cara berpikir dan berperilaku positif', 'Latih meningkatkan kepercayaan pada kemampuan dalam menangani situasi'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Menghormati nilai-nilai budaya, keyakinan agama, dan latar belakang sosial pasien. Dengan memantau verbalisasi yang merendahkan diri secara teratur, perawat dapat mengidentifikasi pola pikiran. Memantau tingkat harga diri secara berkala memungkinkan perawat untuk mengukur perkembangan individu.',
+                    terapeutik: 'Menggunakan kata-kata positif tentang diri sendiri dapat membantu pasien merasa lebih baik. Berhasil mengatasi tantangan atau hal baru dapat meningkatkan harga diri. Untuk membantu pasien memahami dan menilai diri mereka secara lebih sehat. Diskusi tentang pernyataan harga diri membantu individu untuk lebih sadar. Pasien dapat mengidentifikasi faktor-faktor atau pengalaman-pengalaman tertentu yang telah mempengaruhi persepsi negatif. Diskusi ini membantu pasien untuk lebih sadar tentang bagaimana mereka melihat diri mereka sendiri. Untuk memberikan kesempatan bagi pasien untuk berbicara tentang perasaan mereka. Membuat rencana perawatan yang mencakup strategi dan langkah-langkah konkret. Untuk membantu mencapai keselarasan dalam perawatan pasien. Umpan balik positif dapat meningkatkan motivasi pasien. Aktivitas yang melibatkan keterampilan dan minat pasien dapat meningkatkan perasaan kompetensi.',
+                    edukasi: 'Dukungan keluarga dapat memberikan dukungan emosional yang sangat dibutuhkan. Membantu mengidentifikasi kekuatan yang dimiliki. Membantu mempertahankan kontak mata saat berkomunikasi. Dapat membuka diri terhadap kritik negatif. Membantu mengevaluasi perilaku pasien. Mengetahui cara mengatasi bullying. Melatih peningkatan tanggung jawab untuk diri sendiri. Melatih pernyataan/kemampuan positif diri. Melatih cara berpikir dan berperilaku positif. Membantu meningkatkan kepercayaan pada kemampuan dalam menangani situasi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0095',
+        keywords: ['d.0095', 'koping komunitas tidak efektif'],
+        diagnosis: {
+            judul: 'Koping Komunitas Tidak Efektif',
+            kode: 'D.0095',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Pola adaptasi aktivitas komunitas dan penyelesaian masalah yang tidak memuaskan untuk memenuhi tuntutan atau kebutuhan masyarakat.',
+            penyebab: {
+                fisiologis: ['Paparan bencana (alam atau buatan manusia)', 'Riwayat bencana (alam atau buatan manusia)', 'Ketidakadekuatan sumber daya untuk pemecahan masalah', 'Ketidakcukupan sumber daya masyarakat (mis. istirahat, rekreasi, dukungan sosial)', 'Tidak adanya sistem masyarakat'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan ketidakberdayaan komunitas'],
+                objektif: ['Komunitas tidak memenuhi harapan anggotanya', 'Konflik masyarakat meningkat', 'Insiden masalah masyarakat meningkat tinggi (mis. pembunuhan, pengerusakan, pelecehan, pengangguran, kemiskinan, penyakit mental)']
+            },
+            gejalaMinor: {
+                subjektif: ['Mengungkapkan kerentanan komunitas'],
+                objektif: ['Partisipasi masyarakat kurang', 'Tingkat penyakit masyarakat meningkat', 'Stres meningkat']
+            },
+            kondisiKlinis: ['Insiden kekerasan tinggi', 'Tingkat penyakit tinggi', 'Sedikitnya kesempatan atau lokasi untuk interaksi komunitas']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping Komunitas',
+                kode: 'L.09089',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Keberdayaan komunitas meningkat', 'Perencanaan komunitas meningkat', 'Pemecahan masalah komunitas meningkat', 'Sumber daya komunitas meningkat', 'Partisipasi masyarakat meningkat', 'Insiden masalah kesehatan dalam komunitas menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Lingkungan Komunitas',
+                kode: 'I.14515',
+                definisi: 'Mengidentifikasi dan mengelola kondisi lingkungan fisik, sosial, budaya, ekonomi, dan politik yang mempengaruhi kesehatan masyarakat.',
+                tindakan: {
+                    observasi: ['Lakukan skrining risiko gangguan kesehatan lingkungan', 'Identifikasi faktor risiko kesehatan yang diketahui'],
+                    terapeutik: ['Libatkan partisipasi masyarakat dalam memelihara keamanan lingkungan'],
+                    edukasi: ['Promosikan kebijakan pemerintah untuk mengurangi risiko penyakit', 'Berikan pendidikan kesehatan untuk kelompok risiko', 'Informasikan layanan kesehatan ke individu, keluarga, kelompok berisiko dan masyarakat'],
+                    kolaborasi: ['Kolaborasi dalam tim multidisiplin untuk mengidentifikasi ancaman keamanan di masyarakat', 'Kolaborasi dengan tim kesehatan lain dalam program kesehatan komunitas untuk menghadapi risiko yang diketahui', 'Kolaborasi dalam pengembangan program aksi masyarakat', 'Kolaborasi dengan kelompok masyarakat dalam menjalankan peraturan pemerintah']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui risiko gangguan kesehatan lingkungan. Dapat memperkirakan dan menemukan solusi dari faktor risiko kesehatan yang diketahui.',
+                    terapeutik: 'Terlibatnya partisipasi masyarakat dapat meningkatkan pemeliharaan keamanan lingkungan menjadi lebih efektif.',
+                    edukasi: 'Promosi kebijakan dapat membantu pemerintah dalam menurunkan risiko penyakit. Kelompok risiko dapat mengetahui dan memahami gangguan kesehatan lingkungan. Informasi layanan kesehatan yang diberikan membuat mereka dapat mengetahui dan bisa mengakses layanan kesehatan yang tersedia.',
+                    kolaborasi: 'Adanya kolaborasi tim multidisiplin dapat mengatur dan mengkoordinasikan layanan kesehatan. Kolaborasi tim kesehatan dapat memberikan pelayanan yang tepat. Kolaborasi dalam pengembangan program aksi masyarakat bisa diperoleh bantuan pemikiran dan tenaga. Kolaborasi dengan kelompok masyarakat sebagai strategi peraturan pemerintahan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0096',
+        keywords: ['d.0096', 'koping tidak efektif'],
+        diagnosis: {
+            judul: 'Koping Tidak Efektif',
+            kode: 'D.0096',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Ketidakmampuan menilai dan merespons stresor dan/atau ketidakmampuan menggunakan sumber-sumber yang ada untuk mengatasi masalah.',
+            penyebab: {
+                fisiologis: ['Ketidakpercayaan terhadap kemampuan diri mengatasi masalah', 'Ketidakadekuatan sistem pendukung', 'Ketidakadekuatan strategi koping', 'Ketidakteraturan atau kekacauan lingkungan', 'Ketidakcukupan persiapan untuk menghadapi stresor', 'Disfungsi sistem keluarga', 'Krisis situasional', 'Krisis maturasional', 'Kerentanan personalitas', 'Ketidakpastian'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan tidak mampu mengatasi masalah'],
+                objektif: ['Tidak mampu memenuhi peran yang diharapkan (sesuai usia)', 'Menggunakan mekanisme koping yang tidak sesuai']
+            },
+            gejalaMinor: {
+                subjektif: ['Tidak mampu memenuhi kebutuhan dasar', 'Kekhawatiran kronis'],
+                objektif: ['Penyalahgunaan zat', 'Memanipulasi orang lain untuk memenuhi keinginannya sendiri', 'Perilaku tidak asertif', 'Partisipasi sosial kurang']
+            },
+            kondisiKlinis: ['Kondisi perawatan kritis', 'Attention Deficit/Hyperactivity Disorder (ADHD)', 'Gangguan perilaku', 'Oppositional Defiant Disorder', 'Gangguan kecemasan perpisahan', 'Delirium', 'Demensia', 'Gangguan amnestik', 'Intoksikasi zat', 'Putus zat']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping',
+                kode: 'L.09086',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan memenuhi peran sesuai usia meningkat', 'Perilaku koping adaptif meningkat', 'Verbalisasi kemampuan mengatasi masalah meningkat', 'Verbalisasi pengakuan masalah meningkat', 'Verbalisasi kelemahan diri meningkat', 'Perilaku asertif meningkat', 'Verbalisasi menyalahkan orang lain menurun', 'Verbalisasi rasionalisasi kegagalan menurun', 'Hipersensitif terhadap kritik menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Pengambilan Keputusan',
+                kode: 'I.09265',
+                definisi: 'Memberikan informasi dan dukungan saat pembuatan keputusan kesehatan.',
+                tindakan: {
+                    observasi: ['Identifikasi persepsi mengenai masalah dan informasi yang memicu konflik'],
+                    terapeutik: ['Fasilitasi mengklarifikasi nilai dan harapan yang membantu membuat pilihan', 'Diskusikan kelebihan dan kekurangan dari setiap solusi', 'Fasilitasi melihat situasi secara realistis', 'Motivasi mengungkapkan tujuan perawatan yang diharapkan', 'Fasilitasi pengambilan keputusan secara kolaboratif', 'Hormati hak pasien untuk menerima atau menolak informasi', 'Fasilitasi menjelaskan keputusan kepada orang lain, jika perlu', 'Fasilitasi hubungan antara pasien, keluarga, dan tenaga kesehatan lainnya'],
+                    edukasi: ['Informasikan alternatif solusi secara jelas', 'Berikan informasi yang diminta pasien'],
+                    kolaborasi: ['Kolaborasi dengan tenaga kesehatan lain dalam memfasilitasi pengambilan keputusan']
+                },
+                rasional: {
+                    observasi: 'Agar dapat mengetahui dan menemukan masalah sehingga dapat menemukan solusi yang tepat.',
+                    terapeutik: 'Agar pasien dapat menilai dan memilih untuk mengatasi masalah. Agar mendapat solusi yang tepat. Bertujuan untuk membuat pasien paham. Bertujuan mendorong pasien untuk mengungkapkan tujuan perawatan. Agar mendapatkan keputusan yang ingin dicapai bersama-sama. Bertujuan untuk menghormati hak yang dimiliki oleh pasien. Bertujuan agar pasien dapat menjelaskan keputusan yang diambil. Bertujuan agar perawatan dan pengambilan keputusan dapat dilakukan bersama.',
+                    edukasi: 'Agar pasien dapat mengambil keputusan yang tepat. Agar pasien mengetahui informasi dan mempermudah pasien dalam mengambil keputusan.',
+                    kolaborasi: 'Bertujuan agar pasien mendapatkan pelayanan kesehatan yang baik dan mengambil keputusan yang tepat.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0097',
+        keywords: ['d.0097', 'penurunan koping keluarga'],
+        diagnosis: {
+            judul: 'Penurunan Koping Keluarga',
+            kode: 'D.0097',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Ketidakadekuatan atau ketidakefektifan dukungan, rasa nyaman, bantuan dan motivasi orang terdekat (anggota keluarga atau orang berarti) yang dibutuhkan klien untuk mengelola atau mengatasi masalah kesehatannya.',
+            penyebab: {
+                fisiologis: ['Situasi penyerta yang mempengaruhi orang terdekat', 'Krisis perkembangan yang dihadapi orang terdekat', 'Kelelahan orang terdekat dalam memberikan dukungan', 'Disorganisasi keluarga', 'Perubahan peran keluarga', 'Tidak tersedianya informasi bagi orang terdekat', 'Kurangnya saling mendukung', 'Tidak cukupnya dukungan yang diberikan klien pada orang terdekat', 'Orang terdekat kurang terpapar informasi', 'Salahnya/tidak pahamnya informasi yang didapatkan orang terdekat', 'Orang terdekat terlalu fokus pada kondisi di luar keluarga', 'Penyakit kronis yang menghabiskan kemampuan dukungan orang terdekat', 'Krisis situasional yang dialami orang terdekat'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Klien mengeluh/khawatir tentang respon orang terdekat pada masalah kesehatan'],
+                objektif: ['Orang terdekat menarik diri dari klien', 'Terbatasnya komunikasi orang terdekat dengan klien']
+            },
+            gejalaMinor: {
+                subjektif: ['Orang terdekat menyatakan kurang terpapar informasi tentang upaya mengatasi masalah klien'],
+                objektif: ['Bantuan yang dilakukan orang terdekat menunjukkan hasil yang tidak memuaskan', 'Orang terdekat berperilaku protektif yang tidak sesuai dengan kemampuan/kemandirian klien']
+            },
+            kondisiKlinis: ['Penyakit Alzheimer', 'AIDS', 'Kelainan yang menyebabkan paralisis permanen', 'Kanker', 'Penyakit kronis (mis. kanker, arthritis reumatoid)', 'Penyalahgunaan zat', 'Krisis keluarga', 'Konflik keluarga yang belum terselesaikan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Koping Keluarga',
+                kode: 'L.09088',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Perasaan diabaikan membaik', 'Kekhawatiran tentang anggota keluarga membaik', 'Perilaku mengabaikan anggota keluarga membaik', 'Kemampuan memenuhi kebutuhan anggota keluarga membaik', 'Komitmen pada perawatan/pengobatan membaik', 'Komunikasi antara anggota keluarga membaik', 'Toleransi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Koping Keluarga',
+                kode: 'I.09260',
+                definisi: 'Memfasilitasi peningkatan nilai-nilai, minat dan tujuan dalam keluarga.',
+                tindakan: {
+                    observasi: ['Identifikasi respons emosional terhadap kondisi saat ini', 'Identifikasi beban prognosis secara psikologis', 'Identifikasi pemahaman tentang keputusan perawatan setelah pulang', 'Identifikasi kesesuaian antara harapan pasien, keluarga, dan tenaga kesehatan'],
+                    terapeutik: ['Dengarkan masalah, perasaan, dan pertanyaan keluarga', 'Terima nilai-nilai keluarga dengan cara yang tidak menghakimi', 'Diskusikan rencana medis dan perawatan', 'Fasilitasi pengungkapan perasaan antara pasien dan keluarga atau antar anggota keluarga', 'Fasilitasi pengambilan keputusan dalam merencanakan perawatan jangka panjang, jika perlu', 'Fasilitasi anggota keluarga dalam mengidentifikasi dan menyelesaikan konflik nilai', 'Fasilitasi pemenuhan kebutuhan dasar keluarga (mis. tempat tinggal, makanan, pakaian)', 'Fasilitasi anggota keluarga melalui proses kematian dan berduka, jika perlu', 'Fasilitasi memperoleh pengetahuan, keterampilan, dan peralatan yang diperlukan untuk mempertahankan keputusan perawatan pasien', 'Bersikap sebagai pengganti keluarga untuk menenangkan pasien dan/atau jika keluarga tidak dapat memberikan perawatan', 'Hargai dan dukung mekanisme koping adaptif yang digunakan', 'Berikan kesempatan berkunjung bagi anggota keluarga'],
+                    edukasi: ['Informasikan kemajuan pasien secara berkala', 'Informasikan fasilitas perawatan kesehatan yang tersedia'],
+                    kolaborasi: ['Rujuk untuk terapi keluarga, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui mekanisme koping dalam keluarga. Untuk mencari atau mencatat beberapa beban yang mungkin dapat membuat keluarga klien merasa sangat tertekan. Untuk memastikan bahwa keluarga mampu atau tidak dalam menerima keadaan yang dialami saat ini. Untuk menyamakan persepsi agar tidak terjadi kesalahpahaman saat diberi asuhan.',
+                    terapeutik: 'Untuk memahami bagaimana perasaan yang dialami keluarga klien saat ini. Percaya dan lapang dada melakukan yang benar dalam aturan keluarga. Guna untuk melibatkan keluarga dan menemukan titik tengah bila ada permasalahan. Untuk membantu klien dalam mengungkapkan perasaan tanpa menyinggung perasaan keluarga. Untuk memberikan pilihan dan penjelasan bila klien dan keluarga bingung. Untuk membantu menemukan titik tengah dari permasalahan. Untuk memberikan rasa nyaman pada keluarga klien. Untuk memberikan dukungan dan motivasi serta membantu dalam proses pemakaman. Agar keluarga mengetahui apa saja perkembangan yang terjadi. Untuk memberikan situasi yang nyaman. Menerima, menghargai dan memberikan motivasi pendapat yang diutarakan. Dimana bila rasa yang sangat berat dirasakan maka pertemuanlah yang diharapkan dapat mencairkan suasana hati.',
+                    edukasi: 'Untuk menginformasikan kemajuan kesehatan secara berkala untuk meningkatkan motivasi keluarga. Untuk membantu keluarga mengenal dan membuat keputusan yang tepat saat anggota keluarga sakit.',
+                    kolaborasi: 'Terapi keluarga merupakan konseling atau binaan yang diberikan oleh ahli psikologi untuk memberikan masukan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0098',
+        keywords: ['d.0098', 'penyangkalan tidak efektif'],
+        diagnosis: {
+            judul: 'Penyangkalan Tidak Efektif',
+            kode: 'D.0098',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Upaya mengingkari pemahaman atau makna suatu peristiwa secara sadar atau tidak sadar untuk menurunkan kecemasan/ketakutan yang dapat menyebabkan gangguan kesehatan.',
+            penyebab: {
+                fisiologis: ['Kecemasan', 'Ketakutan terhadap kematian', 'Ketakutan mengalami kehilangan kemandirian', 'Ketakutan terhadap perpisahan', 'Ketidakefektifan strategi koping', 'Ketidakpercayaan terhadap kemampuan mengatasi masalah', 'Ancaman terhadap realitas yang tidak menyenangkan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Tidak mengakui dirinya mengalami gejala atau bahaya (walaupun kenyataan sebaliknya)'],
+                objektif: ['Menunda mencari pertolongan pelayanan kesehatan']
+            },
+            gejalaMinor: {
+                subjektif: ['Mengaku tidak takut dengan kematian', 'Mengaku tidak takut dengan penyakit kronis', 'Tidak mengakui bahwa penyakit berdampak pada pola hidup'],
+                objektif: ['Melakukan pengobatan mandiri', 'Mengalihkan sumber gejala ke orang lain', 'Berperilaku acuh tak acuh saat membicarakan peristiwa penyebab stres', 'Menunjukkan afek yang tidak sesuai']
+            },
+            kondisiKlinis: ['Penyakit kronis', 'Intoksikasi zat', 'Penyakit Alzheimer', 'Penyakit terminal']
+        },
+        luaran: {
+            utama: {
+                judul: 'Penerimaan',
+                kode: 'L.09082',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Verbalisasi penerimaan meningkat', 'Verbalisasi perasaan yang dialami meningkat', 'Perilaku mencari perawatan/pengobatan meningkat', 'Menyusun perencanaan masa depan meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Kesadaran Diri',
+                kode: 'I.09311',
+                definisi: 'Meningkatkan pemahaman dan mengeksplorasi pikiran, perasaan, motivasi, dan perilaku.',
+                tindakan: {
+                    observasi: ['Identifikasi keadaan emosional saat ini', 'Identifikasi respons yang ditunjukkan berbagai situasi'],
+                    terapeutik: ['Diskusikan nilai-nilai yang berkontribusi terhadap konsep diri', 'Diskusikan tentang pikiran, perilaku atau respons terhadap kondisi', 'Diskusikan dampak penyakit pada konsep diri', 'Ungkapkan penyangkalan tentang kenyataan', 'Motivasi dalam meningkatkan kemampuan belajar'],
+                    edukasi: ['Anjurkan mengenali pikiran dan perasaan tentang diri', 'Anjurkan menyadari bahwa setiap orang unik', 'Anjurkan mengungkapkan perasaan (mis. marah atau depresi)', 'Anjurkan meminta bantuan orang lain, sesuai kebutuhan', 'Anjurkan mengubah pandangan diri sebagai korban', 'Anjurkan mengidentifikasi perasaan bersalah', 'Anjurkan mengidentifikasi situasi yang memicu kecemasan', 'Anjurkan mengevaluasi kembali persepsi negatif tentang diri', 'Anjurkan dalam mengekspresikan diri dengan kelompok sebaya', 'Ajarkan cara membuat prioritas hidup', 'Latih kemampuan positif diri yang dimiliki'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengidentifikasi keadaan emosional saat ini. Untuk mengidentifikasi respon yang ditunjukkan berbagai situasi.',
+                    terapeutik: 'Untuk mendiskusikan nilai-nilai yang berkontribusi terhadap konsep diri. Untuk mendiskusikan tentang pikiran, perilaku atau respon terhadap kondisi. Untuk mendiskusikan dampak penyakit pada konsep diri. Untuk mengungkapkan penyangkalan tentang kenyataan. Untuk memotivasi dalam meningkatkan kemampuan belajar.',
+                    edukasi: 'Untuk menganjurkan mengenali pikiran dan perasaan tentang diri. Untuk menganjurkan menyadari bahwa setiap orang unik. Untuk menganjurkan mengungkapkan perasaan. Untuk menganjurkan meminta bantuan orang lain. Untuk menganjurkan mengubah pandangan diri sebagai korban. Untuk menganjurkan mengidentifikasi perasaan bersalah. Untuk menganjurkan mengidentifikasi situasi yang memicu kecemasan. Untuk menganjurkan mengevaluasi kembali persepsi negatif tentang diri. Untuk menganjurkan dalam mengekspresikan diri dengan kelompok sebaya. Untuk mengajarkan cara membuat prioritas hidup. Untuk melatih kemampuan positif diri yang dimiliki.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0099',
+        keywords: ['d.0099', 'perilaku kesehatan cenderung berisiko'],
+        diagnosis: {
+            judul: 'Perilaku Kesehatan Cenderung Berisiko',
+            kode: 'D.0099',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Hambatan kemampuan dalam mengubah gaya hidup/perilaku untuk memperbaiki status kesehatan.',
+            penyebab: {
+                fisiologis: ['Kurang terpapar informasi', 'Ketidakadekuatan dukungan sosial', 'Self efficacy yang rendah', 'Status sosio-ekonomi rendah', 'Stresor berlebihan', 'Sikap negatif terhadap pelayanan kesehatan', 'Pemilihan gaya hidup tidak sehat (mis. merokok, konsumsi alkohol berlebihan)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Menunjukkan penolakan terhadap perubahan status kesehatan', 'Gagal melakukan tindakan pencegahan masalah kesehatan', 'Menunjukkan upaya peningkatan status kesehatan yang minimal']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Gagal mencapai pengendalian yang optimal']
+            },
+            kondisiKlinis: ['Kondisi baru terdiagnosis penyakit', 'Kondisi perubahan gaya hidup baru akibat penyakit', 'Tumor otak', 'Penyalahgunaan zat', 'Gangguan kepribadian dan psikotik', 'Depresi/psikosis pasca persalinan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Perilaku Kesehatan',
+                kode: 'L.12105', // Kode L.03025 di PDF kemungkinan salah
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Penerimaan terhadap perubahan status kesehatan meningkat', 'Kemampuan melakukan tindakan pencegahan masalah kesehatan meningkat', 'Kemampuan peningkatan kesehatan meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Perilaku Upaya Kesehatan',
+                kode: 'I.12472',
+                definisi: 'Meningkatkan perubahan perilaku penderita/klien agar memiliki kemauan dan kemampuan yang kondusif bagi kesehatan secara menyeluruh baik bagi lingkungan maupun masyarakat sekitarnya.',
+                tindakan: {
+                    observasi: ['Identifikasi perilaku upaya kesehatan yang dapat ditingkatkan'],
+                    terapeutik: ['Berikan lingkungan yang mendukung kesehatan', 'Orientasi pelayanan kesehatan yang dapat dimanfaatkan'],
+                    edukasi: ['Anjurkan persalinan ditolong oleh tenaga kesehatan', 'Anjurkan memberi bayi ASI Eksklusif', 'Anjurkan menimbang balita setiap bulan', 'Anjurkan menggunakan air bersih', 'Anjurkan mencuci tangan dengan air bersih dan sabun', 'Anjurkan menggunakan jamban sehat', 'Anjurkan memberantas jentik di rumah seminggu sekali', 'Anjurkan makan sayur dan buah setiap hari', 'Anjurkan melakukan aktivitas fisik setiap hari', 'Anjurkan tidak merokok di dalam rumah'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengidentifikasi perilaku upaya kesehatan yang dapat ditingkatkan.',
+                    terapeutik: 'Untuk memberikan lingkungan yang mendukung kesehatan. Untuk mengorientasi pelayanan kesehatan yang dapat dimanfaatkan.',
+                    edukasi: 'Untuk menganjurkan persalinan ditolong oleh tenaga kesehatan. Untuk menganjurkan memberi bayi ASI Eksklusif. Untuk menganjurkan menimbang balita setiap bulan. Untuk menganjurkan menggunakan air bersih. Untuk menganjurkan mencuci tangan dengan air bersih dan sabun. Untuk menganjurkan menggunakan jamban sehat. Untuk menganjurkan memberantas jentik di rumah seminggu sekali. Untuk menganjurkan makan sayur dan buah setiap hari. Untuk menganjurkan melakukan aktivitas fisik setiap hari. Untuk menganjurkan tidak merokok di dalam rumah.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0100',
+        keywords: ['d.0100', 'risiko distres spiritual'],
+        diagnosis: {
+            judul: 'Risiko Distres Spiritual',
+            kode: 'D.0100',
+            kategori: 'Psikologis',
+            subkategori: 'Integritas Ego',
+            definisi: 'Berisiko mengalami gangguan keyakinan atau sistem nilai pada individu atau kelompok berupa kekuatan, harapan dan makna hidup.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Perubahan hidup', 'Perubahan lingkungan', 'Bencana alam', 'Sakit kronis', 'Sakit fisik', 'Penyalahgunaan zat', 'Kecemasan', 'Perubahan dalam ritual agama', 'Perubahan dalam praktik spiritual', 'Konflik spiritual', 'Depresi', 'Ketidakmampuan memaafkan', 'Kehilangan', 'Harga diri rendah', 'Hubungan buruk', 'Konflik rasial', 'Berpisah dengan sistem pendukung', 'Stres'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Penyakit kronis (mis. arthritis rheumatoid, sklerosis multiple)', 'Penyakit terminal (mis. kanker)', 'Retardasi mental', 'Kehilangan ekstremitas', 'Sudden infant death syndrome (SIDS)', 'Kelahiran mati, kematian janin, keguguran', 'Kemandulan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Spiritual',
+                kode: 'L.09091',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Verbalisasi makna dan tujuan hidup meningkat', 'Verbalisasi kepuasan terhadap makna hidup meningkat', 'Perilaku marah pada Tuhan menurun', 'Kemampuan beribadah meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Perkembangan Spiritual',
+                kode: 'I.09269',
+                definisi: 'Memfasilitasi pengembangan kemampuan mengidentifikasi, berhubungan, dan mencari sumber makna, tujuan, kekuatan dan harapan dalam hidup.',
+                tindakan: {
+                    observasi: [],
+                    terapeutik: ['Sediakan lingkungan yang tenang untuk refleksi diri', 'Fasilitasi mengidentifikasi masalah spiritual', 'Fasilitasi mengidentifikasi hambatan dalam pengenalan diri', 'Fasilitasi mengeksplorasi keyakinan terkait pemulihan tubuh, pikiran, dan jiwa', 'Fasilitasi hubungan persahabatan dengan orang lain dan pelayanan keagamaan'],
+                    edukasi: ['Anjurkan membuat komitmen spiritual berdasarkan keyakinan dan nilai', 'Anjurkan berpartisipasi dalam kegiatan ibadah (hari raya, ritual) dan meditasi'],
+                    kolaborasi: ['Rujuk pada pemuka agama/kelompok agama, jika perlu', 'Rujuk kepada kelompok pendukung, swabantu, atau program spiritual, jika perlu']
+                },
+                rasional: {
+                    terapeutik: 'Agar klien dapat memahami diri sendiri lebih baik lagi. Untuk mengetahui lebih dalam masalah spiritual yang dialami klien. Untuk mengetahui hal-hal yang menghambat pengenalan diri klien. Agar membuat klien lebih nyaman melakukan pemulihan tubuh, pikiran dan jiwa berdasarkan keyakinannya. Agar klien bisa lebih terbuka dan leluasa karena berinteraksi dengan orang yang dipercayainya.',
+                    edukasi: 'Agar klien lebih mengetahui keyakinan dan nilai-nilai yang dipercayainya dan memegang teguh hal tersebut. Agar klien dapat menjernihkan pikirannya dengan mendekatkan diri kepada Tuhan-Nya.',
+                    kolaborasi: 'Agar klien bisa lebih diatasi oleh orang-orang yang mengetahui lebih mengenai agamanya. Agar klien bisa berbagi mengenai keluh kesahnya kepada orang lain dan dapat berdiskusi untuk mendapat keputusan yang baik baginya.'
                 }
             }
         ]
