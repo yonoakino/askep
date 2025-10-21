@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Asuhan Keperawatan (SDKI, SLKI, SIKI)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Styling for table content */
+        .askep-table td {
+            vertical-align: top;
+            padding: 1rem;
+        }
+        .askep-table h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .askep-table h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+        .askep-table p, .askep-table li {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .askep-table ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .askep-table ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Aplikasi Asuhan Keperawatan</h1>
+            <p class="text-md text-gray-600 mt-2">Berdasarkan Standar SDKI, SLKI, dan SIKI</p>
+        </header>
+
+        <main>
+            <!-- Search Section -->
+            <div class="bg-white p-6 rounded-xl shadow-md max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="searchInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow" placeholder="Cari berdasarkan kata kunci atau kode diagnosis (mis: D.0001)">
+                    <button id="searchButton" class="w-full sm:w-auto bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-transform transform hover:scale-105">
+                        Cari Askep
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsContainer" class="mt-8">
+                <!-- Content will be injected here by JavaScript -->
+            </div>
+            
+            <!-- Not Found Message -->
+            <div id="notFound" class="hidden mt-8 text-center bg-white p-8 rounded-xl shadow-md max-w-2xl mx-auto">
+                 <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" />
+                </svg>
+                <h3 class="mt-2 text-sm font-medium text-gray-900">Data Tidak Ditemukan</h3>
+                <p class="mt-1 text-sm text-gray-500">
+                    Maaf, asuhan keperawatan dengan kata kunci atau kode tersebut tidak ditemukan. Silakan coba lagi.
+                </p>
+            </div>
+            
+             <!-- Initial State Message -->
+            <div id="initialState" class="mt-8 text-center bg-transparent p-8 rounded-xl max-w-3xl mx-auto">
+                <svg class="mx-auto h-16 w-16 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                </svg>
+                <h2 class="mt-4 text-xl font-semibold text-gray-700">Selamat Datang di Generator Askep</h2>
+                <p class="mt-2 text-gray-500">
+                    Aplikasi ini membantu Anda membuat draf Asuhan Keperawatan dengan cepat. Cukup masukkan kata kunci atau kode diagnosis (misal: D.0019) pada kolom pencarian di atas untuk memulai.
+                </p>
+                <p class="mt-2 text-sm text-gray-400">
+                    Contoh: <strong>nyeri akut</strong>, <strong>D.0005</strong>, <strong>risiko infeksi</strong>, <strong>diare</strong>, <strong>gangguan mobilitas fisik</strong>
+                </p>
+            </div>
+
+        </main>
+    </div>
+
+<script>
+// --- DATABASE ASUHAN KEPERAWATAN (Diperbarui secara ekstensif) ---
+const askepData = [
+    {
+        id: 'D.0001',
+        keywords: ['d.0001', 'bersihan jalan napas tidak efektif', 'bersihan jalan napas', 'batuk', 'sputum', 'sekret'],
+        diagnosis: {
+            judul: 'Bersihan Jalan Napas Tidak Efektif',
+            kode: 'D.0001',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Ketidakmampuan membersihkan sekret atau obstruksi jalan napas untuk mempertahankan jalan napas tetap paten.',
+            penyebab: {
+                fisiologis: [
+                    'Spasme jalan napas', 'Hipersekresi jalan napas', 'Disfungsi neuromuskuler', 'Benda asing dalam jalan napas', 'Adanya jalan napas buatan', 'Sekresi yang tertahan', 'Hiperplasia dinding jalan napas', 'Proses infeksi', 'Respon alergi', 'Efek agen farmakologis (mis. Anastesi)'
+                ],
+                situasional: [
+                    'Merokok aktif', 'Merokok pasif', 'Terpajan polutan'
+                ]
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Batuk tidak efektif atau tidak mampu batuk', 'Sputum berlebih / obstruksi di jalan napas', 'Mengi, wheezing dan/atau ronkhi kering']
+            },
+            gejalaMinor: {
+                subjektif: ['Dispnea', 'Sulit bicara', 'Ortopnea'],
+                objektif: ['Gelisah', 'Sianosis', 'Bunyi napas menurun', 'Frekuensi napas berubah', 'Pola napas berubah']
+            },
+            kondisiKlinis: ['Gullian barre syndrome', 'Sklerosis multipel', 'Myasthenia gravis', 'Stroke', 'Infeksi saluran napas', 'Asma']
+        },
+        luaran: {
+            utama: {
+                judul: 'Bersihan Jalan Napas',
+                kode: 'L.01001',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Batuk efektif meningkat', 'Produksi sputum menurun', 'Mengi menurun', 'Wheezing menurun', 'Frekuensi napas membaik', 'Pola napas membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Batuk Efektif',
+                kode: 'I.01006',
+                definisi: 'Melatih pasien yang tidak memiliki kemampuan batuk secara efektif untuk membersihkan laring, trakea dan bronkiolus dari sekret atau benda asing di jalan napas.',
+                tindakan: {
+                    observasi: ['Identifikasi kemampuan batuk', 'Monitor adanya retensi sputum', 'Monitor tanda dan gejala infeksi saluran napas'],
+                    terapeutik: ['Atur posisi semi-Fowler atau Fowler', 'Pasang perlak dan bengkok di pangkuan pasien', 'Buang sekret pada tempat sputum'],
+                    edukasi: ['Jelaskan tujuan dan prosedur batuk efektif', 'Anjurkan tarik napas dalam melalui hidung selama 4 detik, ditahan selama 2 detik, kemudian keluarkan dari mulut dengan bibir mencucu (dibulatkan) selama 8 detik', 'Anjurkan mengulangi tarik napas dalam hingga 3 kali', 'Anjurkan batuk dengan kuat langsung setelah tarik napas dalam yang ke-3'],
+                    kolaborasi: ['Kolaborasi pemberian mukolitik atau ekspektoran, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengidentifikasi kemampuan dan karakteristik batuk serta adanya retensi sekret sehingga dapat menentukan intervensi yang tepat.',
+                    terapeutik: 'Posisi semi-fowler/fowler memaksimalkan ekspansi paru dan menurunkan upaya bernapas, sehingga mempermudah batuk.',
+                    edukasi: 'Meningkatkan pengetahuan dan partisipasi pasien dalam melakukan batuk efektif untuk membersihkan jalan napas.',
+                    kolaborasi: 'Mukolitik atau ekspektoran membantu mengencerkan sekret sehingga lebih mudah dikeluarkan.'
+                }
+            },
+            {
+                judul: 'Manajemen Jalan Napas',
+                kode: 'I.01011',
+                definisi: 'Mengidentifikasi dan mengelola kepatenan jalan napas.',
+                tindakan: {
+                    observasi: ['Monitor pola napas (frekuensi, kedalaman, usaha napas)', 'Monitor bunyi napas tambahan (mis. gurgling, mengi, wheezing, ronkhi)', 'Monitor sputum (jumlah, warna, aroma)'],
+                    terapeutik: ['Posisikan semi-Fowler atau Fowler', 'Berikan minuman hangat', 'Lakukan fisioterapi dada, jika perlu', 'Lakukan penghisapan lendir kurang dari 15 detik', 'Berikan oksigen, jika perlu'],
+                    edukasi: ['Anjurkan asupan cairan 2000 ml/hari, jika tidak kontraindikasi', 'Ajarkan teknik batuk efektif'],
+                    kolaborasi: ['Kolaborasi pemberian bronkodilator, ekspektoran, mukolitik, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan pola dan bunyi napas adalah indikator kunci untuk menilai kepatenan jalan napas dan keefektifan pertukaran gas.',
+                    terapeutik: 'Intervensi seperti pengaturan posisi, hidrasi, dan fisioterapi dada bertujuan untuk mengencerkan dan memobilisasi sekret.',
+                    edukasi: 'Edukasi pasien mengenai hidrasi yang cukup dan teknik batuk efektif meningkatkan kemandirian dalam menjaga kebersihan jalan napas.',
+                    kolaborasi: 'Obat-obatan farmakologis seperti bronkodilator dapat membantu melebarkan jalan napas dan mempermudah pengeluaran sekret.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0002',
+        keywords: ['d.0002', 'gangguan penyapihan ventilator', 'ventilator', 'penyapihan'],
+        diagnosis: {
+            judul: 'Gangguan Penyapihan Ventilator',
+            kode: 'D.0002',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Ketidakmampuan beradaptasi dengan pengurangan bantuan ventilator mekanik yang dapat menghambat dan memperlama proses penyapihan.',
+            penyebab: {
+                fisiologis: ['Hipersekresi jalan napas', 'Ketidakcukupan Energi', 'Hambatan upaya napas (mis. Nyeri saat bernapas, kelemahan otot pernapasan, efek sedasi)'],
+                psikologis: ['Kecemasan', 'Perasaan tidak berdaya', 'Kurang informasi tentang proses penyapihan', 'Penurunan motivasi'],
+                situasional: ['Ketidakadekuatan dukungan sosial', 'Ketidaktepatan kecepatan proses penyapihan', 'Riwayat kegagalan berulang dalam upaya penyapihan', 'Riwayat ketergantungan ventilator >4 hari']
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Frekuensi napas meningkat', 'Penggunaan otot bantu napas', 'Napas megap-megap (gasping)', 'Upaya napas dan bantuan ventilator tidak sinkron', 'Napas dangkal', 'Agitasi', 'Nilai gas darah arteri abnormal']
+            },
+            gejalaMinor: {
+                subjektif: ['Lelah', 'Kuatir mesin rusak', 'Fokus meningkat pada pernapasan'],
+                objektif: ['Auskultasi suara inspirasi menurun', 'Warna kulit abnormal (mis. pucat, sianosis)', 'Napas paradoks abdominal', 'Diaforesis', 'Ekspresi wajah takut', 'Tekanan darah meningkat', 'Frekuensi nadi meningkat', 'Kesadaran menurun', 'Gelisah']
+            },
+            kondisiKlinis: ['Cedera kepala', 'Coronary artery bypass graft (CABG)', 'Gagal Napas', 'Cardiac Arrest', 'Transplantasi Jantung']
+        },
+        luaran: {
+            utama: {
+                judul: 'Penyapihan Ventilator',
+                kode: 'L.01002',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Kesinkronan bantuan ventilator meningkat', 'Penggunaan otot bantu napas menurun', 'Napas megap-megap (gasping) menurun', 'Napas dangkal menurun', 'Agitasi menurun', 'Frekuensi napas membaik', 'Gas darah arteri membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Penyapihan Ventilasi Mekanik',
+                kode: 'I.01021',
+                definisi: 'Memfasilitasi pasien bernapas tanpa bantuan ventilasi mekanis.',
+                tindakan: {
+                    observasi: ['Periksa kemampuan untuk disapih (meliputi hemodinamik stabil, kondisi optimal, bebas infeksi)', 'Monitor prediktor kemampuan untuk mentolerir penyapihan', 'Monitor tanda-tanda kelelahan otot pernapasan', 'Monitor status cairan dan elektrolit'],
+                    terapeutik: ['Posisikan pasien semi-fowler (30-45 derajat)', 'Lakukan pengisapan jalan napas jika perlu', 'Berikan fisioterapi dada, jika perlu', 'Lakukan uji coba penyapihan', 'Gunakan teknik relaksasi, jika perlu', 'Hindari pemberian sedasi farmakologis selama percobaan penyapihan', 'Berikan dukungan psikologis'],
+                    edukasi: ['Ajarkan cara pengontrolan napas saat penyapihan'],
+                    kolaborasi: ['Kolaborasi pemberian obat yang meningkatkan kepatenan jalan napas dan pertukaran gas']
+                },
+                rasional: {
+                    observasi: 'Untuk menilai stabilitas sistem sirkulasi dan pernapasan, serta memastikan kondisi fisik optimal sebelum proses penyapihan dimulai.',
+                    terapeutik: 'Posisi semi-fowler, pengisapan lendir, dan fisioterapi dada membantu mengoptimalkan fungsi paru dan membersihkan jalan napas untuk mempermudah pernapasan spontan.',
+                    edukasi: 'Mengajarkan kontrol pernapasan membantu pasien mengurangi kecemasan dan menggunakan otot pernapasan secara lebih efisien selama penyapihan.',
+                    kolaborasi: 'Pemberian obat yang tepat dapat membantu mengatasi masalah mendasar seperti bronkospasme atau sekresi berlebih yang menghambat penyapihan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0003',
+        keywords: ['d.0003', 'gangguan pertukaran gas', 'pertukaran gas', 'pco2', 'po2'],
+        diagnosis: {
+            judul: 'Gangguan Pertukaran Gas',
+            kode: 'D.0003',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Kelebihan atau kekurangan oksigenasi dan/atau eliminasi karbon dioksida pada membran alveolus-kapiler.',
+            penyebab: {
+                fisiologis: ['Ketidakseimbangan ventilasi-perfusi', 'Perubahan membran alveolus-kapiler'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Dispnea'],
+                objektif: ['PCO2 meningkat/menurun', 'PO2 menurun', 'Takikardi', 'pH arteri meningkat/menurun', 'Bunyi napas tambahan']
+            },
+            gejalaMinor: {
+                subjektif: ['Pusing', 'Penglihatan kabur'],
+                objektif: ['Sianosis', 'Diaforesis', 'Gelisah', 'Napas cuping hidung', 'Pola napas abnormal', 'Warna kulit abnormal (mis. pucat, kebiruan)', 'Kesadaran menurun']
+            },
+            kondisiKlinis: ['Penyakit paru obstruktif kronis (PPOK)', 'Gagal jantung kongestif', 'Asma', 'Pneumonia', 'Tuberkulosis paru', 'Penyakit membran hialin', 'Asfiksia']
+        },
+        luaran: {
+            utama: {
+                judul: 'Pertukaran Gas',
+                kode: 'L.01003',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Tingkat kesadaran meningkat', 'Dispnea menurun', 'Bunyi napas tambahan menurun', 'Pusing menurun', 'PCO2 membaik', 'PO2 membaik', 'Takikardi membaik', 'pH arteri membaik', 'Sianosis membaik', 'Pola napas membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Pemantauan Respirasi',
+                kode: 'I.01014',
+                definisi: 'Mengumpulkan dan menganalisis data untuk memastikan kepatenan jalan napas dan keefektifan pertukaran gas.',
+                tindakan: {
+                    observasi: ['Monitor frekuensi, irama, kedalaman dan upaya napas', 'Monitor pola napas', 'Monitor saturasi oksigen', 'Monitor nilai AGD', 'Monitor hasil x-ray toraks'],
+                    terapeutik: ['Atur interval pemantauan respirasi sesuai kondisi pasien', 'Dokumentasikan hasil pemantauan'],
+                    edukasi: ['Jelaskan tujuan dan prosedur pemantauan'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Pemantauan ketat parameter respirasi, termasuk AGD dan saturasi oksigen, sangat penting untuk menilai tingkat gangguan pertukaran gas secara objektif.',
+                    terapeutik: 'Dokumentasi yang akurat dan interval pemantauan yang sesuai memungkinkan deteksi dini perburukan dan evaluasi respons terhadap terapi.',
+                    edukasi: 'Memberikan penjelasan kepada pasien dan keluarga tentang tujuan pemantauan dapat mengurangi kecemasan dan meningkatkan kerja sama.',
+                    kolaborasi: 'Hasil pemantauan menjadi dasar untuk kolaborasi dengan dokter dalam menentukan atau menyesuaikan terapi oksigen dan intervensi medis lainnya.'
+                }
+            },
+            {
+                judul: 'Terapi Oksigen',
+                kode: 'I.01026',
+                definisi: 'Memberikan tambahan oksigen untuk mencegah dan mengatasi kondisi kekurangan oksigen jaringan.',
+                tindakan: {
+                    observasi: ['Monitor kecepatan aliran oksigen', 'Monitor posisi alat terapi oksigen', 'Monitor efektivitas terapi oksigen (mis. oksimetri, AGD)', 'Monitor tanda-tanda hipoventilasi'],
+                    terapeutik: ['Bersihkan sekret pada mulut, hidung, dan trakea, jika perlu', 'Pertahankan kepatenan jalan napas', 'Siapkan dan atur peralatan pemberian oksigen', 'Berikan oksigen tambahan, jika perlu'],
+                    edukasi: ['Ajarkan pasien dan keluarga cara menggunakan oksigen di rumah'],
+                    kolaborasi: ['Kolaborasi penentuan dosis oksigen']
+                },
+                rasional: {
+                    observasi: 'Pemantauan efektivitas terapi oksigen dan tanda hipoventilasi penting untuk memastikan pasien menerima dosis yang tepat dan mencegah komplikasi seperti toksisitas oksigen.',
+                    terapeutik: 'Mempertahankan jalan napas yang bersih dan memberikan oksigen sesuai kebutuhan adalah intervensi langsung untuk memperbaiki oksigenasi.',
+                    edukasi: 'Mengajarkan penggunaan oksigen di rumah meningkatkan kemandirian dan keamanan pasien setelah pulang dari rumah sakit.',
+                    kolaborasi: 'Dosis oksigen harus ditentukan secara kolaboratif untuk memastikan terapi yang optimal dan aman sesuai kondisi klinis pasien.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0004',
+        keywords: ['d.0004', 'gangguan ventilasi spontan', 'ventilasi spontan'],
+        diagnosis: {
+            judul: 'Gangguan Ventilasi Spontan',
+            kode: 'D.0004',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Penurunan cadangan energi yang mengakibatkan individu tidak mampu bernapas secara adekuat.',
+            penyebab: {
+                fisiologis: ['Gangguan metabolisme', 'Kelemahan otot pernapasan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Dispnea'],
+                objektif: ['Penggunaan otot bantu napas meningkat', 'Volume tidal menurun', 'PCO2 meningkat', 'PO2 menurun', 'SaO2 menurun']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Gelisah', 'Takikardia']
+            },
+            kondisiKlinis: ['Penyakit paru obstruktif kronis (PPOK)', 'Asma', 'Cedera kepala', 'Gagal napas', 'Bedah jantung']
+        },
+        luaran: {
+            utama: {
+                judul: 'Ventilasi Spontan',
+                kode: 'L.01007',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Dispnea menurun', 'Penggunaan otot bantu napas menurun', 'Volume tidal membaik', 'PCO2 membaik', 'PO2 membaik', 'Takikardia membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Ventilasi',
+                kode: 'I.01002',
+                definisi: 'Merangsang dan membantu pernapasan.',
+                tindakan: {
+                    observasi: ['Identifikasi adanya kelelahan otot bantu napas', 'Monitor status respirasi dan oksigenasi'],
+                    terapeutik: ['Pertahankan kepatenan jalan napas', 'Posisikan semi-Fowler atau Fowler', 'Berikan oksigenasi sesuai kebutuhan'],
+                    edukasi: ['Ajarkan melakukan teknik relaksasi napas dalam'],
+                    kolaborasi: ['Kolaborasi pemberian bronkodilator, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mengidentifikasi kelelahan otot napas dan memonitor status oksigenasi adalah kunci untuk mendeteksi kegagalan ventilasi yang akan datang.',
+                    terapeutik: 'Menjaga jalan napas tetap paten, memposisikan pasien untuk ekspansi paru optimal, dan memberikan oksigen adalah intervensi fundamental untuk mendukung ventilasi.',
+                    edukasi: 'Mengajarkan teknik relaksasi napas dalam dapat membantu pasien mengurangi kerja pernapasan dan mengatasi dispnea.',
+                    kolaborasi: 'Kolaborasi pemberian obat seperti bronkodilator dapat mengurangi resistensi jalan napas dan mempermudah proses ventilasi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0005',
+        keywords: ['d.0005', 'pola napas tidak efektif', 'pola napas', 'dispnea', 'takipnea'],
+        diagnosis: {
+            judul: 'Pola Napas Tidak Efektif',
+            kode: 'D.0005',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Inspirasi dan/atau ekspirasi yang tidak memberikan ventilasi adekuat.',
+            penyebab: {
+                fisiologis: [
+                    'Depresi pusat pernapasan', 'Hambatan upaya napas (mis. nyeri saat bernapas, kelemahan otot pernapasan)', 'Deformitas dinding dada', 'Gangguan neuromuskular', 'Gangguan neurologis (mis. cedera kepala)', 'Penurunan energi', 'Obesitas'
+                ],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Dispnea'],
+                objektif: ['Penggunaan otot bantu pernapasan', 'Fase ekspirasi memanjang', 'Pola napas abnormal (mis. takipnea, bradipnea, hiperventilasi)']
+            },
+            gejalaMinor: {
+                subjektif: ['Ortopnea'],
+                objektif: ['Pernapasan pursed-lip', 'Pernapasan cuping hidung', 'Diameter toraks anterior-posterior meningkat', 'Ventilasi semenit menurun', 'Kapasitas vital menurun']
+            },
+            kondisiKlinis: ['Depresi sistem saraf pusat', 'Cedera kepala', 'Trauma toraks', 'Stroke']
+        },
+        luaran: {
+            utama: {
+                judul: 'Pola Napas',
+                kode: 'L.01004',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Dispnea menurun', 'Penggunaan otot bantu napas menurun', 'Pernapasan cuping hidung menurun', 'Frekuensi napas membaik', 'Kedalaman napas membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Jalan Napas',
+                kode: 'I.01011',
+                definisi: 'Mengidentifikasi dan mengelola kepatenan jalan napas.',
+                tindakan: {
+                    observasi: ['Monitor pola napas (frekuensi, kedalaman, usaha napas)', 'Monitor bunyi napas tambahan'],
+                    terapeutik: ['Posisikan semi-Fowler atau Fowler', 'Berikan oksigen, jika perlu'],
+                    edukasi: ['Ajarkan teknik batuk efektif'],
+                    kolaborasi: ['Kolaborasi pemberian bronkodilator, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan pola napas secara berkala penting untuk mendeteksi perubahan dan menentukan tingkat kegawatan.',
+                    terapeutik: 'Posisi semi-Fowler membantu ekspansi paru maksimal dan mengurangi kerja pernapasan. Oksigenasi membantu mengatasi hipoksemia.',
+                    edukasi: 'Mengajarkan teknik pernapasan yang benar dapat membantu pasien mengontrol dispnea dan meningkatkan efisiensi ventilasi.',
+                    kolaborasi: 'Bronkodilator dapat merelaksasi otot jalan napas, mengurangi resistensi, dan memperbaiki aliran udara.'
+                }
+            },
+            {
+                judul: 'Pemantauan Respirasi',
+                kode: 'I.01014',
+                definisi: 'Mengumpulkan dan menganalisis data untuk memastikan kepatenan jalan napas dan keefektifan pertukaran gas.',
+                tindakan: {
+                    observasi: ['Monitor frekuensi, irama, kedalaman dan upaya napas', 'Monitor pola napas', 'Monitor saturasi oksigen', 'Auskultasi bunyi napas'],
+                    terapeutik: ['Atur interval pemantauan respirasi sesuai kondisi pasien', 'Dokumentasikan hasil pemantauan'],
+                    edukasi: ['Jelaskan tujuan dan prosedur pemantauan', 'Informasikan hasil pemantauan, jika perlu'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Pemantauan komprehensif terhadap parameter respirasi memberikan gambaran lengkap tentang status pernapasan pasien.',
+                    terapeutik: 'Interval pemantauan yang disesuaikan dengan kondisi pasien memastikan deteksi dini perburukan kondisi.',
+                    edukasi: 'Melibatkan pasien dalam pemantauan dapat meningkatkan kesadaran mereka terhadap kondisinya dan mendorong kerja sama.',
+                    kolaborasi: 'Data pemantauan yang akurat menjadi dasar kolaborasi dengan tim medis lain untuk penyesuaian terapi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0006',
+        keywords: ['d.0006', 'risiko aspirasi', 'aspirasi', 'menelan'],
+        diagnosis: {
+            judul: 'Risiko Aspirasi',
+            kode: 'D.0006',
+            kategori: 'Fisiologis',
+            subkategori: 'Respirasi',
+            definisi: 'Beresiko mengalami masuknya sekresi gastrointestinal, sekresi orofaring, benda cair atau padat ke dalam saluran trakeobronkial.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Penurunan tingkat kesadaran', 'Penurunan refleks muntah dan/atau batuk', 'Gangguan menelan', 'Disfagia', 'Peningkatan residu lambung', 'Peningkatan tekanan intragastrik', 'Sfingter esofagus bawah inkompeten', 'Perlambatan pengosongan lambung', 'Terpasang selang nasogastrik', 'Terpasang trakeostomi atau endotracheal tube'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Cedera kepala', 'Stroke', 'Penyakit Parkinson', 'Prematuritas']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Aspirasi',
+                kode: 'L.01006',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Tingkat kesadaran meningkat', 'Kemampuan menelan meningkat', 'Tidak ada batuk', 'Tidak ada tersedak', 'Tidak ada akumulasi sekret']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Pencegahan Aspirasi',
+                kode: 'I.01018',
+                definisi: 'Mengidentifikasi dan mengurangi risiko masuknya partikel makanan/cairan ke dalam paru-paru.',
+                tindakan: {
+                    observasi: ['Monitor tingkat kesadaran, batuk, muntah, dan kemampuan menelan', 'Monitor status pernapasan', 'Periksa residu gaster sebelum memberi asupan oral'],
+                    terapeutik: ['Posisikan semi-Fowler (30-45 derajat) 30 menit sebelum memberi asupan oral', 'Pertahankan posisi semi-Fowler pada pasien', 'Pertahankan kepatenan jalan napas', 'Lakukan penghisapan jalan napas, jika produksi sekret meningkat'],
+                    edukasi: ['Anjurkan makan secara perlahan', 'Ajarkan strategi mencegah aspirasi'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Memantau faktor risiko utama seperti tingkat kesadaran dan kemampuan menelan adalah kunci untuk mencegah aspirasi.',
+                    terapeutik: 'Mengatur posisi kepala lebih tinggi (semi-Fowler) menggunakan gravitasi untuk mengurangi risiko refluks dan aspirasi isi lambung.',
+                    edukasi: 'Mengajarkan pasien dan keluarga tentang cara makan yang aman (misalnya, makan perlahan, potongan kecil) meningkatkan keamanan selama pemberian makan.',
+                    kolaborasi: 'Berkolaborasi dengan ahli terapi wicara untuk evaluasi menelan formal dapat memberikan rekomendasi spesifik untuk modifikasi diet dan teknik makan yang aman.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0008',
+        keywords: ['d.0008', 'penurunan curah jantung', 'curah jantung', 'jantung'],
+        diagnosis: {
+            judul: 'Penurunan Curah Jantung',
+            kode: 'D.0008',
+            kategori: 'Fisiologis',
+            subkategori: 'Sirkulasi',
+            definisi: 'Ketidakadekuatan jantung memompa darah untuk memenuhi kebutuhan metabolisme tubuh.',
+            penyebab: {
+                fisiologis: ['Perubahan irama jantung', 'Perubahan frekuensi jantung', 'Perubahan kontraktilitas', 'Perubahan preload', 'Perubahan afterload'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Lelah', 'Dispnea', 'Palpitasi'],
+                objektif: ['Bradikardia/takikardia', 'Gambaran EKG aritmia', 'Edema', 'Distensi vena jugularis', 'Tekanan darah menurun', 'Nadi perifer teraba lemah', 'Warna kulit pucat/sianosis', 'Terdengar suara jantung S3 dan/atau S4']
+            },
+            gejalaMinor: {
+                subjektif: ['Batuk'],
+                objektif: ['Berat badan bertambah', 'Hepatomegali', 'Murmur jantung', 'Oliguria']
+            },
+            kondisiKlinis: ['Gagal jantung kongestif', 'Sindrom koroner akut', 'Penyakit katup jantung', 'Aritmia']
+        },
+        luaran: {
+            utama: {
+                judul: 'Curah Jantung',
+                kode: 'L.02008',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Kekuatan nadi perifer meningkat', 'Tekanan darah membaik', 'Tidak ada edema', 'Tidak ada distensi vena jugularis', 'Tidak ada lelah', 'Tidak ada dispnea']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Perawatan Jantung',
+                kode: 'I.02075',
+                definisi: 'Mengidentifikasi, merawat dan membatasi komplikasi akibat ketidakseimbangan antara suplai dan konsumsi oksigen miokard.',
+                tindakan: {
+                    observasi: ['Identifikasi tanda/gejala primer penurunan curah jantung', 'Identifikasi tanda/gejala sekunder penurunan curah jantung', 'Monitor tekanan darah', 'Monitor intake dan output cairan', 'Monitor EKG 12 sadapan'],
+                    terapeutik: ['Posisikan pasien semi-Fowler atau Fowler', 'Berikan diet jantung yang sesuai', 'Berikan oksigen untuk mempertahankan saturasi oksigen >94%'],
+                    edukasi: ['Anjurkan beraktivitas fisik sesuai toleransi', 'Anjurkan berhenti merokok', 'Ajarkan pasien dan keluarga mengukur intake dan output cairan harian'],
+                    kolaborasi: ['Kolaborasi pemberian antiaritmia, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Identifikasi dan pemantauan tanda gejala penurunan curah jantung secara primer dan sekunder, serta data hemodinamik (TD, EKG), sangat penting untuk evaluasi kondisi pasien.',
+                    terapeutik: 'Posisi semi-fowler mengurangi preload dan kerja jantung. Diet jantung yang sesuai dan suplementasi oksigen membantu mengurangi beban kerja jantung dan meningkatkan oksigenasi miokard.',
+                    edukasi: 'Edukasi tentang modifikasi gaya hidup (aktivitas, merokok) dan pemantauan mandiri (cairan) memberdayakan pasien dalam mengelola kondisinya.',
+                    kolaborasi: 'Pemberian antiaritmia secara kolaboratif diperlukan untuk menstabilkan irama jantung yang menjadi salah satu penyebab utama penurunan curah jantung.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0009',
+        keywords: ['d.0009', 'perfusi perifer tidak efektif', 'perfusi perifer', 'akral dingin'],
+        diagnosis: {
+            judul: 'Perfusi Perifer Tidak Efektif',
+            kode: 'D.0009',
+            kategori: 'Fisiologis',
+            subkategori: 'Sirkulasi',
+            definisi: 'Penurunan sirkulasi darah pada level kapiler yang dapat mengganggu metabolisme tubuh.',
+            penyebab: {
+                fisiologis: ['Hiperglikemia', 'Penurunan konsentrasi hemoglobin', 'Peningkatan tekanan darah', 'Kekurangan volume cairan', 'Penurunan aliran arteri dan/atau vena'],
+                situasional: ['Kurang aktivitas fisik', 'Gaya hidup monoton', 'Merokok']
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Pengisian kapiler >3 detik', 'Nadi perifer menurun atau tidak teraba', 'Akral teraba dingin', 'Warna kulit pucat', 'Turgor kulit menurun']
+            },
+            gejalaMinor: {
+                subjektif: ['Parastesia', 'Nyeri ekstremitas (klaudikasi intermiten)'],
+                objektif: ['Edema', 'Penyembuhan luka lambat', 'Indeks ankle-brachial < 0,90']
+            },
+            kondisiKlinis: ['Tromboflebitis', 'Diabetes melitus', 'Anemia', 'Gagal jantung kongestif', 'Trombosis vena dalam']
+        },
+        luaran: {
+            utama: {
+                judul: 'Perfusi Perifer',
+                kode: 'L.02011',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Denyut nadi perifer meningkat', 'Penyembuhan luka meningkat', 'Sensasi meningkat', 'Warna kulit pucat menurun', 'Edema perifer menurun', 'Nyeri ekstremitas menurun', 'Kelemahan otot menurun', 'Pengisian kapiler membaik', 'Akral membaik', 'Turgor kulit membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Perawatan Sirkulasi',
+                kode: 'I.02079',
+                definisi: 'Mengidentifikasi dan merawat area lokal dengan keterbatasan sirkulasi perifer.',
+                tindakan: {
+                    observasi: ['Periksa sirkulasi perifer (mis. nadi perifer, edema, pengisian kapiler, warna, suhu)', 'Identifikasi faktor risiko gangguan sirkulasi', 'Monitor panas, kemerahan, nyeri, atau bengkak pada ekstremitas'],
+                    terapeutik: ['Hindari pemasangan infus atau pengambilan darah di area keterbatasan perfusi', 'Lakukan pencegahan infeksi', 'Lakukan perawatan kaki dan kuku'],
+                    edukasi: ['Anjurkan berhenti merokok', 'Anjurkan berolahraga rutin', 'Anjurkan melakukan perawatan kulit yang tepat (mis. melembabkan kulit kering pada kaki)'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Pemeriksaan sirkulasi perifer secara rutin memungkinkan deteksi dini perubahan perfusi dan pencegahan komplikasi seperti ulkus.',
+                    terapeutik: 'Menghindari prosedur invasif pada area dengan perfusi buruk dan melakukan perawatan kaki preventif dapat mencegah cedera dan infeksi.',
+                    edukasi: 'Edukasi tentang modifikasi gaya hidup, seperti berhenti merokok dan olahraga, ditujukan untuk mengatasi faktor risiko dan memperbaiki sirkulasi jangka panjang.',
+                    kolaborasi: 'Kolaborasi dengan dokter untuk manajemen penyakit dasar (seperti diabetes atau hipertensi) sangat penting untuk meningkatkan perfusi perifer.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0012',
+        keywords: ['d.0012', 'risiko perdarahan', 'perdarahan', 'hemoragi'],
+        diagnosis: {
+            judul: 'Risiko Perdarahan',
+            kode: 'D.0012',
+            kategori: 'Fisiologis',
+            subkategori: 'Sirkulasi',
+            definisi: 'Beresiko mengalami kehilangan darah baik internal (terjadi di dalam tubuh) maupun eksternal (terjadi di luar tubuh).',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Aneurisma', 'Gangguan gastrointestinal (mis. ulkus lambung)', 'Gangguan fungsi hati', 'Komplikasi kehamilan', 'Komplikasi pasca partum (mis. atoni uterus)', 'Gangguan koagulasi (mis. trombositopenia)', 'Tindakan pembedahan', 'Trauma'],
+                situasional: ['Kurang terpapar informasi tentang pencegahan perdarahan', 'Proses keganasan']
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Aneurisma', 'Sirosis hepatis', 'Ulkus lambung', 'Trombositopenia', 'Plasenta previa/abrupsio', 'Atonia uterus', 'Kanker']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Perdarahan',
+                kode: 'L.02017',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Tidak ada perdarahan internal maupun eksternal', 'Hemoglobin dan hematokrit dalam batas normal', 'Tekanan darah membaik', 'Frekuensi nadi membaik', 'Suhu tubuh membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Pencegahan Perdarahan',
+                kode: 'I.02067',
+                definisi: 'Mengidentifikasi dan menurunkan risiko atau komplikasi stimulus yang menyebabkan perdarahan atau risiko perdarahan.',
+                tindakan: {
+                    observasi: ['Monitor tanda dan gejala perdarahan', 'Monitor nilai hematokrit/hemoglobin sebelum dan setelah kehilangan darah', 'Monitor tanda-tanda vital'],
+                    terapeutik: ['Pertahankan bed rest selama perdarahan aktif', 'Batasi tindakan invasif, jika perlu'],
+                    edukasi: ['Jelaskan tanda dan gejala perdarahan', 'Anjurkan meningkatkan asupan cairan untuk menghindari konstipasi', 'Anjurkan menghindari aspirin atau antikoagulan', 'Anjurkan segera melapor jika terjadi perdarahan'],
+                    kolaborasi: ['Kolaborasi pemberian obat pengontrol perdarahan, jika perlu', 'Kolaborasi pemberian produk darah, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan tanda vital dan nilai laboratorium (Hb/Ht) secara cermat dapat mendeteksi perdarahan secara dini, bahkan sebelum manifestasi klinis yang jelas muncul.',
+                    terapeutik: 'Tirah baring dan pembatasan tindakan invasif bertujuan untuk mengurangi risiko trauma lebih lanjut yang dapat memicu atau memperburah perdarahan.',
+                    edukasi: 'Memberikan pengetahuan kepada pasien untuk mengenali tanda perdarahan dan menghindari faktor pemicu (mis. konstipasi, obat-obatan tertentu) meningkatkan kewaspadaan dan partisipasi dalam pencegahan.',
+                    kolaborasi: 'Pemberian obat hemostatik atau transfusi produk darah adalah intervensi kolaboratif kritis untuk menghentikan perdarahan aktif dan menstabilkan kondisi pasien.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0019',
+        keywords: ['d.0019', 'defisit nutrisi', 'kurang gizi', 'malnutrisi', 'kurang makan'],
+        diagnosis: {
+            judul: 'Defisit Nutrisi',
+            kode: 'D.0019',
+            kategori: 'Fisiologis',
+            subkategori: 'Nutrisi dan Cairan',
+            definisi: 'Asupan nutrisi tidak cukup untuk memenuhi kebutuhan metabolisme.',
+            penyebab: {
+                fisiologis: [
+                    'Ketidakmampuan menelan makanan',
+                    'Ketidakmampuan mencerna makanan',
+                    'Ketidakmampuan mengabsorbsi nutrien',
+                    'Peningkatan kebutuhan metabolisme'
+                ],
+                situasional: [
+                    'Kurangnya asupan makanan',
+                    'Faktor ekonomi (finansial tidak mencukupi)',
+                    'Faktor psikologis (stres, keengganan untuk makan)'
+                ]
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Berat badan menurun minimal 10% di bawah rentang ideal']
+            },
+            gejalaMinor: {
+                subjektif: ['Cepat kenyang setelah makan', 'Kram/nyeri abdomen', 'Nafsu makan menurun'],
+                objektif: ['Bising usus hiperaktif', 'Otot pengunyah lemah', 'Otot menelan lemah', 'Membran mukosa pucat', 'Sariawan', 'Serum albumin turun', 'Rambut rontok berlebihan', 'Diare']
+            },
+            kondisiKlinis: ['Stroke', 'Parkinson', 'Cerebral palsy', 'Infeksi', 'AIDS', 'Kanker']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Nutrisi',
+                kode: 'L.03030',
+                ekspektasi: 'membaik',
+                kriteriaHasil: [
+                    'Porsi makanan yang dihabiskan meningkat',
+                    'Kekuatan otot pengunyah meningkat',
+                    'Nafsu makan membaik',
+                    'Berat badan membaik',
+                    'Indeks Massa Tubuh (IMT) membaik',
+                    'Membran mukosa membaik'
+                ]
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Nutrisi',
+                kode: 'I.03119',
+                definisi: 'Mengidentifikasi dan mengelola asupan nutrisi yang seimbang.',
+                tindakan: {
+                    observasi: [
+                        'Identifikasi status nutrisi',
+                        'Identifikasi alergi dan intoleransi makanan',
+                        'Identifikasi makanan yang disukai',
+                        'Monitor asupan makanan',
+                        'Monitor berat badan'
+                    ],
+                    terapeutik: [
+                        'Lakukan oral hygiene sebelum makan, jika perlu',
+                        'Sajikan makanan secara menarik dan suhu yang sesuai',
+                        'Berikan makanan tinggi kalori dan tinggi protein',
+                        'Berikan suplemen makanan, jika perlu'
+                    ],
+                    edukasi: [
+                        'Anjurkan posisi duduk, jika mampu',
+                        'Ajarkan diet yang diprogramkan'
+                    ],
+                    kolaborasi: [
+                        'Kolaborasi pemberian medikasi sebelum makan (mis. pereda nyeri, antiemetik), jika perlu',
+                        'Kolaborasi dengan ahli gizi untuk menentukan jumlah kalori dan jenis nutrien yang dibutuhkan'
+                    ]
+                },
+                rasional: {
+                    observasi: 'Pengkajian status nutrisi dan preferensi pasien adalah langkah awal untuk merencanakan intervensi yang personal dan efektif.',
+                    terapeutik: 'Menyajikan makanan dengan cara yang menarik dan menjaga kebersihan mulut dapat meningkatkan nafsu makan dan asupan nutrisi.',
+                    edukasi: 'Memberikan pengetahuan kepada pasien mengenai diet yang tepat akan meningkatkan kemandirian dan kepatuhan terhadap program nutrisi.',
+                    kolaborasi: 'Kolaborasi dengan tim kesehatan lain, terutama ahli gizi, memastikan bahwa rencana nutrisi sesuai dengan kebutuhan medis dan metabolisme pasien.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0020',
+        keywords: ['d.0020', 'diare', 'mencret', 'feses lembek', 'bab cair'],
+        diagnosis: {
+            judul: 'Diare',
+            kode: 'D.0020',
+            kategori: 'Fisiologis',
+            subkategori: 'Nutrisi dan Cairan',
+            definisi: 'Pengeluaran feses yang sering, lunak dan tidak berbentuk.',
+            penyebab: {
+                fisiologis: ['Inflamasi gastrointestinal', 'Iritasi gastrointestinal', 'Proses infeksi', 'Malabsorpsi'],
+                situasional: ['Kecemasan', 'Tingkat stres tinggi', 'Terpapar kontaminan', 'Efek obat-obatan']
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Defekasi lebih dari tiga kali dalam 24 jam', 'Feses lembek atau cair']
+            },
+            gejalaMinor: {
+                subjektif: ['Urgency', 'Nyeri/kram abdomen'],
+                objektif: ['Frekuensi peristaltik meningkat', 'Bising usus hiperaktif']
+            },
+            kondisiKlinis: ['Kanker kolon', 'Gastritis', 'Malaria', 'Kolera', 'Disentri', 'Hepatitis']
+        },
+        luaran: {
+            utama: {
+                judul: 'Eliminasi Fekal',
+                kode: 'L.04033',
+                ekspektasi: 'membaik',
+                kriteriaHasil: [
+                    'Kontrol pengeluaran feses meningkat',
+                    'Konsistensi feses membaik',
+                    'Frekuensi defekasi membaik',
+                    'Peristaltik usus membaik',
+                    'Nyeri abdomen menurun'
+                ]
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Diare',
+                kode: 'I.03101',
+                definisi: 'Mengidentifikasi dan mengelola diare dan dampaknya.',
+                tindakan: {
+                    observasi: ['Identifikasi penyebab diare', 'Identifikasi riwayat pemberian makanan', 'Monitor warna, volume, frekuensi, dan konsistensi tinja', 'Monitor tanda dan gejala hipovolemia'],
+                    terapeutik: ['Berikan asupan cairan oral (mis. larutan garam gula, oralit)', 'Pasang jalur intravena', 'Berikan cairan intravena, jika perlu'],
+                    edukasi: ['Anjurkan makanan porsi kecil dan sering secara bertahap', 'Anjurkan menghindari makanan pembentuk gas, pedas, dan mengandung laktosa'],
+                    kolaborasi: ['Kolaborasi pemberian obat antimotilitas', 'Kolaborasi pemberian obat pengeras feses']
+                },
+                rasional: {
+                    observasi: 'Mengidentifikasi penyebab dan memantau karakteristik diare serta status hidrasi sangat penting untuk menentukan intervensi yang tepat dan mencegah dehidrasi.',
+                    terapeutik: 'Rehidrasi, baik oral maupun intravena, adalah prioritas utama dalam manajemen diare untuk menggantikan cairan dan elektrolit yang hilang.',
+                    edukasi: 'Edukasi diet membantu mengurangi iritasi pada saluran cerna dan mempercepat pemulihan fungsi usus normal.',
+                    kolaborasi: 'Pemberian obat secara kolaboratif dapat membantu mengontrol gejala diare yang berat, namun harus dilakukan dengan hati-hati sesuai penyebabnya.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0022',
+        keywords: ['d.0022', 'hipervolemia', 'kelebihan cairan', 'edema'],
+        diagnosis: {
+            judul: 'Hipervolemia',
+            kode: 'D.0022',
+            kategori: 'Fisiologis',
+            subkategori: 'Nutrisi dan Cairan',
+            definisi: 'Peningkatan volume cairan intravaskuler, interstisial, dan/atau intraselular.',
+            penyebab: {
+                fisiologis: ['Gangguan mekanisme regulasi', 'Kelebihan asupan cairan', 'Kelebihan asupan natrium', 'Gangguan aliran balik vena'],
+                situasional: ['Efek agen farmakologis']
+            },
+            gejalaMayor: {
+                subjektif: ['Ortopnea', 'Dispnea', 'Paroxysmal nocturnal dyspnea (PND)'],
+                objektif: ['Edema anasarca dan/atau edema perifer', 'Berat badan meningkat dalam waktu singkat', 'Jugular Venous Pressure (JVP) dan/atau Central Venous Pressure (CVP) meningkat', 'Refleks hepatojugular positif']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Distensi vena jugularis', 'Terdengar suara napas tambahan', 'Hepatomegali', 'Kadar Hb/Ht turun', 'Oliguria', 'Intake lebih banyak dari output (balans cairan positif)', 'Kongesti paru']
+            },
+            kondisiKlinis: ['Penyakit ginjal (gagal ginjal akut/kronis)', 'Hipoalbuminemia', 'Gagal jantung kongestif', 'Penyakit hati (sirosis, asites)']
+        },
+        luaran: {
+            utama: {
+                judul: 'Keseimbangan Cairan',
+                kode: 'L.03020',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Asupan cairan seimbang dengan output urine', 'Edema menurun', 'Tekanan darah membaik', 'Denyut nadi membaik', 'Tidak ada suara napas tambahan']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Hipervolemia',
+                kode: 'I.03114',
+                definisi: 'Mengidentifikasi dan mengelola kelebihan volume cairan intravaskuler dan ekstraseluler serta mencegah terjadinya komplikasi.',
+                tindakan: {
+                    observasi: ['Periksa tanda dan gejala hipervolemia', 'Identifikasi penyebab hipervolemia', 'Monitor status hemodinamik', 'Monitor intake dan output cairan', 'Monitor tanda hemokonsentrasi'],
+                    terapeutik: ['Timbang berat badan setiap hari pada waktu yang sama', 'Batasi asupan cairan dan garam', 'Tinggikan kepala tempat tidur 30-40 derajat'],
+                    edukasi: ['Anjurkan melapor jika haluaran urine <0,5 ml/kg/jam dalam 6 jam', 'Ajarkan cara mengukur dan mencatat asupan dan haluaran cairan'],
+                    kolaborasi: ['Kolaborasi pemberian diuretik', 'Kolaborasi pemberian continuous renal replacement therapy (CRRT), jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan ketat terhadap tanda-tanda kelebihan cairan, status hemodinamik, dan keseimbangan cairan adalah fundamental untuk menilai tingkat keparahan dan respons terhadap terapi.',
+                    terapeutik: 'Pembatasan asupan cairan dan natrium, serta meninggikan kepala tempat tidur, adalah intervensi non-farmakologis utama untuk mengurangi volume cairan dan beban kerja jantung.',
+                    edukasi: 'Melibatkan pasien dalam memantau berat badan dan keseimbangan cairan meningkatkan kesadaran dan kepatuhan terhadap pembatasan yang diperlukan.',
+                    kolaborasi: 'Diuretik adalah terapi farmakologis utama untuk mengeluarkan kelebihan cairan. CRRT mungkin diperlukan pada kasus gagal ginjal berat.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0023',
+        keywords: ['d.0023', 'hipovolemia', 'kekurangan cairan', 'dehidrasi'],
+        diagnosis: {
+            judul: 'Hipovolemia',
+            kode: 'D.0023',
+            kategori: 'Fisiologis',
+            subkategori: 'Nutrisi dan Cairan',
+            definisi: 'Penurunan volume cairan intravaskuler, interstisial, dan/atau intraselular.',
+            penyebab: {
+                fisiologis: ['Kehilangan cairan aktif', 'Kegagalan mekanisme regulasi', 'Peningkatan permeabilitas kapiler', 'Kekurangan intake cairan', 'Evaporasi'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Frekuensi nadi meningkat', 'Nadi teraba lemah', 'Tekanan darah menurun', 'Tekanan nadi menyempit', 'Turgor kulit menurun', 'Membran mukosa kering', 'Volume urin menurun', 'Hematokrit meningkat']
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa lemah', 'Mengeluh haus'],
+                objektif: ['Pengisian vena menurun', 'Status mental berubah', 'Suhu tubuh meningkat', 'Konsentrasi urin meningkat', 'Berat badan turun tiba-tiba']
+            },
+            kondisiKlinis: ['Penyakit Addison', 'Trauma/perdarahan', 'Luka bakar', 'AIDS', 'Muntah', 'Diare']
+        },
+        luaran: {
+            utama: {
+                judul: 'Status Cairan',
+                kode: 'L.03028',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kekuatan nadi meningkat', 'Turgor kulit meningkat', 'Output urine meningkat', 'Membran mukosa lembab', 'Frekuensi nadi membaik', 'Tekanan darah membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Hipovolemia',
+                kode: 'I.03116',
+                definisi: 'Mengidentifikasi dan mengelola penurunan volume cairan intravaskuler.',
+                tindakan: {
+                    observasi: ['Periksa tanda dan gejala hipovolemia', 'Monitor intake dan output cairan'],
+                    terapeutik: ['Hitung kebutuhan cairan', 'Berikan posisi modified Trendelenburg', 'Berikan asupan cairan oral'],
+                    edukasi: ['Anjurkan memperbanyak asupan cairan oral', 'Anjurkan menghindari perubahan posisi mendadak'],
+                    kolaborasi: ['Kolaborasi pemberian cairan IV isotonis (mis. NaCl, RL)', 'Kolaborasi pemberian produk darah, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan tanda-tanda hipovolemia (nadi, tekanan darah, turgor) dan keseimbangan cairan sangat penting untuk deteksi dini dan penilaian tingkat dehidrasi.',
+                    terapeutik: 'Pemberian cairan, baik oral maupun intravena, adalah intervensi utama untuk mengembalikan volume sirkulasi. Posisi modified Trendelenburg dapat meningkatkan aliran darah ke otak sementara.',
+                    edukasi: 'Mendorong asupan cairan oral dan mengajarkan cara menghindari hipotensi ortostatik memberdayakan pasien untuk berpartisipasi dalam pemulihannya.',
+                    kolaborasi: 'Pada kasus hipovolemia berat atau syok, kolaborasi untuk resusitasi cairan intravena atau transfusi darah adalah tindakan penyelamatan jiwa.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0027',
+        keywords: ['d.0027', 'ketidakstabilan kadar glukosa darah', 'glukosa', 'gula darah', 'hiperglikemia', 'hipoglikemia'],
+        diagnosis: {
+            judul: 'Ketidakstabilan Kadar Glukosa Darah',
+            kode: 'D.0027',
+            kategori: 'Fisiologis',
+            subkategori: 'Nutrisi dan Cairan',
+            definisi: 'Variasi kadar glukosa naik atau turun dari rentang normal.',
+            penyebab: {
+                fisiologis: ['Disfungsi pankreas', 'Resistensi insulin', 'Gangguan toleransi glukosa darah', 'Penggunaan insulin atau obat glikemik oral', 'Disfungsi hati', 'Disfungsi ginjal kronis'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Lelah/lesu', 'Mengantuk', 'Pusing'],
+                objektif: ['Kadar glukosa dalam darah/urine tinggi atau rendah', 'Gangguan koordinasi']
+            },
+            gejalaMinor: {
+                subjektif: ['Palpitasi', 'Mengeluh lapar', 'Mulut kering', 'Haus meningkat'],
+                objektif: ['Gemetar', 'Kesadaran menurun', 'Berkeringat', 'Jumlah urine meningkat']
+            },
+            kondisiKlinis: ['Diabetes melitus', 'Ketoasidosis diabetik', 'Hipoglikemia', 'Hiperglikemia', 'Diabetes gestasional']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kestabilan Kadar Glukosa Darah',
+                kode: 'L.03022',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kadar glukosa dalam darah membaik', 'Lelah/lesu menurun', 'Mengantuk menurun', 'Pusing menurun', 'Gemetar menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Hiperglikemia',
+                kode: 'I.03115',
+                definisi: 'Mengidentifikasi dan mengelola kadar glukosa darah di atas normal.',
+                tindakan: {
+                    observasi: ['Identifikasi kemungkinan penyebab hiperglikemia', 'Monitor kadar glukosa darah', 'Monitor tanda dan gejala hiperglikemia (poliuria, polidipsia, polifagia)'],
+                    terapeutik: ['Berikan asupan cairan oral', 'Konsultasi dengan medis jika tanda dan gejala hiperglikemia tetap ada atau memburuk'],
+                    edukasi: ['Anjurkan menghindari olahraga saat kadar glukosa darah lebih dari 250 mg/dL', 'Anjurkan monitor kadar glukosa darah secara mandiri', 'Anjurkan kepatuhan terhadap diet dan olahraga'],
+                    kolaborasi: ['Kolaborasi pemberian insulin, jika perlu', 'Kolaborasi pemberian cairan IV, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemantauan kadar glukosa darah dan gejala klinis hiperglikemia secara teratur adalah dasar untuk penilaian dan penyesuaian manajemen.',
+                    terapeutik: 'Pemberian cairan oral membantu mencegah dehidrasi akibat diuresis osmotik yang disebabkan oleh glukosa darah tinggi.',
+                    edukasi: 'Edukasi tentang pemantauan mandiri, diet, dan olahraga memberdayakan pasien untuk mengelola diabetes secara proaktif dan mencegah komplikasi.',
+                    kolaborasi: 'Pemberian insulin dan cairan intravena adalah intervensi kolaboratif yang penting untuk menurunkan kadar glukosa darah yang sangat tinggi dan mengoreksi dehidrasi.'
+                }
+            },
+            {
+                judul: 'Manajemen Hipoglikemia',
+                kode: 'I.03117',
+                definisi: 'Mengidentifikasi dan mengelola kadar glukosa darah di bawah normal.',
+                tindakan: {
+                    observasi: ['Identifikasi tanda dan gejala hipoglikemia', 'Identifikasi kemungkinan penyebab hipoglikemia'],
+                    terapeutik: ['Berikan karbohidrat sederhana, jika pasien dapat menelan', 'Pertahankan akses IV'],
+                    edukasi: ['Anjurkan membawa karbohidrat sederhana setiap saat', 'Anjurkan monitor kadar glukosa darah secara mandiri'],
+                    kolaborasi: ['Kolaborasi pemberian glukosa IV, jika perlu', 'Kolaborasi pemberian glukagon, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mengenali tanda dan gejala hipoglikemia (misalnya, gemetar, berkeringat, kebingungan) memungkinkan intervensi cepat untuk mencegah kerusakan neurologis.',
+                    terapeutik: 'Pemberian karbohidrat sederhana (seperti jus atau gula) secara oral adalah cara tercepat untuk menaikkan kadar glukosa darah pada pasien yang sadar.',
+                    edukasi: 'Mengajarkan pasien untuk selalu membawa sumber gula dan memantau glukosa darahnya sendiri sangat penting untuk pencegahan dan manajemen hipoglikemia di luar rumah sakit.',
+                    kolaborasi: 'Pada pasien yang tidak sadar atau tidak dapat menelan, pemberian glukosa intravena atau glukagon secara kolaboratif adalah tindakan penyelamatan jiwa.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0049',
+        keywords: ['d.0049', 'konstipasi', 'sembelit', 'sulit bab'],
+        diagnosis: {
+            judul: 'Konstipasi',
+            kode: 'D.0049',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Penurunan defekasi normal yang disertai pengeluaran feses sulit dan tidak tuntas serta feses kering dan banyak.',
+            penyebab: {
+                fisiologis: ['Penurunan motilitas gastrointestinal', 'Ketidakcukupan asupan serat', 'Ketidakcukupan asupan cairan', 'Kelemahan otot abdomen'],
+                psikologis: ['Konfusi', 'Depresi', 'Gangguan emosional'],
+                situasional: ['Perubahan kebiasaan makan', 'Aktivitas fisik harian kurang', 'Penyalahgunaan laksatif', 'Kebiasaan menahan dorongan defekasi']
+            },
+            gejalaMayor: {
+                subjektif: ['Defekasi kurang dari 2 kali seminggu', 'Pengeluaran feses lama dan sulit'],
+                objektif: ['Feses keras', 'Peristaltik usus menurun']
+            },
+            gejalaMinor: {
+                subjektif: ['Mengejan saat defekasi'],
+                objektif: ['Distensi abdomen', 'Kelemahan umum', 'Teraba massa pada rektal']
+            },
+            kondisiKlinis: ['Lesi/cedera pada medula spinalis', 'Stroke', 'Penyakit Parkinson', 'Hemoroid', 'Obesitas', 'Kehamilan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Eliminasi Fekal',
+                kode: 'L.04033',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Konsistensi feses membaik', 'Frekuensi defekasi membaik', 'Peristaltik usus membaik', 'Mengejan saat defekasi menurun', 'Keluhan defekasi lama dan sulit menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Konstipasi',
+                kode: 'I.04153',
+                definisi: 'Mengidentifikasi dan mengelola konstipasi.',
+                tindakan: {
+                    observasi: ['Periksa tanda dan gejala konstipasi', 'Monitor bising usus'],
+                    terapeutik: ['Anjurkan diet tinggi serat', 'Lakukan evakuasi feses secara manual, jika perlu'],
+                    edukasi: ['Jelaskan etiologi dan faktor risiko konstipasi', 'Anjurkan peningkatan asupan cairan', 'Anjurkan peningkatan aktivitas fisik'],
+                    kolaborasi: ['Kolaborasi penggunaan obat pencahar, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Pemeriksaan abdomen dan pemantauan bising usus membantu dalam menilai tingkat keparahan konstipasi dan menyingkirkan kemungkinan obstruksi.',
+                    terapeutik: 'Diet tinggi serat dan asupan cairan yang cukup adalah landasan manajemen konstipasi, karena membantu melunakkan feses dan meningkatkan massa feses.',
+                    edukasi: 'Edukasi tentang diet, cairan, dan aktivitas fisik memberdayakan pasien untuk membuat perubahan gaya hidup jangka panjang untuk mencegah kekambuhan konstipasi.',
+                    kolaborasi: 'Obat pencahar mungkin diperlukan untuk jangka pendek guna mengatasi konstipasi yang parah, namun penggunaannya harus di bawah pengawasan medis untuk menghindari ketergantungan.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0054',
+        keywords: ['d.0054', 'gangguan mobilitas fisik', 'mobilitas', 'sulit bergerak', 'keterbatasan gerak'],
+        diagnosis: {
+            judul: 'Gangguan Mobilitas Fisik',
+            kode: 'D.0054',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Keterbatasan dalam gerak fisik dari satu atau lebih ekstremitas secara mandiri.',
+            penyebab: {
+                fisiologis: [
+                    'Kerusakan integritas struktur tulang', 'Perubahan metabolisme', 'Ketidakbugaran fisik', 'Penurunan kendali, massa, atau kekuatan otot', 'Kekakuan sendi', 'Kontraktur', 'Malnutrisi', 'Gangguan muskuloskeletal', 'Gangguan neuromuskular'
+                ],
+                situasional: [
+                    'Nyeri', 'Kecemasan', 'Gangguan kognitif', 'Keengganan melakukan pergerakan'
+                ]
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh sulit menggerakkan ekstremitas'],
+                objektif: ['Kekuatan otot menurun', 'Rentang gerak (ROM) menurun']
+            },
+            gejalaMinor: {
+                subjektif: ['Nyeri saat bergerak', 'Enggan melakukan pergerakan', 'Merasa cemas saat bergerak'],
+                objektif: ['Sendi kaku', 'Gerakan tidak terkoordinasi', 'Gerakan terbatas', 'Fisik lemah']
+            },
+            kondisiKlinis: ['Stroke', 'Cedera medula spinalis', 'Trauma', 'Fraktur', 'Osteoartritis', 'Keganasan']
+        },
+        luaran: {
+            utama: {
+                judul: 'Mobilitas Fisik',
+                kode: 'L.05042',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Pergerakan ekstremitas meningkat', 'Kekuatan otot meningkat', 'Rentang gerak (ROM) meningkat', 'Nyeri menurun', 'Kecemasan menurun', 'Kaku sendi menurun', 'Gerakan tidak terkoordinasi menurun', 'Kelemahan fisik menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Mobilisasi',
+                kode: 'I.05173',
+                definisi: 'Memfasilitasi pasien untuk meningkatkan aktivitas pergerakan fisik.',
+                tindakan: {
+                    observasi: ['Identifikasi adanya nyeri atau keluhan fisik lainnya', 'Identifikasi toleransi fisik melakukan pergerakan', 'Monitor kondisi umum selama melakukan mobilisasi'],
+                    terapeutik: ['Fasilitasi aktivitas mobilisasi dengan alat bantu (mis. pagar tempat tidur)', 'Fasilitasi melakukan pergerakan, jika perlu', 'Libatkan keluarga untuk membantu pasien dalam meningkatkan pergerakan'],
+                    edukasi: ['Jelaskan tujuan dan prosedur mobilisasi', 'Anjurkan melakukan mobilisasi dini', 'Ajarkan mobilisasi sederhana yang harus dilakukan (mis. duduk di tempat tidur, pindah dari tempat tidur ke kursi)'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Mengidentifikasi keterbatasan dan toleransi pasien terhadap aktivitas fisik penting untuk merancang program mobilisasi yang aman dan efektif.',
+                    terapeutik: 'Menggunakan alat bantu dan melibatkan keluarga dapat memberikan dukungan fisik dan psikologis, meningkatkan keamanan, serta memotivasi pasien.',
+                    edukasi: 'Edukasi tentang pentingnya dan cara mobilisasi dini memberdayakan pasien untuk berpartisipasi aktif dalam pemulihannya dan mencegah komplikasi imobilitas.',
+                    kolaborasi: 'Bekerja sama dengan fisioterapis (jika ada) dapat mengoptimalkan program latihan dan memastikan teknik yang digunakan sudah tepat.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0055',
+        keywords: ['d.0055', 'gangguan pola tidur', 'sulit tidur', 'insomnia'],
+        diagnosis: {
+            judul: 'Gangguan Pola Tidur',
+            kode: 'D.0055',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Gangguan kualitas dan kuantitas waktu tidur akibat faktor eksternal.',
+            penyebab: {
+                fisiologis: [],
+                situasional: ['Hambatan lingkungan (mis. kebisingan, pencahayaan, suhu)', 'Kurangnya kontrol tidur', 'Kurangnya privasi', 'Restraint fisik', 'Ketiadaan teman tidur']
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh sulit tidur', 'Mengeluh sering terjaga', 'Mengeluh tidak puas tidur', 'Mengeluh pola tidur berubah', 'Mengeluh istirahat tidak cukup'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Mengeluh kemampuan beraktivitas menurun'],
+                objektif: []
+            },
+            kondisiKlinis: ['Nyeri/kolik', 'Hipertiroidisme', 'Kecemasan', 'Penyakit paru obstruktif kronik', 'Kehamilan', 'Kondisi pasca operasi']
+        },
+        luaran: {
+            utama: {
+                judul: 'Pola Tidur',
+                kode: 'L.05045',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Keluhan sulit tidur menurun', 'Keluhan sering terjaga menurun', 'Keluhan tidak puas tidur menurun', 'Kemampuan beraktivitas meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Dukungan Tidur',
+                kode: 'I.05174',
+                definisi: 'Memfasilitasi siklus tidur dan terjaga yang teratur.',
+                tindakan: {
+                    observasi: ['Identifikasi pola aktivitas dan tidur', 'Identifikasi faktor pengganggu tidur (fisik dan/atau psikologis)'],
+                    terapeutik: ['Modifikasi lingkungan (mis. pencahayaan, kebisingan, suhu)', 'Batasi waktu tidur siang, jika perlu', 'Tetapkan jadwal tidur rutin', 'Lakukan prosedur untuk meningkatkan kenyamanan (mis. pijat, mengatur posisi)'],
+                    edukasi: ['Jelaskan pentingnya tidur cukup selama sakit', 'Anjurkan menepati kebiasaan waktu tidur', 'Ajarkan relaksasi otot autogenik atau cara nonfarmakologi lainnya'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Mengidentifikasi pola tidur dan faktor pengganggu adalah langkah esensial untuk memahami akar masalah dan merencanakan intervensi yang tepat sasaran.',
+                    terapeutik: 'Menciptakan lingkungan yang kondusif untuk tidur (gelap, tenang, sejuk) dan menetapkan rutinitas tidur membantu mengatur ulang jam biologis tubuh.',
+                    edukasi: 'Edukasi tentang sleep hygiene dan teknik relaksasi memberikan pasien alat untuk mengelola tidur mereka secara mandiri dan mengurangi ketergantungan pada bantuan eksternal.',
+                    kolaborasi: 'Jika gangguan tidur berat atau disebabkan oleh kondisi medis lain (seperti sleep apnea atau nyeri kronis), kolaborasi dengan dokter diperlukan untuk penanganan lebih lanjut.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0056',
+        keywords: ['d.0056', 'intoleransi aktivitas', 'lelah', 'kelemahan'],
+        diagnosis: {
+            judul: 'Intoleransi Aktivitas',
+            kode: 'D.0056',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Ketidakcukupan energi untuk melakukan aktivitas sehari-hari.',
+            penyebab: {
+                fisiologis: ['Ketidakseimbangan antara suplai dan kebutuhan oksigen', 'Tirah baring', 'Kelemahan', 'Imobilitas'],
+                situasional: ['Gaya hidup monoton']
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh lelah'],
+                objektif: ['Frekuensi jantung meningkat >20% dari kondisi istirahat']
+            },
+            gejalaMinor: {
+                subjektif: ['Dispnea saat/setelah aktivitas', 'Merasa tidak nyaman setelah beraktivitas'],
+                objektif: ['Tekanan darah berubah >20% dari kondisi istirahat', 'Gambaran EKG menunjukkan aritmia saat/setelah aktivitas', 'Sianosis']
+            },
+            kondisiKlinis: ['Anemia', 'Gagal jantung kongestif', 'Penyakit jantung koroner', 'Penyakit paru obstruktif kronis (PPOK)']
+        },
+        luaran: {
+            utama: {
+                judul: 'Toleransi Aktivitas',
+                kode: 'L.05047',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Frekuensi nadi membaik', 'Saturasi oksigen membaik', 'Kemudahan dalam melakukan aktivitas sehari-hari meningkat', 'Keluhan lelah menurun', 'Dispnea saat beraktivitas menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Energi',
+                kode: 'I.05178',
+                definisi: 'Mengidentifikasi dan mengelola penggunaan energi untuk mengatasi atau mencegah kelelahan dan mengoptimalkan proses pemulihan.',
+                tindakan: {
+                    observasi: ['Monitor kelelahan fisik dan emosional', 'Monitor pola dan jam tidur'],
+                    terapeutik: ['Sediakan lingkungan nyaman dan rendah stimulus', 'Lakukan latihan rentang gerak pasif dan/atau aktif', 'Berikan aktivitas distraksi yang menenangkan'],
+                    edukasi: ['Anjurkan tirah baring', 'Anjurkan melakukan aktivitas secara bertahap', 'Ajarkan strategi koping untuk mengurangi kelelahan'],
+                    kolaborasi: ['Kolaborasi dengan ahli gizi tentang cara meningkatkan asupan makanan']
+                },
+                rasional: {
+                    observasi: 'Memantau tingkat kelelahan dan pola istirahat membantu perawat dalam menilai keseimbangan antara energi yang tersedia dan yang digunakan.',
+                    terapeutik: 'Mengelola energi melibatkan keseimbangan antara istirahat yang cukup, aktivitas bertahap, dan distraksi untuk mencegah kelelahan berlebih.',
+                    edukasi: 'Mengajarkan pasien tentang konservasi energi dan strategi koping membantu mereka untuk berpartisipasi dalam aktivitas sehari-hari tanpa mengalami kelelahan yang signifikan.',
+                    kolaborasi: 'Kolaborasi dengan ahli gizi penting untuk memastikan asupan kalori dan nutrien yang adekuat, yang merupakan dasar dari produksi energi tubuh.'
+                }
+            }
+        ]
+    }
+];
+
+
+// --- APPLICATION LOGIC ---
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const resultsContainer = document.getElementById('resultsContainer');
+const notFoundMessage = document.getElementById('notFound');
+const initialStateMessage = document.getElementById('initialState');
+
+searchButton.addEventListener('click', performSearch);
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
+});
+
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (!query) return;
+    
+    // Split the query into words and find items that match all words
+    const queryWords = query.split(' ').filter(w => w);
+    const results = askepData.filter(item => {
+        const itemKeywords = item.keywords.join(' ').toLowerCase();
+        const itemCode = item.id.toLowerCase();
+        // Check if query is the code itself (e.g., "d.0001"), or if the query text is part of the keywords
+        return itemCode === query || queryWords.every(word => itemKeywords.includes(word));
+    });
+
+    displayResults(results);
+}
+
+function displayResults(results) {
+    resultsContainer.innerHTML = '';
+    initialStateMessage.classList.add('hidden');
+
+    if (results.length === 0) {
+        notFoundMessage.classList.remove('hidden');
+    } else {
+        notFoundMessage.classList.add('hidden');
+        results.forEach(result => {
+            const resultElement = document.createElement('div');
+            resultElement.className = 'bg-white p-6 rounded-xl shadow-md mb-6';
+            resultElement.innerHTML = generateAskepHTML(result);
+            resultsContainer.appendChild(resultElement);
+        });
+    }
+}
+
+function generateAskepHTML(data) {
+    // Helper function to generate lists
+    const createList = (items, type = 'ul') => {
+        if (!items || items.length === 0) return '<p>-</p>';
+        const listItems = items.map(item => `<li>${item}</li>`).join('');
+        return `<${type}>${listItems}</${type}>`;
+    };
+
+    // Helper function to generate sub-sections
+    const createSection = (title, items, type = 'ul') => {
+        if (!items || (Array.isArray(items) && items.length === 0) || (typeof items === 'object' && !Array.isArray(items) && Object.keys(items).every(k => !items[k] || items[k].length === 0)) ) {
+            return '';
+        }
+
+        let content = '';
+        if (Array.isArray(items)) {
+            content = createList(items, type);
+        } else if (typeof items === 'object' && items !== null) {
+            for (const key in items) {
+                if (items[key] && items[key].length > 0) {
+                     content += `<h4>${key.charAt(0).toUpperCase() + key.slice(1)}</h4>${createList(items[key], type)}`;
+                }
+            }
+        }
+        
+        if (!content.trim()) return '';
+        return `<h4>${title}</h4>${content}`;
+    };
+    
+    // Generate SIKI and Rasional content
+    let sikiContent = '';
+    let rasionalContent = '';
+
+    (data.intervensi || []).forEach(intervensi => {
+        sikiContent += `
+            <div class="mb-4">
+                <h3>${intervensi.judul} (${intervensi.kode})</h3>
+                <p><strong>Definisi:</strong> ${intervensi.definisi}</p>
+                ${createSection('Observasi', intervensi.tindakan.observasi)}
+                ${createSection('Terapeutik', intervensi.tindakan.terapeutik)}
+                ${createSection('Edukasi', intervensi.tindakan.edukasi)}
+                ${createSection('Kolaborasi', intervensi.tindakan.kolaborasi)}
+            </div>
+        `;
+        
+        rasionalContent += `
+            <div class="mb-4">
+                <h3>${intervensi.judul}</h3>
+                ${intervensi.rasional.observasi ? `<h4>Observasi</h4><p>${intervensi.rasional.observasi}</p>` : ''}
+                ${intervensi.rasional.terapeutik ? `<h4>Terapeutik</h4><p>${intervensi.rasional.terapeutik}</p>` : ''}
+                ${intervensi.rasional.edukasi ? `<h4>Edukasi</h4><p>${intervensi.rasional.edukasi}</p>` : ''}
+                ${intervensi.rasional.kolaborasi ? `<h4>Kolaborasi</h4><p>${intervensi.rasional.kolaborasi}</p>` : ''}
+            </div>
+        `;
+    });
+
+
+    return `
+        <h2 class="text-2xl font-bold text-center mb-6">ASUHAN KEPERAWATAN: ${data.diagnosis.judul.toUpperCase()}</h2>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 askep-table">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border border-gray-300 p-3 text-left w-[5%]">No.</th>
+                        <th class="border border-gray-300 p-3 text-left w-[30%]">SDKI</th>
+                        <th class="border border-gray-300 p-3 text-left w-[25%]">SLKI</th>
+                        <th class="border border-gray-300 p-3 text-left w-[20%]">SIKI</th>
+                        <th class="border border-gray-300 p-3 text-left w-[20%]">Rasional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 text-center">1.</td>
+                        <td class="border border-gray-300">
+                            <h3>${data.diagnosis.judul} (${data.diagnosis.kode})</h3>
+                            <p><strong>Kategori:</strong> ${data.diagnosis.kategori}</p>
+                            <p><strong>Subkategori:</strong> ${data.diagnosis.subkategori}</p>
+                            <h4>Definisi</h4>
+                            <p>${data.diagnosis.definisi}</p>
+                            ${createSection('Penyebab / Faktor Risiko', data.diagnosis.penyebab)}
+                            ${createSection('Gejala dan Tanda Mayor', data.diagnosis.gejalaMayor)}
+                            ${createSection('Gejala dan Tanda Minor', data.diagnosis.gejalaMinor)}
+                            ${createSection('Kondisi Klinis Terkait', data.diagnosis.kondisiKlinis)}
+                        </td>
+                        <td class="border border-gray-300">
+                            <h3>${data.luaran.utama.judul} (${data.luaran.utama.kode})</h3>
+                            <p>Setelah dilakukan tindakan keperawatan selama ...x 24 jam masalah <strong>${data.diagnosis.judul}</strong> dapat teratasi dengan ekspektasi <strong>${data.luaran.utama.ekspektasi}</strong>, dan kriteria hasil:</p>
+                            ${createList(data.luaran.utama.kriteriaHasil, 'ol')}
+                        </td>
+                        <td class="border border-gray-300">
+                            ${sikiContent}
+                        </td>
+                        <td class="border border-gray-300">
+                            ${rasionalContent}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+</script>
+
+</body>
+</html>
+
