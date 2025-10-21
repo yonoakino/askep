@@ -7362,61 +7362,47 @@ const askepData = [
             }
         ]
     },
-        {
+    {
         id: 'D.0141',
-        keywords: ['d.0141', 'risiko jatuh'],
+        keywords: ['d.0141', 'risiko hipotermia perioperatif'],
         diagnosis: {
-            judul: 'Risiko Jatuh',
+            judul: 'Risiko Hipotermia Perioperatif',
             kode: 'D.0141',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko mengalami kerusakan fisik dan gangguan kesehatan akibat terjatuh.',
+            definisi: 'Beresiko mengalami penurunan suhu tubuh di bawah 36°C secara tidak sengaja selama periode perioperatif.',
             penyebab: { // Faktor Risiko
-                fisiologis: [
-                    'Usia >65 tahun (pada dewasa) atau <2 tahun (pada anak)',
-                    'Penurunan tingkat kesadaran',
-                    'Perubahan fungsi kognitif',
-                    'Penurunan kekuatan otot',
-                    'Gangguan keseimbangan',
-                    'Gangguan penglihatan',
-                    'Gangguan pendengaran',
-                    'Hipotensi ortostatik',
-                    'Neuropati',
-                    'Riwayat jatuh',
-                    'Kondisi pasca operasi',
-                    'Efek agen farmakologis',
-                    'Lingkungan tidak aman (mis. lantai licin, lingkungan asing)',
-                    'Inkontinensia'
-                ],
+                fisiologis: ['Suhu lingkungan rendah', 'Kerusakan hipotalamus', 'Efek agen anestesi', 'Prosedur pembedahan', 'Malnutrisi', 'Kombinasi anestesi regional dan umum', 'Berat badan rendah', 'Skor ASA >1', 'Lanjut usia (>55 tahun)', 'Neonatus'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
             gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Osteoporosis', 'Kejang', 'Penyakit Parkinson', 'Vertigo', 'Gangguan keseimbangan', 'Gangguan penglihatan', 'Gangguan pendengaran', 'Kelemahan', 'Hipotensi', 'Anemia', 'Kondisi pasca operasi']
+            kondisiKlinis: ['Trauma', 'Luka bakar', 'Kerusakan hipotalamus']
         },
         luaran: {
             utama: {
-                judul: 'Tingkat Jatuh',
-                kode: 'L.14138',
-                ekspektasi: 'menurun',
-                kriteriaHasil: ['Jatuh dari tempat tidur menurun', 'Jatuh saat berdiri menurun', 'Jatuh saat duduk menurun', 'Jatuh saat berjalan menurun', 'Jatuh saat di kamar mandi menurun', 'Jatuh saat naik tangga menurun']
+                judul: 'Termoregulasi Perioperatif',
+                kode: 'L.14135',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Menggigil menurun', 'Suhu tubuh membaik', 'Suhu kulit membaik']
             }
         },
         intervensi: [
             {
-                judul: 'Pencegahan Jatuh',
-                kode: 'I.14540', // Kode di PDF sepertinya salah, ini lebih sesuai
-                definisi: 'Mengidentifikasi dan menurunkan risiko jatuh.',
+                judul: 'Manajemen Hipotermia Perioperatif',
+                kode: 'I.14506',
+                definisi: 'Mengidentifikasi dan mengelola suhu tubuh perioperatif di bawah rentang normal.',
                 tindakan: {
-                    observasi: ['Identifikasi faktor risiko jatuh (mis. usia >65 tahun, penurunan tingkat kesadaran, defisit kognitif, hipotensi ortostatik, gangguan keseimbangan, gangguan penglihatan, neuropati)', 'Identifikasi faktor lingkungan yang meningkatkan risiko jatuh (mis. lantai licin, penerangan kurang)', 'Hitung risiko jatuh dengan menggunakan skala (mis. Fall Morse Scale, Humpty Dumpty Scale), jika perlu', 'Monitor kemampuan berpindah dari tempat tidur ke kursi roda dan sebaliknya'],
-                    terapeutik: ['Pasang handrail tempat tidur', 'Atur tempat tidur mekanis pada posisi terendah', 'Tempatkan pasien berisiko tinggi jatuh dekat dengan pantauan perawat dari nurse station', 'Gunakan alat bantu berjalan (mis. kursi roda, walker)', 'Dekatkan bel pemanggil dalam jangkauan pasien'],
-                    edukasi: ['Anjurkan memanggil perawat jika membutuhkan bantuan untuk berpindah', 'Anjurkan menggunakan alas kaki yang tidak licin', 'Anjurkan berkonsentrasi untuk menjaga keseimbangan tubuh', 'Anjurkan melebarkan jarak kedua kaki untuk meningkatkan keseimbangan saat berdiri', 'Ajarkan cara menggunakan bel pemanggil untuk memanggil perawat'],
+                    observasi: ['Monitor suhu tubuh secara berkala', 'Identifikasi faktor risiko hipotermia perioperatif (mis. usia, status nutrisi, prosedur pembedahan)', 'Monitor tanda dan gejala hipotermia (mis. menggigil, pucat, bradikardia, takipnea, hipertensi)', 'Monitor tanda dan gejala penyulit akibat hipotermia (mis. aritmia, koagulopati, iskemia miokard, infeksi)'],
+                    terapeutik: ['Hangatkan pasien sebelum pembedahan dimulai', 'Atur suhu ruangan minimal 24°C', 'Hangatkan cairan intravena', 'Gunakan selimut penghangat selama pembedahan', 'Batasi bagian tubuh yang terbuka selama pembedahan', 'Gunakan penutup kepala selama pembedahan'],
+                    edukasi: ['Jelaskan upaya-upaya mencegah hipotermia'],
                     kolaborasi: []
                 },
                 rasional: {
-                    observasi: 'Untuk mengidentifikasi faktor risiko jatuh. Untuk mengetahui faktor lingkungan yang berisiko menyebabkan jatuh. Agar dapat meminimalisir risiko jatuh. Agar mengetahui kemampuan klien untuk berpindah.',
-                    terapeutik: 'Untuk keamanan klien agar tidak jatuh. Untuk meminimalisir risiko jatuh. Agar perawat dapat mengawasi klien yang berisiko tinggi jatuh. Agar klien dapat beraktivitas seperti biasa. Agar klien dapat memanggil perawat jika terjadi sesuatu.',
-                    edukasi: 'Agar klien tidak melakukan aktivitas yang berisiko jatuh. Agar klien tidak jatuh saat berjalan. Agar klien dapat menjaga keseimbangan saat beraktivitas. Agar klien dapat menjaga keseimbangan saat berdiri. Agar klien dapat memanggil perawat saat membutuhkan bantuan.'
+                    observasi: 'Untuk mengetahui perubahan suhu tubuh pasien. Untuk mengidentifikasi faktor risiko hipotermia. Untuk mengetahui tanda dan gejala hipotermia. Untuk mengetahui tanda dan gejala penyulit hipotermia.',
+                    terapeutik: 'Untuk menghangatkan pasien. Untuk mengatur suhu ruangan. Untuk menghangatkan cairan intravena. Untuk menggunakan selimut penghangat. Untuk membatasi bagian tubuh yang terbuka. Untuk menggunakan penutup kepala.',
+                    edukasi: 'Agar pasien dan keluarga mengetahui cara pencegahan hipotermia.',
+                    kolaborasi: ''
                 }
             }
         ]
@@ -7431,7 +7417,7 @@ const askepData = [
             subkategori: 'Keamanan dan Proteksi',
             definisi: 'Berisiko mengalami peningkatan terserang organisme patogenik.',
             penyebab: { // Faktor Risiko
-                fisiologis: ['Penyakit kronis (mis. diabetes melitus)', 'Efek prosedur invasif', 'Malnutrisi', 'Peningkatan paparan organisme patogen lingkungan', 'Ketidakadekuatan pertahanan tubuh primer (mis. gangguan peristaltik, kerusakan integritas kulit, perubahan sekresi pH, penurunan kerja siliaris, ketuban pecah lama, ketuban pecah dini, merokok, status cairan tubuh)', 'Ketidakadekuatan pertahanan tubuh sekunder (mis. penurunan hemoglobin, imununosupresi, leukopenia, supresi respon inflamasi, vaksinasi tidak adekuat)'],
+                fisiologis: ['Penyakit kronis (mis. Diabetes Melitus)', 'Efek prosedur invasif', 'Malnutrisi', 'Peningkatan paparan organisme patogen lingkungan', 'Ketidakadekuatan pertahanan tubuh primer (mis. gangguan peristaltik, kerusakan integritas kulit, perubahan sekresi pH, penurunan kerja siliaris, ketuban pecah lama, ketuban pecah dini, merokok, status cairan tubuh)', 'Ketidakadekuatan pertahanan tubuh sekunder (mis. penurunan hemoglobin, imununosupresi, leukopenia, supresi respon inflamasi, vaksinasi tidak adekuat)'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
@@ -7467,89 +7453,88 @@ const askepData = [
     },
     {
         id: 'D.0143',
-        keywords: ['d.0143', 'risiko hipotermia'],
+        keywords: ['d.0143', 'risiko jatuh'],
         diagnosis: {
-            judul: 'Risiko Hipotermia',
+            judul: 'Risiko Jatuh',
             kode: 'D.0143',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko mengalami penurunan suhu tubuh di bawah 36,5°C secara tiba-tiba.',
+            definisi: 'Berisiko mengalami kerusakan fisik dan gangguan kesehatan akibat terjatuh.',
             penyebab: { // Faktor Risiko
-                fisiologis: ['Kerusakan hipotalamus', 'Konsumsi alkohol', 'Berat badan ekstrem', 'Efek agen farmakologis', 'Kurang terpapar informasi tentang pencegahan hipotermia', 'Malnutrisi', 'Penurunan laju metabolisme', 'Tidak beraktivitas', 'Terpapar suhu lingkungan rendah', 'Pakaian tidak memadai'],
+                fisiologis: ['Usia >65 tahun (pada dewasa) atau <2 tahun (pada anak)', 'Penurunan tingkat kesadaran', 'Perubahan fungsi kognitif', 'Riwayat jatuh', 'Anggota gerak bawah prostetik', 'Hipotensi ortostatik', 'Perubahan kadar glukosa darah', 'Gangguan keseimbangan', 'Gangguan penglihatan', 'Gangguan pendengaran', 'Kelemahan', 'Neuropati', 'Kekuatan otot menurun', 'Gaya berjalan tidak stabil', 'Lingkungan tidak aman (mis. lantai licin, lingkungan asing)', 'Kondisi pasca operasi', 'Efek agen farmakologis', 'Aktivitas fisik harian berlebihan', 'Menggunakan alat bantu berjalan', 'Penyakit akut', 'Penyakit kronis', 'Anemia', 'Diare'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
             gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Cedera otak', 'Hipotiroid', 'Lanjut usia', 'Bayi baru lahir (neonatus)', 'Prematuritas']
+            kondisiKlinis: ['Osteoporosis', 'Kejang', 'Penyakit Parkinson', 'Vertigo', 'Gangguan keseimbangan', 'Gangguan penglihatan', 'Gangguan pendengaran', 'Kelemahan', 'Hipotensi', 'Anemia', 'Kondisi pasca operasi']
         },
         luaran: {
             utama: {
-                judul: 'Termoregulasi',
-                kode: 'L.14134',
-                ekspektasi: 'membaik',
-                kriteriaHasil: ['Menggigil menurun', 'Pucat menurun', 'Suhu tubuh membaik', 'Suhu kulit membaik']
+                judul: 'Tingkat Jatuh',
+                kode: 'L.14138',
+                ekspektasi: 'menurun',
+                kriteriaHasil: ['Jatuh dari tempat tidur menurun', 'Jatuh saat berdiri menurun', 'Jatuh saat duduk menurun', 'Jatuh saat berjalan menurun', 'Jatuh saat di kamar mandi menurun', 'Jatuh saat naik tangga menurun']
             }
         },
         intervensi: [
             {
-                judul: 'Manajemen Hipotermia',
-                kode: 'I.14507',
-                definisi: 'Mengidentifikasi dan mengelola suhu tubuh di bawah rentang normal.',
+                judul: 'Pencegahan Jatuh',
+                kode: 'I.14540',
+                definisi: 'Mengidentifikasi dan menurunkan risiko jatuh.',
                 tindakan: {
-                    observasi: ['Monitor suhu tubuh', 'Identifikasi penyebab hipotermia (mis. terpapar suhu lingkungan rendah, pakaian tipis, kerusakan hipotalamus, penurunan laju metabolisme, kekurangan lemak subkutan)', 'Monitor tanda dan gejala akibat hipotermia (hipotermia ringan: takipnea, disartria, menggigil, hipertensi, diuresis; hipotermia sedang: aritmia, hipotensi, apatis, koagulopati, refleks menurun; hipotermia berat: oliguria, refleks menghilang, edema paru, asam-basa abnormal)'],
-                    terapeutik: ['Sediakan lingkungan yang hangat (mis. atur suhu ruangan, inkubator)', 'Ganti pakaian dan/atau linen yang basah', 'Lakukan penghangatan pasif (mis. selimut, menutup kepala, pakaian tebal)', 'Lakukan penghangatan aktif eksternal (mis. kompres hangat, botol hangat, selimut hangat, metode kanguru)', 'Lakukan penghangatan aktif internal (mis. infus cairan hangat, oksigen hangat, lavase peritoneal dengan cairan hangat)'],
-                    edukasi: ['Anjurkan makan/minum hangat'],
+                    observasi: ['Identifikasi faktor risiko jatuh (mis. usia >65 tahun, penurunan tingkat kesadaran, defisit kognitif, hipotensi ortostatik, gangguan keseimbangan, gangguan penglihatan, neuropati)', 'Identifikasi faktor lingkungan yang meningkatkan risiko jatuh (mis. lantai licin, penerangan kurang)', 'Hitung risiko jatuh dengan menggunakan skala (mis. Fall Morse Scale, Humpty Dumpty Scale), jika perlu', 'Monitor kemampuan berpindah dari tempat tidur ke kursi roda dan sebaliknya'],
+                    terapeutik: ['Orientasikan ruangan pada pasien dan keluarga', 'Pastikan roda tempat tidur dan kursi roda selalu dalam kondisi terkunci', 'Pasang handrail tempat tidur', 'Atur tempat tidur mekanis pada posisi terendah', 'Tempatkan pasien berisiko tinggi jatuh dekat dengan pantauan perawat dari nurse station', 'Gunakan alat bantu berjalan (mis. kursi roda, walker)', 'Dekatkan bel pemanggil dalam jangkauan pasien'],
+                    edukasi: ['Anjurkan memanggil perawat jika membutuhkan bantuan untuk berpindah', 'Anjurkan menggunakan alas kaki yang tidak licin', 'Anjurkan berkonsentrasi untuk menjaga keseimbangan tubuh', 'Anjurkan melebarkan jarak kedua kaki untuk meningkatkan keseimbangan saat berdiri', 'Ajarkan cara menggunakan bel pemanggil untuk memanggil perawat'],
                     kolaborasi: []
                 },
                 rasional: {
-                    observasi: 'Untuk mengetahui suhu tubuh pasien. Untuk mengetahui penyebab dari hipotermia. Untuk mengetahui tanda dan gejala dari hipotermia.',
-                    terapeutik: 'Untuk memberikan kehangatan pada pasien. Untuk mencegah hipotermia. Untuk memberikan kehangatan pada pasien. Untuk memberikan kehangatan dari luar tubuh. Untuk memberikan kehangatan dari dalam tubuh.',
-                    edukasi: 'Untuk memberikan kehangatan dari dalam tubuh.',
-                    kolaborasi: ''
+                    observasi: 'Untuk mengidentifikasi faktor risiko jatuh. Untuk mengetahui faktor lingkungan yang berisiko menyebabkan jatuh. Agar dapat meminimalisir risiko jatuh. Agar mengetahui kemampuan klien untuk berpindah.',
+                    terapeutik: 'Untuk keamanan klien agar tidak jatuh. Untuk meminimalisir risiko jatuh. Agar perawat dapat mengawasi klien yang berisiko tinggi jatuh. Agar klien dapat beraktivitas seperti biasa. Agar klien dapat memanggil perawat jika terjadi sesuatu.',
+                    edukasi: 'Agar klien tidak melakukan aktivitas yang berisiko jatuh. Agar klien tidak jatuh saat berjalan. Agar klien dapat menjaga keseimbangan saat beraktivitas. Agar klien dapat menjaga keseimbangan saat berdiri. Agar klien dapat memanggil perawat saat membutuhkan bantuan.'
                 }
             }
         ]
     },
     {
         id: 'D.0144',
-        keywords: ['d.0144', 'risiko hipotermia perioperatif'],
+        keywords: ['d.0144', 'risiko luka tekan'],
         diagnosis: {
-            judul: 'Risiko Hipotermia Perioperatif',
+            judul: 'Risiko Luka Tekan',
             kode: 'D.0144',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko mengalami penurunan suhu tubuh di bawah 36°C secara tidak sengaja selama periode perioperatif.',
+            definisi: 'Berisiko mengalami cedera lokal pada kulit dan/atau jaringan, biasanya pada tonjolan tulang akibat tekanan dan/atau gesekan.',
             penyebab: { // Faktor Risiko
-                fisiologis: ['Suhu lingkungan rendah', 'Kerusakan hipotalamus', 'Efek agen anestesi', 'Prosedur pembedahan', 'Malnutrisi', 'Kombinasi anestesi regional dan umum', 'Berat badan rendah', 'Skor ASA >1', 'Lanjut usia (>55 tahun)', 'Neonatus'],
+                fisiologis: ['Skor skala Braden Q ≤ 16 (anak) atau skor skala Braden ≤ 18 (dewasa)', 'Perubahan fungsi kognitif', 'Perubahan sensasi', 'Skor ASA (American in Sensation Anesthesiologist) ≥2', 'Anemia', 'Penurunan mobilisasi', 'Penurunan kadar albumin', 'Penurunan oksigenasi jaringan', 'Penurunan perfusi jaringan', 'Dehidrasi', 'Kulit kering', 'Edema', 'Peningkatan suhu kulit 1-2 °C', 'Periode imobilisasi yang keras (mis. prosedur operasi ≥2 jam)', 'Usia ≥65 tahun', 'Berat badan lebih', 'Fraktur tungkai', 'Riwayat stroke', 'Riwayat luka tekan', 'Riwayat trauma', 'Hipertermi', 'Inkontinensia', 'Ketidakadekuatan nutrisi', 'Skor RAPS (Risk Assesment Pressure Score) Rendah', 'Klasifikasi fungsional NYHA (New York Heart Association) ≥2', 'Efek agen farmakologis (mis. Anastesi umum, vasopressor, antidepresan, norepinefrin)', 'Imobilisasi fisik', 'Penekanan di atas tonjolan tulang', 'Penurunan tebal lipatan kulit trisep', 'Kulit bersisik', 'Gesekan permukaan kulit'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
             gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Trauma', 'Luka bakar', 'Kerusakan hipotalamus']
+            kondisiKlinis: ['Anemia', 'Gagal jantung kongestif', 'Trauma', 'Stroke', 'Malnutrisi', 'Obesitas', 'Fraktur tungkai', 'Cedera medula spinalis dan/atau kepala', 'Imobilisasi']
         },
         luaran: {
             utama: {
-                judul: 'Termoregulasi Perioperatif',
-                kode: 'L.14135',
-                ekspektasi: 'membaik',
-                kriteriaHasil: ['Suhu tubuh membaik', 'Suhu kulit membaik']
+                judul: 'Integritas Kulit dan Jaringan',
+                kode: 'L.14125',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Hidrasi meningkat', 'Perfusi jaringan meningkat', 'Kerusakan jaringan menurun', 'Kerusakan lapisan kulit menurun', 'Kemerahan menurun', 'Suhu kulit membaik']
             }
         },
         intervensi: [
             {
-                judul: 'Manajemen Hipotermia Perioperatif',
-                kode: 'I.14506', // Disesuaikan dari PDF
-                definisi: 'Mengidentifikasi dan mengelola suhu tubuh di bawah rentang normal selama periode perioperatif.',
+                judul: 'Pencegahan Luka Tekan',
+                kode: 'I.14542',
+                definisi: 'Mengidentifikasi dan menurunkan risiko terjadinya luka tekan.',
                 tindakan: {
-                    observasi: ['Monitor suhu tubuh secara berkala', 'Identifikasi faktor risiko hipotermia (mis. usia, status nutrisi, jenis pembedahan)', 'Monitor tanda dan gejala hipotermia'],
-                    terapeutik: ['Hangatkan pasien sebelum pembedahan', 'Gunakan selimut penghangat atau alat penghangat lainnya', 'Sesuaikan suhu lingkungan', 'Berikan cairan intravena yang dihangatkan', 'Batasi paparan area tubuh selama prosedur'],
-                    edukasi: ['Jelaskan kepada pasien dan keluarga tentang pencegahan hipotermia'],
+                    observasi: ['Identifikasi faktor risiko (mis. imobilisasi, usia tua, malnutrisi, inkontinensia)', 'Monitor tanda-tanda kemerahan atau iritasi'],
+                    terapeutik: ['Gunakan alas tidur yang lembut dan rata', 'Oleskan lotion atau minyak/baby oil pada daerah yang tertekan', 'Lakukan alih baring setiap 2 jam', 'Jaga kebersihan kulit agar tetap bersih dan kering', 'Hindari kerutan pada tempat tidur'],
+                    edukasi: ['Anjurkan menggunakan pakaian yang longgar'],
                     kolaborasi: []
                 },
                 rasional: {
-                    observasi: 'Untuk mengetahui perubahan suhu tubuh pasien. Untuk mengidentifikasi faktor risiko hipotermia. Untuk mengetahui tanda dan gejala hipotermia.',
-                    terapeutik: 'Untuk menjaga suhu tubuh pasien tetap normal. Untuk memberikan kehangatan pada pasien. Untuk menyesuaikan suhu lingkungan. Untuk memberikan cairan intravena yang hangat. Untuk membatasi paparan area tubuh.',
-                    edukasi: 'Agar pasien dan keluarga mengetahui cara pencegahan hipotermia.',
+                    observasi: 'Untuk mengetahui risiko terjadinya luka tekan. Untuk mengetahui adanya kemerahan pada area luka.',
+                    terapeutik: 'Untuk menghindari terjadinya luka tekan. Untuk melembabkan kulit. Agar tidak memperparah luka tekan. Untuk mencegah terjadinya infeksi. Untuk menghindari gesekan pada luka.',
+                    edukasi: 'Untuk menghindari terjadinya luka tekan.',
                     kolaborasi: ''
                 }
             }
@@ -7557,53 +7542,54 @@ const askepData = [
     },
     {
         id: 'D.0145',
-        keywords: ['d.0145', 'risiko perilaku kekerasan ditujukan pada diri sendiri'],
+        keywords: ['d.0145', 'risiko mutilasi diri'],
         diagnosis: {
-            judul: 'Risiko Perilaku Kekerasan Ditujukan pada Diri Sendiri',
+            judul: 'Risiko Mutilasi Diri',
             kode: 'D.0145',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko menunjukkan perilaku bahwa individu dapat membahayakan secara fisik pada diri sendiri.',
+            definisi: 'Berisiko melakukan upaya melukai diri sendiri tanpa bermaksud bunuh diri untuk meredakan ketegangan yang tidak dapat ditoleransi.',
             penyebab: { // Faktor Risiko
-                fisiologis: ['Gangguan psikotik', 'Konflik interpersonal', 'Penyalahgunaan zat', 'Putus asa', 'Riwayat perilaku kekerasan pada diri sendiri', 'Lingkungan tidak mendukung'],
+                fisiologis: ['Gangguan kepribadian (mis. ambang, antisosial)', 'Gangguan mood (mis. depresi)', 'Gangguan makan', 'Autisme', 'Retardasi mental', 'Penyalahgunaan zat', 'Gangguan disosiasi', 'Penyakit kronis', 'Putus asa', 'Isolasi sosial', 'Konflik hubungan interpersonal', 'Kesulitan koping', 'Riwayat penganiayaan di masa kanak-kanak', 'Riwayat perilaku menyakiti diri sendiri', 'Riwayat kekerasan dalam keluarga', 'Penjara', 'Hospitalisasi jangka panjang', 'Krisis situasional'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
             gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Skizofrenia dan gangguan psikotik lainnya', 'Gangguan bipolar', 'Gangguan kepribadian (mis. ambang, antisosial)', 'Gangguan yang berhubungan dengan alkohol', 'Gangguan yang berhubungan dengan zat lain', 'Demensia', 'Delirium', 'Gangguan amnestik']
+            kondisiKlinis: ['Penyakit terminal', 'Gangguan jiwa', 'Gangguan perkembangan', 'Gangguan kepribadian', 'Riwayat penganiayaan']
         },
         luaran: {
             utama: {
                 judul: 'Kontrol Diri',
                 kode: 'L.09076',
                 ekspektasi: 'meningkat',
-                kriteriaHasil: ['Verbalisasi ancaman pada diri sendiri menurun', 'Verbalisasi keinginan bunuh diri menurun', 'Perilaku merusak diri sendiri menurun']
+                kriteriaHasil: ['Perilaku merusak diri sendiri menurun', 'Perilaku merusak orang lain menurun', 'Perilaku agresif menurun']
             }
         },
         intervensi: [
             {
-                judul: 'Pencegahan Perilaku Kekerasan',
-                kode: 'I.14541',
-                definisi: 'Mengidentifikasi dan mencegah risiko perilaku kekerasan terhadap diri sendiri, orang lain, maupun lingkungan.',
+                judul: 'Manajemen Perilaku: Cedera Diri',
+                kode: 'I.13481',
+                definisi: 'Mengidentifikasi dan mengelola perilaku mencederai diri sendiri.',
                 tindakan: {
-                    observasi: ['Monitor adanya benda yang berpotensi membahayakan (benda tajam, tali)', 'Monitor keamanan barang-barang yang dibawa pasien (mis. dompet, tas, perhiasan)', 'Monitor adanya perilaku agresif atau amuk'],
-                    terapeutik: ['Pertahankan lingkungan yang aman dari cedera', 'Singkirkan benda-benda yang dapat membahayakan', 'Dekati pasien dengan tenang dan lakukan komunikasi terapeutik', 'Diskusikan perilaku yang dapat melukai diri sendiri, orang lain, dan lingkungan', 'Gunakan pengekangan fisik sesuai indikasi'],
-                    edukasi: ['Anjurkan melaporkan jika melihat benda yang berpotensi membahayakan', 'Anjurkan mengungkapkan perasaan secara verbal dan non verbal yang sesuai', 'Latih cara mengungkapkan marah secara asertif'],
-                    kolaborasi: []
+                    observasi: ['Monitor perilaku mencederai diri sendiri secara berkala', 'Identifikasi pemicu perilaku mencederai diri', 'Monitor efek samping obat'],
+                    terapeutik: ['Tetapkan harapan yang realistis tentang perilaku', 'Diskusikan tanggung jawab terhadap perilaku', 'Hindari menghakimi perilaku mencederai diri', 'Gunakan pendekatan yang tenang dan tidak menghakimi', 'Sediakan lingkungan yang aman', 'Sediakan aktivitas pengalihan (mis. menggambar, melukis, menulis, permainan, terapi musik)', 'Lakukan pengekangan fisik, jika perlu', 'Berikan pujian/penghargaan atas kemajuan'],
+                    edukasi: ['Jelaskan risiko cedera akibat perilaku', 'Jelaskan cara mengatasi marah atau frustasi secara konstruktif', 'Anjurkan mengungkapkan perasaan yang mendasari perilaku', 'Anjurkan menggunakan mekanisme pertahanan diri yang positif', 'Latih keterampilan koping baru (mis. latihan asertif, resolusi konflik)', 'Latih cara menyalurkan marah atau frustasi'],
+                    kolaborasi: ['Kolaborasi pemberian obat (mis. antipsikotik, antiansietas)']
                 },
                 rasional: {
-                    observasi: 'Agar tidak terjadi hal yang tidak diinginkan. Untuk menjaga keamanan barang pasien. Untuk mengetahui jika ada perilaku agresif.',
-                    terapeutik: 'Agar tidak terjadi cedera. Untuk menjauhkan dari benda-benda berbahaya. Agar pasien merasa nyaman. Untuk mendiskusikan perilaku yang dapat melukai diri sendiri, orang lain, dan lingkungan. Untuk mengontrol pasien.',
-                    edukasi: 'Agar tidak terjadi hal-hal yang membahayakan. Untuk mengungkapkan perasaan secara verbal dan non verbal. Untuk melatih mengungkapkan marah secara asertif.'
+                    observasi: 'Untuk memantau perilaku mencederai diri sendiri. Untuk mengidentifikasi pemicu perilaku mencederai diri. Untuk memonitor efek samping obat.',
+                    terapeutik: 'Agar tidak terlalu menuntut pasien. Agar pasien dapat bertanggung jawab atas perilakunya. Agar pasien tidak merasa dihakimi. Agar pasien merasa nyaman. Agar pasien tidak melukai dirinya sendiri. Untuk mengalihkan perhatian pasien. Untuk mengontrol pasien. Untuk memotivasi pasien.',
+                    edukasi: 'Agar pasien tahu risiko dari perilakunya. Agar pasien bisa mengatasi marahnya dengan benar. Agar pasien bisa mengungkapkan perasaannya. Agar pasien bisa melindungi dirinya. Agar pasien bisa mengatasi masalahnya. Agar pasien bisa menyalurkan marahnya.',
+                    kolaborasi: 'Untuk menenangkan pasien.'
                 }
             }
         ]
     },
     {
         id: 'D.0146',
-        keywords: ['d.0146', 'risiko perilaku kekerasan ditujukan pada orang lain'],
+        keywords: ['d.0146', 'risiko perilaku kekerasan'],
         diagnosis: {
-            judul: 'Risiko Perilaku Kekerasan Ditujukan pada Orang Lain',
+            judul: 'Risiko Perilaku Kekerasan',
             kode: 'D.0146',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
@@ -7690,90 +7676,95 @@ const askepData = [
     },
     {
         id: 'D.0148',
-        keywords: ['d.0148', 'risiko mutilasi diri'],
+        keywords: ['d.0148', 'risiko sindrom disuse'],
         diagnosis: {
-            judul: 'Risiko Mutilasi Diri',
+            judul: 'Risiko Sindrom Disuse',
             kode: 'D.0148',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko melakukan upaya melukai diri sendiri tanpa bermaksud bunuh diri untuk meredakan ketegangan yang tidak dapat ditoleransi.',
+            definisi: 'Berisiko mengalami perubahan sistem tubuh akibat imobilitas dan tirah baring yang tidak aktif.',
             penyebab: { // Faktor Risiko
-                fisiologis: ['Gangguan kepribadian (mis. ambang, antisosial)', 'Gangguan mood (mis. depresi)', 'Gangguan makan', 'Autisme', 'Retardasi mental', 'Penyalahgunaan zat', 'Gangguan disosiasi', 'Penyakit kronis', 'Putus asa', 'Isolasi sosial', 'Konflik hubungan interpersonal', 'Kesulitan koping', 'Riwayat penganiayaan di masa kanak-kanak', 'Riwayat perilaku menyakiti diri sendiri', 'Riwayat kekerasan dalam keluarga', 'Penjara', 'Hospitalisasi jangka panjang', 'Krisis situasional'],
+                fisiologis: ['Kelumpuhan', 'Imobilisasi', 'Nyeri berat', 'Perubahan tingkat kesadaran'],
                 situasional: []
             },
             gejalaMayor: { subjektif: [], objektif: [] },
             gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Penyakit terminal', 'Gangguan jiwa', 'Gangguan perkembangan', 'Gangguan kepribadian', 'Riwayat penganiayaan']
+            kondisiKlinis: ['Stroke', 'Cedera medula spinalis', 'Kondisi pasca operasi', 'Fraktur multipel']
         },
         luaran: {
             utama: {
-                judul: 'Kontrol Diri',
-                kode: 'L.09076',
+                judul: 'Mobilitas Fisik',
+                kode: 'L.05042',
                 ekspektasi: 'meningkat',
-                kriteriaHasil: ['Perilaku merusak diri sendiri menurun', 'Perilaku merusak orang lain menurun', 'Perilaku agresif menurun', 'Verbalisasi keinginan bunuh diri menurun', 'Verbalisasi ancaman bunuh diri menurun']
+                kriteriaHasil: ['Pergerakan ekstremitas meningkat', 'Kekuatan otot meningkat', 'Rentang gerak (ROM) meningkat', 'Nyeri menurun', 'Kecemasan menurun', 'Kaku sendi menurun', 'Gerakan tidak terkoordinasi menurun', 'Kelemahan fisik menurun']
             }
         },
         intervensi: [
             {
-                judul: 'Manajemen Perilaku: Cedera Diri',
-                kode: 'I.13481',
-                definisi: 'Mengidentifikasi dan mengelola perilaku mencederai diri sendiri.',
+                judul: 'Dukungan Ambulasi',
+                kode: 'I.06171',
+                definisi: 'Memfasilitasi pasien untuk meningkatkan aktivitas perpindahan.',
                 tindakan: {
-                    observasi: ['Monitor perilaku mencederai diri sendiri secara berkala', 'Identifikasi pemicu perilaku mencederai diri', 'Monitor efek samping obat'],
-                    terapeutik: ['Tetapkan harapan yang realistis tentang perilaku', 'Diskusikan tanggung jawab terhadap perilaku', 'Hindari menghakimi perilaku mencederai diri', 'Gunakan pendekatan yang tenang dan tidak menghakimi', 'Sediakan lingkungan yang aman', 'Sediakan aktivitas pengalihan (mis. menggambar, melukis, menulis, permainan, terapi musik)', 'Lakukan pengekangan fisik, jika perlu', 'Berikan pujian/penghargaan atas kemajuan'],
-                    edukasi: ['Jelaskan risiko cedera akibat perilaku', 'Jelaskan cara mengatasi marah atau frustasi secara konstruktif', 'Anjurkan mengungkapkan perasaan yang mendasari perilaku', 'Anjurkan menggunakan mekanisme pertahanan diri yang positif', 'Latih keterampilan koping baru (mis. latihan asertif, resolusi konflik)', 'Latih cara menyalurkan marah atau frustasi'],
-                    kolaborasi: ['Kolaborasi pemberian obat (mis. antipsikotik, antiansietas)']
+                    observasi: ['Identifikasi toleransi fisik melakukan ambulasi', 'Monitor frekuensi jantung dan tekanan darah sebelum memulai ambulasi', 'Monitor kondisi umum selama melakukan ambulasi'],
+                    terapeutik: ['Fasilitasi aktivitas ambulasi dengan alat bantu (mis. tongkat, kruk)', 'Fasilitasi melakukan mobilisasi dini, jika perlu', 'Libatkan keluarga untuk membantu pasien dalam meningkatkan ambulasi'],
+                    edukasi: ['Jelaskan tujuan dan prosedur ambulasi', 'Anjurkan melakukan ambulasi dini', 'Ajarkan ambulasi sederhana yang harus dilakukan (mis. berjalan dari tempat tidur ke kursi roda, berjalan dari tempat tidur ke toilet, berjalan sesuai toleransi)'],
+                    kolaborasi: []
                 },
                 rasional: {
-                    observasi: 'Untuk memantau perilaku mencederai diri sendiri. Untuk mengidentifikasi pemicu perilaku mencederai diri. Untuk memonitor efek samping obat.',
-                    terapeutik: 'Agar tidak terlalu menuntut pasien. Agar pasien dapat bertanggung jawab atas perilakunya. Agar pasien tidak merasa dihakimi. Agar pasien merasa nyaman. Agar pasien tidak melukai dirinya sendiri. Untuk mengalihkan perhatian pasien. Untuk mengontrol pasien. Untuk memotivasi pasien.',
-                    edukasi: 'Agar pasien tahu risiko dari perilakunya. Agar pasien bisa mengatasi marahnya dengan benar. Agar pasien bisa mengungkapkan perasaannya. Agar pasien bisa melindungi dirinya. Agar pasien bisa mengatasi masalahnya. Agar pasien bisa menyalurkan marahnya.',
-                    kolaborasi: 'Untuk menenangkan pasien.'
+                    observasi: 'Untuk mengidentifikasi toleransi fisik melakukan ambulasi. Untuk memonitor frekuensi jantung dan tekanan darah sebelum memulai ambulasi. Untuk memonitor kondisi umum selama melakukan ambulasi.',
+                    terapeutik: 'Untuk memfasilitasi aktivitas ambulasi dengan alat bantu. Untuk memfasilitasi melakukan mobilisasi dini. Untuk melibatkan keluarga untuk membantu pasien.',
+                    edukasi: 'Untuk menjelaskan tujuan dan prosedur ambulasi. Untuk menganjurkan ambulasi dini. Untuk mengajarkan ambulasi sederhana.'
                 }
             }
         ]
     },
     {
         id: 'D.0149',
-        keywords: ['d.0149', 'risiko percobaan bunuh diri'],
+        keywords: ['d.0149', 'termoregulasi tidak efektif'],
         diagnosis: {
-            judul: 'Risiko Percobaan Bunuh Diri',
+            judul: 'Termoregulasi Tidak Efektif',
             kode: 'D.0149',
             kategori: 'Lingkungan',
             subkategori: 'Keamanan dan Proteksi',
-            definisi: 'Berisiko melakukan upaya menyakiti diri sendiri untuk mengakhiri kehidupan.',
-            penyebab: { // Faktor Risiko
-                fisiologis: ['Gangguan perilaku', 'Gangguan mood', 'Gangguan kepribadian', 'Penyalahgunaan zat', 'Masalah sosial', 'Riwayat keluarga bunuh diri', 'Riwayat percobaan bunuh diri sebelumnya', 'Riwayat penganiayaan', 'Pemberitaan media tentang bunuh diri', 'Konflik perkawinan', 'Orientasi seksual biseksual atau homoseksual', 'Penyakit fisik'],
+            definisi: 'Kegagalan mempertahankan suhu tubuh dalam rentang normal.',
+            penyebab: {
+                fisiologis: ['Stimulasi pusat termoregulasi', 'Fluktuasi suhu lingkungan', 'Proses penyakit (mis. infeksi)', 'Proses penuaan', 'Dehidrasi', 'Ketidaksesuaian pakaian untuk suhu lingkungan', 'Peningkatan kebutuhan oksigen', 'Perubahan laju metabolisme', 'Suhu lingkungan ekstrem', 'Efek agen farmakologis'],
                 situasional: []
             },
-            gejalaMayor: { subjektif: [], objektif: [] },
-            gejalaMinor: { subjektif: [], objektif: [] },
-            kondisiKlinis: ['Gangguan bipolar', 'Depresi mayor', 'Gangguan stres pasca trauma (PTSD)', 'Skizofrenia', 'Penyalahgunaan zat', 'Percobaan bunuh diri', 'Penyakit terminal (mis. kanker, AIDS)', 'Nyeri kronis', 'Kehilangan bagian tubuh']
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Kulit dingin/hangat', 'Menggigil', 'Suhu tubuh fluktuatif']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Piloereksi', 'Pengisian kapiler melambat', 'Tekanan darah meningkat', 'Pucat', 'Frekuensi napas meningkat', 'Takikardia', 'Kejang', 'Kulit kemerahan', 'Dasar kuku sianotik']
+            },
+            kondisiKlinis: ['Trauma', 'Kerusakan hipotalamus', 'Stroke', 'Aktivitas berlebihan', 'Cedera medula spinalis', 'Prematuritas', 'Berat badan lahir rendah']
         },
         luaran: {
             utama: {
-                judul: 'Kontrol Diri',
-                kode: 'L.09076',
-                ekspektasi: 'meningkat',
-                kriteriaHasil: ['Perilaku merusak diri sendiri menurun', 'Perilaku merusak orang lain menurun', 'Perilaku agresif menurun', 'Verbalisasi keinginan bunuh diri menurun', 'Verbalisasi ancaman bunuh diri menurun']
+                judul: 'Termoregulasi',
+                kode: 'L.14134',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Menggigil menurun', 'Takikardi menurun', 'Suhu tubuh membaik', 'Suhu kulit membaik']
             }
         },
         intervensi: [
             {
-                judul: 'Pencegahan Bunuh Diri',
-                kode: 'I.14542',
-                definisi: 'Mengidentifikasi dan menurunkan risiko menyakiti diri sendiri atau bunuh diri.',
+                judul: 'Regulasi Temperatur',
+                kode: 'I.14578',
+                definisi: 'Mengatur suhu tubuh agar tetap dalam rentang normal.',
                 tindakan: {
-                    observasi: ['Identifikasi riwayat percobaan bunuh diri', 'Identifikasi suasana hati (mood), perasaan, pikiran dan rencana bunuh diri', 'Identifikasi adanya pesan verbal dan nonverbal keinginan bunuh diri', 'Identifikasi tingkat risiko bunuh diri'],
-                    terapeutik: ['Pastikan benda yang dapat membahayakan (benda tajam, obat-obatan, tali) diamankan', 'Pastikan obat yang diminum sesuai dosis yang diresepkan', 'Lakukan pendekatan langsung dan tidak menghakimi saat membahas tentang bunuh diri', 'Gali alasan keinginan bunuh diri', 'Tingkatkan harga diri (mis. libatkan dalam kegiatan positif, berikan penghargaan)'],
-                    edukasi: ['Jelaskan cara mengatasi masalah dengan konstruktif', 'Latih cara meredakan stres (mis. meditasi, relaksasi)', 'Latih menyelesaikan masalah'],
-                    kolaborasi: ['Rujuk ke psikolog/psikiater, jika perlu']
+                    observasi: ['Monitor suhu bayi sampai stabil (36,5°C - 37,5°C)', 'Monitor suhu tubuh anak tiap dua jam, jika perlu', 'Monitor tekanan darah, frekuensi pernapasan dan nadi', 'Monitor warna dan suhu kulit', 'Monitor dan catat tanda dan gejala hipotermia atau hipertermia'],
+                    terapeutik: ['Pasang alat pemantau suhu kontinu, jika perlu', 'Tingkatkan asupan cairan dan nutrisi yang adekuat', 'Bedong bayi segera setelah lahir untuk mencegah kehilangan panas', 'Kenakan pakaian yang longgar', 'Gunakan topi, sarung tangan dan kaus kaki pada bayi', 'Lakukan metode kanguru jika memungkinkan', 'Sesuaikan suhu lingkungan dengan kebutuhan pasien', 'Ganti linen dan pakaian yang basah', 'Lakukan pendinginan eksternal (mis. kompres dingin pada dahi, leher, dada, abdomen, aksila)', 'Berikan oksigen, jika perlu'],
+                    edukasi: ['Jelaskan cara pencegahan heat exhaustion dan heat stroke', 'Jelaskan cara pencegahan hipotermia', 'Demonstrasikan teknik perawatan metode kanguru (PMK) untuk bayi BBLR'],
+                    kolaborasi: ['Kolaborasi pemberian antipiretik, jika perlu', 'Kolaborasi pemberian cairan dan elektrolit intravena, jika perlu']
                 },
                 rasional: {
-                    observasi: 'Agar mengetahui riwayat percobaan bunuh diri. Untuk mengetahui kondisi pasien. Agar dapat mencegah keinginan bunuh diri. Untuk mengetahui tingkat risiko bunuh diri.',
-                    terapeutik: 'Agar tidak ada benda yang dapat membahayakan. Agar pasien minum obat sesuai dosis. Agar tidak menyinggung perasaan. Agar dapat mengetahui alasan keinginan bunuh diri. Agar dapat meningkatkan harga diri.',
-                    edukasi: 'Agar pasien dapat mengatasi masalahnya. Untuk meredakan stres. Agar pasien dapat menyelesaikan masalahnya.',
-                    kolaborasi: 'Agar dapat ditangani oleh ahlinya.'
+                    observasi: 'Suhu tubuh normal bayi baru lahir berkisar antara 36,5–37,5°C. Ketika demam, denyut jantung serta pernapasan akan menjadi lebih cepat. Jika kulit bayi tampak kuning atau kebiruan, segera hubungi dokter. Hipertermia adalah kondisi suhu tubuh terlalu tinggi akibat kegagalan mekanisme pengaturan suhu. Hipotermia adalah kondisi suhu tubuh menurun drastis hingga di bawah 35°C.',
+                    terapeutik: 'Pemantauan suhu kontinu membantu mengidentifikasi perubahan suhu secara cepat. Asupan cairan dan nutrisi yang adekuat membantu menjaga keseimbangan cairan dan elektrolit. Membedong bayi membantu menjaga kehangatan tubuh bayi. Pakaian yang longgar membantu sirkulasi udara dan menjaga suhu tubuh tetap stabil. Topi, sarung tangan, dan kaus kaki membantu menjaga kehangatan tubuh bayi. Metode kanguru dapat membantu menjaga kehangatan tubuh bayi dan meningkatkan ikatan antara ibu dan bayi. Suhu lingkungan yang sesuai dapat membantu menjaga suhu tubuh tetap stabil. Pakaian dan linen yang basah dapat menyebabkan kehilangan panas. Pendinginan eksternal dapat membantu menurunkan suhu tubuh. Pemberian oksigen dapat membantu memenuhi kebutuhan oksigen yang meningkat.',
+                    edukasi: 'Heat exhaustion dan heat stroke adalah kondisi serius yang dapat terjadi akibat paparan panas yang berlebihan. Hipotermia adalah kondisi serius yang dapat terjadi akibat paparan dingin yang berlebihan. Metode kanguru adalah cara yang efektif untuk menjaga kehangatan tubuh bayi dan meningkatkan ikatan antara ibu dan bayi.',
+                    kolaborasi: 'Antipiretik dapat membantu menurunkan demam. Cairan dan elektrolit intravena dapat membantu menjaga keseimbangan cairan dan elektrolit.'
                 }
             }
         ]
