@@ -2198,6 +2198,418 @@ const askepData = [
             }
         ]
     },
+        {
+        id: 'D.0041',
+        keywords: ['d.0041', 'inkontinensia fekal'],
+        diagnosis: {
+            judul: 'Inkontinensia Fekal',
+            kode: 'D.0041',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Perubahan kebiasaan buang air besar dari pola normal yang ditandai dengan pengeluaran feses secara involunter (tidak disadari).',
+            penyebab: {
+                fisiologis: ['Kerusakan susunan saraf motorik bawah', 'Penurunan tonus otot', 'Gangguan kognitif', 'Penyalahgunaan laksatif', 'Kehilangan fungsi pengendalian sfingter rektum', 'Pascaoperasi pullthrough dan penutupan kolostomi', 'Ketidakmampuan mencapai kamar kecil', 'Diare kronis', 'Stres berlebihan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Tidak mampu mengontrol pengeluaran feses', 'Tidak mampu menunda defekasi'],
+                objektif: ['Feses keluar sedikit-sedikit dan sering']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Bau feses', 'Kulit perianal kemerahan']
+            },
+            kondisiKlinis: ['Spina bifida', 'Atresia ani', 'Penyakit Hirschsprung']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Fekal',
+                kode: 'L.04035', // disesuaikan dengan konteks
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Pengontrolan pengeluaran feses membaik', 'Defekasi membaik', 'Frekuensi buang air besar membaik', 'Kondisi kulit perianal membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Eliminasi Fekal',
+                kode: 'I.04150', // disesuaikan dengan konteks
+                definisi: 'Mengajarkan suatu kemampuan melatih usus untuk dievakuasi pada interval tertentu.',
+                tindakan: {
+                    observasi: ['Monitor peristaltik usus secara teratur'],
+                    terapeutik: ['Anjurkan waktu yang konsisten untuk buang air besar'],
+                    edukasi: ['Anjurkan mengkonsumsi makanan tertentu, sesuai program atau hasil konsultasi', 'Anjurkan asupan cairan yang adekuat sesuai kebutuhan', 'Anjurkan olahraga sesuai toleransi'],
+                    kolaborasi: ['Kolaborasi penggunaan supositoria, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Bunyi peristaltik usus dapat menjadi sinyal tentang kondisi usus itu sendiri normalnya 5-34 kali dalam 1 menit.',
+                    terapeutik: 'Tidak BAB lebih dari 3 hari dapat membuat feses menjadi lebih kering dan keras oleh sebab itu dianjurkan untuk membuat jadwal BAB.',
+                    edukasi: 'Makanan-makanan tertentu dapat membuat BAB seperti serat, serat dapat membantu merangsang pergerakan usus secara teratur serta membantu memperlunak buangan atau feses. Air berperan sebagai pelumas yang bisa memperlancar pencernaan dan melunakkan feses. Beberapa jenis olahraga dapat membantu pergerakan usus oleh sebab itu beberapa olahraga dianjurkan.',
+                    kolaborasi: 'Obat supositoria dapat membuat feses menjadi lebih lunak dengan cepat.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0042',
+        keywords: ['d.0042', 'inkontinensia urin berlanjut'],
+        diagnosis: {
+            judul: 'Inkontinensia Urin Berlanjut',
+            kode: 'D.0042',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Pengeluaran urin tidak terkendali dan terus menerus tanpa distensi atau perasaan penuh pada kandung kemih.',
+            penyebab: {
+                fisiologis: ['Neuropati arkus refleks', 'Disfungsi neurologis', 'Kerusakan refleks kontraksi detrusor', 'Trauma', 'Kerusakan medula spinalis', 'Kelainan anatomis (mis. fistula)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Keluar urin konstan tanpa distensi', 'Nokturia lebih dari 2 kali sepanjang tidur'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Berkemih tanpa sadar', 'Tidak sadar inkontinensia urin'],
+                objektif: []
+            },
+            kondisiKlinis: ['Cedera kepala', 'Trauma', 'Tumor', 'Infeksi medula spinalis', 'Fistula saluran kemih']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan mengontrol pengeluaran urine meningkat', 'Nokturia menurun', 'Residu volume urine setelah berkemih menurun', 'Distensi kandung kemih menurun', 'Dribbling menurun', 'Hesitancy menurun', 'Enuresis menurun', 'Kemampuan menunda pengeluaran urine membaik', 'Frekuensi berkemih membaik', 'Sensasi berkemih membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Kateterisasi Urine',
+                kode: 'I.04148',
+                definisi: 'Masukan selang kateter urine ke dalam kandung kemih.',
+                tindakan: {
+                    observasi: ['Memeriksa kondisi pasien (mis. Kesadaran, tanda-tanda vital, daerah perineal, distensi kandung kemih, inkontinensia urine, refleks berkemih)'],
+                    terapeutik: ['Menyiapkan peralatan, bahan-bahan dan ruangan tindakan', 'Menyiapkan pasien: membebaskan pakaian bawah dan memposisikan dorsal rekumben (untuk wanita) dan supine (untuk laki-laki)', 'Memasang sarung tangan', 'Membersikan daerah perineal atau preposium dengan cairan NaCl atau aquades', 'Melakukan insersi kateter urine dengan menerapkan prinsip aseptik', 'Menyambungkan kateter urin dengan urine bag', 'Mengisi balon dengan NaCl 0,9% sesuai anjuran pabrik', 'Memfiksasikan selang kateter di atas simpisis atau paha', 'Memastikan kantung urine ditempatkan lebih rendah dari kandung kemih', 'Memberikan label waktu pemasangan'],
+                    edukasi: ['Menjelaskan tujuan dan prosedur pemasangan kateter urin', 'Menganjurkan menarik napas saat insersi selang kateter'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui perkembangan status kesehatan pasien.',
+                    terapeutik: 'Agar tindakan sesuai dengan prosedur. Agar mempermudah klien untuk berkemih. Untuk melindungi diri dari kontak cairan dari pasien. Agar daerah perineal dan preposium bersih. Untuk mencegah terjadinya infeksi saat dilakukan insersi kateter urin. Agar urin tertampung di urin bag. Untuk memastikan kateter yang dipasang tidak terlepas. Agar pasien beraktivitas dengan nyaman. Untuk mempermudah urine mengalir ke dalam urin bag. Untuk mempertahankan kenyamanan pasien selama pemasangan kateter urine.',
+                    edukasi: 'Untuk mengetahui tujuan dan prosedur pemasangan kateter urine. Agar pasien tidak merasakan nyeri saat pemasangan kateter urine.'
+                }
+            },
+            {
+                judul: 'Perawatan Inkontinensia Urine',
+                kode: 'I.04163',
+                definisi: 'Mengidentifikasikan dan merawat pasien yang mengalami pengeluaran urin secara involunter (tidak disadari).',
+                tindakan: {
+                    observasi: ['Mengidentifikasi penyebab inkontinensia urine', 'Mengidentifikasi perasaan dan persepsi pasien terhadap inkontinensia urine yang dialaminya', 'Memonitoring keefektifan obat, pembedahan dan terapi modalitas berkemih', 'Memonitoring kebiasaan berkemih'],
+                    terapeutik: ['Membersihkan genital dan kulit sekitar secara rutin', 'Memberikan pujian atas keberhasilan mencegah inkontinensia', 'Membuat jadwal konsumsi obat-obat diuretik', 'Mengambil sampel urine untuk pemeriksaan urine lengkap atau kultur'],
+                    edukasi: ['Menjelaskan definisi, jenis inkontinensia, penyebab inkontinensia urine', 'Menjelaskan program penanganan inkontinensia urine', 'Menjelaskan jenis pakaian dan lingkungan yang mendukung proses berkemih', 'Menganjurkan membatasi konsumsi cairan 2-3 jam menjelang tidur', 'Mengajarkan memantau cairan keluar dan masuk serta pola eliminasi urine', 'Menganjurkan minum minimal 1500 cc/hari, jika tidak kontraindikasi', 'Menganjurkan menghindari kopi, minuman bersoda, teh dan cokelat', 'Menganjurkan konsumsi buah dan sayur untuk menghindari konstipasi'],
+                    kolaborasi: ['Rujuk ke ahli inkontinensia, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui penyebab inkontinensia urine. Untuk mengetahui perasaan dan persepsi pasien terhadap inkontinensia urine. Untuk mengetahui efektivitas dan keamanan penggunaan obat. Untuk mengetahui seberapa sering pasien berkemih.',
+                    terapeutik: 'Agar menghindari munculnya bau tidak sedap pada area genitalia dan meningkatkan kenyamanan pasien. Agar pasien termotivasi untuk menjaga kesehatan. Agar pemberian obat pada pasien sesuai dengan waktu yang ditentukan. Untuk mengetahui kesehatan urine pasien.',
+                    edukasi: 'Untuk mengetahui definisi, jenis inkontinensia dan penyebab inkontinensia urine. Agar pasien mengetahui program yang bisa dilakukan untuk menangani inkontinensia urin. Untuk menimbulkan rasa ingin berkemih. Untuk menormalkan berkemih pasien. Untuk mengetahui cairan keluar dan masuk serta pola eliminasi urine. Untuk mendorong hasrat berkemih dan membantu membersihkan bakteri dari sistem saluran kencing. Untuk menghindari iritasi kandung kemih. Agar memperlancar pasien melakukan BAB.',
+                    kolaborasi: 'Untuk mendapatkan perawatan lebih lanjut dari ahli inkontinensia urine.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0043',
+        keywords: ['d.0043', 'inkontinensia urin berlebih'],
+        diagnosis: {
+            judul: 'Inkontinensia Urin Berlebih',
+            kode: 'D.0043',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Kehilangan urin yang tidak terkendali akibat overdistensi kandung kemih.',
+            penyebab: {
+                fisiologis: ['Blok spingter', 'Kerusakan atau ketidakadekuatan jalur aferen', 'Obstruksi jalan keluar urin (mis. impaksi fekal, efek agen farmakologis)', 'Ketidakadekuatan detrusor (mis. pada kondisi stres atau tidak nyaman, deconditioned voiding)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Residu volume urin setelah berkemih atau keluhan kebocoran sedikit urin', 'Nokturia'],
+                objektif: ['Kandung kemih distensi (bukan berhubungan dengan penyebab reversible akut) atau kandung kemih distensi dengan sering, sedikit berkemih atau dribbling']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Residu urin 100ml atau lebih']
+            },
+            kondisiKlinis: ['Asma', 'Alergi', 'Penyakit neurologi: cedera/tumor/infeksi medula spinalis', 'Cedera kepala', 'Sklerosis Multipel', 'Dimielinisasi saraf', 'Neuropati diabetikum', 'Neuropati alkohol', 'Striktura uretra/leher kandung kemih', 'Pembesaran prostat', 'Pembengkakan perineal']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urin',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan mengontrol pengeluaran urin meningkat', 'Kemampuan menunda pengeluaran urin membaik', 'Frekuensi BAK membaik', 'Sensasi BAK membaik', 'Nokturia menurun', 'Hesitancy/Enuresis menurun', 'Residu volume urin setelah BAK menurun', 'Dribbling menurun', 'Verbalisasi pengeluaran urin tidak tuntas menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Perawatan Inkontinensia Urin',
+                kode: 'I.04163',
+                definisi: 'Mengidentifikasi dan merawat pasien yang mengalami pengeluaran urine secara involunter (tidak disadari).',
+                tindakan: {
+                    observasi: ['Identifikasi penyebab inkontinensia urine', 'Identifikasi perasaan dan persepsi pasien terhadap inkontinensia urine yang dialaminya', 'Monitor keefektifan obat, pembedahan dan terapi modalitas berkemih', 'Monitor kebiasaan BAK'],
+                    terapeutik: ['Bersihkan genital dan kulit sekitar secara rutin', 'Berikan pujian atas keberhasilan mencegah inkontinensia', 'Buat jadwal konsumsi obat-obatan diuretik', 'Ambil sampel urine untuk pemeriksaan urine lengkap atau kultur'],
+                    edukasi: ['Jelaskan definisi, jenis inkontinensia, penyebab inkontinensia urine', 'Jelaskan program penanganan inkontinensia urine', 'Jelaskan jenis pakaian dan lingkungan yang mendukung proses berkemih', 'Anjurkan membatasi mengonsumsi cairan 2-3 jam menjelang tidur', 'Ajarkan memantau cairan keluar dan masuk serta pola eliminasi urine', 'Anjurkan minum minimal 1500 cc/hari, jika tidak kontraindikasi', 'Anjurkan menghindari kopi, minuman bersoda, teh dan coklat', 'Anjurkan konsumsi buah dan sayur untuk menghindari konstipasi'],
+                    kolaborasi: ['Rujuk ke ahli inkontinensia, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mengetahui penyebab inkontinensia pada urine klien. Untuk mengetahui perasaan yang dialami klien, dan persepsi terhadap inkontinensia urine yang dialaminya. Agar keefektifan obat yang dikonsumsi dapat diminum dengan benar dan mengetahui hasil dari pembedahan dan terapi yang diberikan berjalan dengan baik. Untuk mengetahui perubahan pola eliminasi urine klien menjadi lebih baik atau lebih memburuk.',
+                    terapeutik: 'Agar tetap terjaga kebersihan area genital dan kulit klien agar klien merasa lebih bersih dan nyaman. Agar klien merasa diapresiasi dan termotivasi atas keberhasilannya mencegah inkontinensia. Agar jadwal konsumsi obat diuretik klien teratur dengan baik. Untuk melihat adanya masalah pada urine atau kultur klien.',
+                    edukasi: 'Agar klien mengetahui tentang definisi, jenis, dan penyebab inkontinensia urine. Agar klien mengetahui program yang harus dilakukan untuk mencegah inkontinensia urine. Agar klien dapat mengetahui pakaian yang cocok untuk berkemih dan lingkungan yang nyaman untuk berkemih. Pembatasan cairan pada malam hari dapat mencegah terjadinya enuresis. Agar klien mengetahui perubahan cairan yang keluar dan perubahan pola eliminasi klien. Klien mengonsumsi air minum 1500 cc/hari ketika tidak terjadi kontraindikasi. Agar tidak dapat memperburuk inkontinensia urine pada klien. Agar proses eliminasi BAB klien tidak mengalami konstipasi.',
+                    kolaborasi: 'Dapat ditangani oleh dokter yang ahli gangguan inkontinensia urine, sehingga masalah gangguan inkontinensia dapat diatasi secara langsung.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0044',
+        keywords: ['d.0044', 'inkontinensia urin fungsional'],
+        diagnosis: {
+            judul: 'Inkontinensia Urin Fungsional',
+            kode: 'D.0044',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Pengeluaran urin tidak terkendali karena kesulitan dan tidak mampu mencapai toilet pada waktu yang tepat.',
+            penyebab: {
+                fisiologis: ['Ketidakmampuan atau penurunan mengenali tanda-tanda berkemih', 'Penurunan tonus kandung kemih', 'Hambatan mobilisasi', 'Faktor psikologis: penurunan perhatian pada tanda-tanda keinginan berkemih (depresi, bingung, delirium)', 'Hambatan lingkungan (toilet jauh, tempat tidur terlalu tinggi, lingkungan baru)', 'Kehilangan sensorik dan motorik (pada geriatri)', 'Gangguan penglihatan'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengompol sebelum mencapai atau selama usaha mencapai toilet'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Mengompol di waktu pagi hari', 'Mampu mengosongkan kandung kemih lengkap'],
+                objektif: []
+            },
+            kondisiKlinis: ['Cedera kepala', 'Neuropati alkoholik', 'Penyakit Parkinson', 'Penyakit dimielinisasi', 'Sklerosis multipel', 'Stroke', 'Demensia progresif', 'Depresi']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan mengontrol pengeluaran urine meningkat', 'Nokturia menurun', 'Residu volume urine setelah BAK menurun', 'Distensi kandung kemih menurun', 'Dribbling menurun', 'Hesitancy menurun', 'Enuresis menurun', 'Verbalisasi pengeluaran urine tidak tuntas menurun', 'Kemampuan menunda pengeluaran urine membaik', 'Frekuensi BAK membaik', 'Sensasi BAK membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Berkemih',
+                kode: 'I.04149',
+                definisi: 'Mengajarkan suatu kemampuan melakukan eliminasi urine.',
+                tindakan: {
+                    observasi: ['Periksa kembali penyebab gangguan berkemih (mis. kognitif, kehilangan ekstremitas/fungsi ekstremitas, kehilangan penglihatan)', 'Monitor pola dan kemampuan berkemih'],
+                    terapeutik: ['Hindari penggunaan kateter indwelling', 'Siapkan area toilet yang aman', 'Sediakan peralatan yang dibutuhkan dekat dan mudah dijangkau (mis. kursi komode, pispot, urinal)'],
+                    edukasi: ['Jelaskan arah-arah menuju kamar mandi/toilet pada pasien dengan gangguan penglihatan', 'Anjurkan intake cairan adekuat untuk mendukung output urine', 'Anjurkan eliminasi normal dengan beraktivitas dan olahraga sesuai kemampuan'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui penyebab dari gangguan berkemih. Untuk mengetahui pola dan kemampuan berkemih klien.',
+                    terapeutik: 'Pemasangan kateter terlalu lama berisiko terjadinya infeksi ataupun trauma. Memberikan rasa aman dan nyaman pada klien. Mempermudah intervensi yang akan dilakukan dan memudahkan perawat untuk menjangkau peralatan yang diperlukan.',
+                    edukasi: 'Agar mempermudah pasien dengan gangguan penglihatan mengakses kamar mandi dan toilet. Banyaknya intake cairan akan merangsang output urine yang akan membantu dalam latihan berkemih. Untuk menjaga kesehatan klien serta membantu keberhasilan terhadap program yang dijalani klien.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0045',
+        keywords: ['d.0045', 'inkontinensia urin refleks'],
+        diagnosis: {
+            judul: 'Inkontinensia Urin Refleks',
+            kode: 'D.0045',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Pengeluaran urin yang tidak terkendali pada saat volume kandung kemih tertentu tercapai.',
+            penyebab: {
+                fisiologis: ['Kerusakan konduksi impuls di atas arkus refleks', 'Kerusakan jaringan (mis. terapi radiasi)'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Tidak mengalami sensasi berkemih', 'Dribbling', 'Sering buang air kecil', 'Hesitancy', 'Nokturia', 'Enuresis'],
+                objektif: ['Volume residu urin meningkat']
+            },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Cedera/tumor/infeksi medula spinalis', 'Cystitis', 'Pembedahan pelvis', 'Sklerosis multipel', 'Kanker kandung kemih atau pelvis', 'Penyakit Parkinson', 'Demensia']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Sensasi Berkemih membaik', 'Dribbling menurun', 'Frekuensi Berkemih membaik', 'Hesitancy menurun', 'Nokturia menurun', 'Enuresis/Verbalisasi pengeluaran urin tidak tuntas menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Kateterisasi Urine',
+                kode: 'I.04148',
+                definisi: 'Masukkan selang kateter urine ke dalam kandung kemih.',
+                tindakan: {
+                    observasi: ['Periksa kondisi pasien (mis. Kesadaran, tanda-tanda vital, daerah perineal, distensi kandung kemih, inkontinensia urine, refleks berkemih)'],
+                    terapeutik: ['Siapkan peralatan, bahan-bahan dan ruangan tindakan', 'Siapkan pasien: bebaskan pakaian bawah dan posisikan dorsal rekumben (untuk wanita) dan supine (laki-laki)', 'Pasang sarung tangan', 'Bersihkan daerah perineal atau preposium dengan cairan NaCl atau aquades', 'Lakukan insersi kateter urine dengan menerapkan prinsip aseptik', 'Sambungkan kateter urin dengan urine bag', 'Isi balon dengan NaCl 0,9% sesuai anjuran pabrik', 'Fiksasi selang kateter di atas simpisis atau di paha', 'Pastikan kantung urine ditempatkan lebih rendah dari kandung kemih', 'Berikan label waktu pemasangan'],
+                    edukasi: ['Jelaskan tujuan dan prosedur pemasangan kateter urine', 'Anjurkan menarik napas saat insersi selang kateter'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui perkembangan status kesehatan pasien dan mencegah komplikasi lanjutan. Daerah perineal adalah bagian kecil dari kulit sensitif di antara alat kelamin dan dubur. Distensi kandung kemih adalah kondisi di mana kandung kemih mengalami pembesaran atau peradangan. Inkontinensia Urine adalah kondisi hilangnya kontrol kandung kemih.',
+                    terapeutik: 'Untuk memudahkan perawat dalam melakukan tindakan. Posisi dorsal recumbent yaitu menekuk lutut dan melebarkan kedua kaki. Posisi supinasi adalah memposisikan pasien terlentang. Untuk melindungi tangan jika kemungkinan perawat kontak dengan cairan tubuh pasien. Untuk mensterilkan daerah perineum pasien. Untuk mengurangi risiko infeksi pasca prosedur. Untuk memudahkan saat menampung urine yang keluar. Untuk mencegah kateter bergeser dan keluar dari tubuh. Untuk menahan kateter agar tidak geser. Untuk memudahkan jalur keluarnya urine. Untuk memudahkan perawat saat mengidentifikasi kapan pemakaian kateter.',
+                    edukasi: 'Agar pasien dapat mengetahui tindakan apa yang akan dilakukan. Agar pasien tidak merasakan nyeri saat dilakukan insersi kateter.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0046',
+        keywords: ['d.0046', 'inkontinensia urin stres'],
+        diagnosis: {
+            judul: 'Inkontinensia Urin Stres',
+            kode: 'D.0046',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Kebocoran urin mendadak dan tidak dapat dikendalikan karena aktivitas yang meningkatkan tekanan intraabdominal.',
+            penyebab: {
+                fisiologis: ['Kelemahan intrinsik spingter uretra', 'Perubahan degenerasi/non degenerasi otot pelvis', 'Kekurangan estrogen', 'Peningkatan tekanan intraabdomen', 'Kelemahan otot pelvis'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Mengeluh keluar urin <50ml saat tekanan abdominal meningkat (mis. saat berdiri, bersin, tertawa, berlari atau mengangkat benda berat)'],
+                objektif: []
+            },
+            gejalaMinor: {
+                subjektif: ['Pengeluaran urin tidak tuntas', 'Urgensi miksi', 'Frekuensi berkemih meningkat'],
+                objektif: ['Overdistensi abdomen']
+            },
+            kondisiKlinis: ['Obesitas', 'Kehamilan/melahirkan', 'Menopause', 'Infeksi saluran kemih', 'Operasi abdomen', 'Operasi prostat', 'Penyakit Alzheimer', 'Cedera medula spinalis']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan mengontrol pengeluaran urine meningkat', 'Nokturia menurun', 'Residu volume urine setelah berkemih menurun', 'Distensi kandung kemih menurun', 'Dribbling menurun', 'Hesitancy menurun', 'Enuresis menurun', 'Kemampuan menunda pengeluaran urine membaik', 'Frekuensi berkemih membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Otot Panggul',
+                kode: 'I.07215',
+                definisi: 'Mengajarkan kemampuan meningkatkan otot-otot elevator ani dan urogenital melalui kontraksi berulang untuk menurunkan inkontinensia urin dan ejakulasi dini.',
+                tindakan: {
+                    observasi: ['Monitor pengeluaran urine'],
+                    terapeutik: ['Berikan reinforcement positif selama melakukan latihan dengan benar'],
+                    edukasi: ['Anjurkan berbaring', 'Anjurkan tidak mengkontraksikan perut, kaki dan bokong saat melakukan latihan otot panggul', 'Anjurkan menambah durasi kontraksi-relaksasi 10 detik dengan siklus 10-12 kali, dilakukan 3-4 kali sehari', 'Ajarkan mengkontraksikan sekitar otot uretra dan anus seperti menahan BAB/BAK selama 5 detik kemudian dikendurkan dan direlaksasikan dengan siklus 10 kali', 'Ajarkan mengevaluasi latihan yang dilakukan dengan cara menghentikan urin sesaat saat BAK, seminggu sekali', 'Anjurkan latihan selama 6-12 minggu'],
+                    kolaborasi: ['Kolaborasi rehabilitas medik untuk mengukur kekuatan kontraksi otot dasar panggul, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui jumlah pengeluaran urine.',
+                    terapeutik: 'Agar pasien lebih semangat dan meningkatkan motivasi dalam melakukan pengobatan.',
+                    edukasi: 'Untuk meminimalisir pergerakan dan mencegah meningkatnya tekanan kandung kemih. Agar otot panggul bawah tidak tertekan saat latihan. Untuk meningkatkan kekuatan otot dasar panggul. Untuk memantau tingkat distensi kandung kemih. Memastikan latihan yang dilakukan berhasil. Melatih otot panggul pasien untuk bisa dilakukan secara mandiri.',
+                    kolaborasi: 'Untuk mengurangi terjadinya kontraksi pada otot panggul dengan bantuan tenaga medis.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0047',
+        keywords: ['d.0047', 'inkontinensia urin urgensi'],
+        diagnosis: {
+            judul: 'Inkontinensia Urine Urgensi',
+            kode: 'D.0047',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Keluarnya urin tidak terkendali sesaat setelah keinginan yang kuat untuk berkemih (Kebelet).',
+            penyebab: {
+                fisiologis: ['Iritasi reseptor kontraksi kandung kemih', 'Penurunan kapasitas kandung kemih', 'Hiperaktivitas detrusor dengan kerusakan kontraktilitas kandung kemih'],
+                situasional: ['Efek agen farmakologis (mis. diuretik)']
+            },
+            gejalaMayor: {
+                subjektif: ['Keinginan berkemih yang kuat disertai dengan inkontinensia'],
+                objektif: []
+            },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Riwayat penyakit peradangan pelvis dan/atau vagina', 'Riwayat penggunaan kateter urin', 'Infeksi kandung kemih dan/atau uretra', 'Gangguan neurogenik/tumor/infeksi', 'Penyakit Parkinson', 'Neuropati diabetikum', 'Operasi abdomen']
+        },
+        luaran: {
+            utama: {
+                judul: 'Kontinensia Urine',
+                kode: 'L.04036',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Nokturia menurun', 'Residu volume urine setelah berkemih menurun', 'Distensi kandung kemih menurun', 'Dribbling menurun', 'Hesitancy menurun', 'Frekuensi berkemih membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Latihan Berkemih',
+                kode: 'I.04149',
+                definisi: 'Mengajarkan suatu kemampuan melakukan eliminasi urine.',
+                tindakan: {
+                    observasi: ['Periksa kembali penyebab gangguan berkemih (mis. Kognitif, kehilangan ekstremitas/fungsi ekstremitas, kehilangan penglihatan)', 'Monitor pola dan kemampuan berkemih'],
+                    terapeutik: ['Hindari penggunaan kateter indwelling', 'Siapkan area toilet yang aman', 'Sediakan peralatan yang dibutuhkan dekat dan mudah dijangkau (mis. Kursi komode, pispot, urinal)'],
+                    edukasi: ['Jelaskan arah-arah menuju kamar mandi/toilet pada pasien dengan gangguan penglihatan', 'Anjurkan intake cairan adekuat untuk mendukung output urine', 'Anjurkan eliminasi normal dengan beraktivitas dan olahraga sesuai kemampuan'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui masalah/penyebab yang terjadi pada pasien. Mengetahui karakteristik dari urin.',
+                    terapeutik: 'Agar pasien tidak merasakan nyeri saat ingin buang air kecil. Untuk membantu pasien ketika ingin berkemih. Agar pasien lebih mudah menjangkau peralatan ketika tiba-tiba ingin berkemih.',
+                    edukasi: 'Memudahkan pasien untuk menjangkau toilet/kamar mandi ketika ingin berkemih. Mengumpulkan dan menganalisis data pasien untuk mengatur keseimbangan cairan. Aktivitas dan olahraga dapat membantu meningkatkan kemampuan eliminasi urine.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0048',
+        keywords: ['d.0048', 'kesiapan peningkatan eliminasi urin'],
+        diagnosis: {
+            judul: 'Kesiapan Peningkatan Eliminasi Urin',
+            kode: 'D.0048',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Pola fungsi sistem perkemihan yang cukup untuk memenuhi kebutuhan eliminasi yang dapat ditingkatkan.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Mengungkapkan keinginan untuk meningkatkan eliminasi urin'],
+                objektif: ['Jumlah urin normal', 'Karakteristik urin normal']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Asupan cairan cukup']
+            },
+            kondisiKlinis: ['Cedera medula spinalis', 'Sklerosis multipel', 'Kehamilan', 'Trauma pelvis', 'Pembedahan abdomen', 'Penyakit prostat']
+        },
+        luaran: {
+            utama: {
+                judul: 'Eliminasi Urine',
+                kode: 'L.04034',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Sensasi berkemih meningkat', 'Desakan berkemih (urgensi) menurun', 'Distensi kandung kemih menurun', 'Berkemih tidak tuntas (hesitancy) menurun', 'Volume residu urine menurun', 'Urin menetes (dribbling) menurun', 'Nokturia menurun', 'Mengompol menurun', 'Enuresis menurun', 'Disuria menurun', 'Anuria menurun', 'Frekuensi BAK membaik', 'Karakteristik urine membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Eliminasi Urine',
+                kode: 'I.04152',
+                definisi: 'Mengidentifikasi dan mengelola gangguan pola eliminasi urine.',
+                tindakan: {
+                    observasi: ['Identifikasi tanda dan gejala inkontinensia urine', 'Identifikasi faktor yang menyebabkan retensi atau inkontinensia urine', 'Monitor eliminasi urine (mis. frekuensi, konsistensi, aroma, volume, dan warna)'],
+                    terapeutik: ['Catat waktu-waktu dan haluaran berkemih', 'Batasi asupan cairan, jika perlu', 'Ambil sampel urine tengah (midstream) atau kultur'],
+                    edukasi: ['Ajarkan tanda dan gejala infeksi saluran kemih', 'Ajarkan mengukur asupan cairan dan haluaran urine', 'Ajarkan mengambil spesimen urine midstream', 'Ajarkan mengenali tanda berkemih dan waktu yang tepat untuk berkemih', 'Ajarkan terapi modalitas penguatan otot-otot panggul/berkemihan', 'Anjurkan minum yang cukup, jika tidak ada kontraindikasi', 'Anjurkan mengurangi minum menjelang tidur'],
+                    kolaborasi: ['Kolaborasi pemberian obat supositoria uretra, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Mengetahui tanda dan gejala. Mengetahui faktor penyebab utama retensi urine dan memberikan penanganan yang sesuai. Mengetahui output urine.',
+                    terapeutik: 'Mengetahui waktu terakhir pasien berkemih. Kebutuhan berkemih harus disegerakan apabila ditahan akan menimbulkan komplikasi. Untuk pemeriksaan laboratorium.',
+                    edukasi: 'Pasien dan keluarga mengerti tanda dan gejala infeksi saluran kemih. Pasien dan keluarga mengerti cara mengukur asupan cairan dan haluaran urine. Keluarga mengerti cara mengambil spesimen urine. Pasien mengetahui tanda-tanda berkemih. Untuk menguatkan otot panggul mencegah inkontinensia urine. Minum yang berlebihan dapat menyebabkan semakin penuh urine di kandung kemih. Mencegah produksi urine lebih banyak saat istirahat.',
+                    kolaborasi: 'Mencegah komplikasi lebih lanjut.'
+                }
+            }
+        ]
+    },
     {
         id: 'D.0049',
         keywords: ['d.0049', 'konstipasi', 'sembelit', 'sulit bab'],
@@ -2208,9 +2620,9 @@ const askepData = [
             subkategori: 'Eliminasi',
             definisi: 'Penurunan defekasi normal yang disertai pengeluaran feses sulit dan tidak tuntas serta feses kering dan banyak.',
             penyebab: {
-                fisiologis: ['Penurunan motilitas gastrointestinal', 'Ketidakcukupan asupan serat', 'Ketidakcukupan asupan cairan', 'Kelemahan otot abdomen'],
+                fisiologis: ['Penurunan mobilitas gastrointestinal', 'Ketidakadekuatan pertumbuhan gigi', 'Ketidakcukupan diet', 'Ketidakcukupan asupan serat', 'Ketidakcukupan asupan cairan', 'Aganglionik (mis. penyakit Hirschsprung)'],
                 psikologis: ['Konfusi', 'Depresi', 'Gangguan emosional'],
-                situasional: ['Perubahan kebiasaan makan', 'Aktivitas fisik harian kurang', 'Penyalahgunaan laksatif', 'Kebiasaan menahan dorongan defekasi']
+                situasional: ['Perubahan kebiasaan makan', 'Ketidakadekuatan toileting', 'Aktivitas fisik harian kurang dari yang dianjurkan', 'Penyalahgunaan laksatif', 'Efek agen farmakologis', 'Ketidakteraturan kebiasaan defekasi', 'Kebiasaan menahan dorongan defekasi', 'Perubahan lingkungan']
             },
             gejalaMayor: {
                 subjektif: ['Defekasi kurang dari 2 kali seminggu', 'Pengeluaran feses lama dan sulit'],
@@ -2220,32 +2632,178 @@ const askepData = [
                 subjektif: ['Mengejan saat defekasi'],
                 objektif: ['Distensi abdomen', 'Kelemahan umum', 'Teraba massa pada rektal']
             },
-            kondisiKlinis: ['Lesi/cedera pada medula spinalis', 'Stroke', 'Penyakit Parkinson', 'Hemoroid', 'Obesitas', 'Kehamilan']
+            kondisiKlinis: ['Lesi/cedera pada medula spinalis', 'Spina bifida', 'Stroke', 'Sklerosis multipel', 'Penyakit parkinson', 'Demensia', 'Hiperparatiroidisme', 'Hipoparatiroidisme', 'Ketidakseimbangan elektrolit', 'Hemoroid', 'Obesitas', 'Pasca operasi obstruksi bowel', 'Kehamilan', 'Pembesaran prostat', 'Abses rektal', 'Fisura anorektal', 'Striktura anorektal', 'Prolaps rektal', 'Ulkus rektal', 'Rektokel', 'Tumor', 'Penyakit hirschsprung', 'Impaksi feses']
         },
         luaran: {
             utama: {
                 judul: 'Eliminasi Fekal',
                 kode: 'L.04033',
                 ekspektasi: 'membaik',
-                kriteriaHasil: ['Konsistensi feses membaik', 'Frekuensi defekasi membaik', 'Peristaltik usus membaik', 'Mengejan saat defekasi menurun', 'Keluhan defekasi lama dan sulit menurun']
+                kriteriaHasil: ['Kontrol pengeluaran feses meningkat', 'Kesulitan defekasi lama dan sulit menurun', 'Mengejan saat defekasi menurun', 'Konsistensi feses membaik', 'Frekuensi BAB membaik', 'Peristaltik usus membaik']
             }
         },
         intervensi: [
             {
-                judul: 'Manajemen Konstipasi',
-                kode: 'I.04153',
-                definisi: 'Mengidentifikasi dan mengelola konstipasi.',
+                judul: 'Manajemen Eliminasi Fekal',
+                kode: 'I.04151',
+                definisi: 'Mengidentifikasi dan mengelola gangguan pola eliminasi fekal.',
                 tindakan: {
-                    observasi: ['Periksa tanda dan gejala konstipasi', 'Monitor bising usus'],
-                    terapeutik: ['Anjurkan diet tinggi serat', 'Lakukan evakuasi feses secara manual, jika perlu'],
-                    edukasi: ['Jelaskan etiologi dan faktor risiko konstipasi', 'Anjurkan peningkatan asupan cairan', 'Anjurkan peningkatan aktivitas fisik'],
-                    kolaborasi: ['Kolaborasi penggunaan obat pencahar, jika perlu']
+                    observasi: ['Identifikasi masalah usus dan penggunaan obat pencahar', 'Identifikasi pengobatan yang berefek pada kondisi gastrointestinal', 'Monitor buang air besar (mis. warna, frekuensi, konsistensi, volume)', 'Monitor tanda dan gejala diare, konstipasi, atau impaksi'],
+                    terapeutik: ['Berikan air hangat setelah makan', 'Jadwalkan waktu defekasi bersama pasien', 'Sediakan makanan tinggi serat'],
+                    edukasi: ['Jelaskan jenis makanan yang membantu meningkatkan keteraturan peristaltik usus', 'Anjurkan mencatat warna, frekuensi, konsistensi, volume feses', 'Anjurkan meningkatkan aktivitas fisik, sesuai toleransi', 'Anjurkan pengurangan asupan makanan yang meningkatkan pembentukan gas', 'Anjurkan mengkonsumsi makanan yang mengandung tinggi serat', 'Anjurkan meningkatkan asupan cairan, jika tidak ada kontraindikasi'],
+                    kolaborasi: ['Kolaborasi pemberian obat suppositoria anal, jika perlu']
                 },
                 rasional: {
-                    observasi: 'Pemeriksaan abdomen dan pemantauan bising usus membantu dalam menilai tingkat keparahan konstipasi dan menyingkirkan kemungkinan obstruksi.',
-                    terapeutik: 'Diet tinggi serat dan asupan cairan yang cukup adalah landasan manajemen konstipasi, karena membantu melunakkan feses dan meningkatkan massa feses.',
-                    edukasi: 'Edukasi tentang diet, cairan, dan aktivitas fisik memberdayakan pasien untuk membuat perubahan gaya hidup jangka panjang untuk mencegah kekambuhan konstipasi.',
-                    kolaborasi: 'Obat pencahar mungkin diperlukan untuk jangka pendek guna mengatasi konstipasi yang parah, namun penggunaannya harus di bawah pengawasan medis untuk menghindari ketergantungan.'
+                    observasi: 'Untuk mengetahui masalah pada usus dan penggunaan obat pencahar. Untuk mengetahui pengobatan yang berefek pada kondisi gastrointestinal. Untuk melihat warna, frekuensi, konsistensi, dan volume dari buang air besar tersebut. Untuk mengetahui tanda dan gejala dari konstipasi/impaksi.',
+                    terapeutik: 'Air hangat dapat membantu meredakan nyeri dan dapat meredakan konstipasi. Untuk mengetahui jadwal defekasi bersama pasien. Makanan yang tinggi serat dapat membantu klien dalam meredakan konstipasi.',
+                    edukasi: 'Agar klien dapat mengetahui jenis makanan yang dapat meningkatkan keteraturan peristaltik. Untuk mengetahui warna, frekuensi, konsistensi, dan volume feses. Untuk mengetahui aktivitas fisik, sesuai toleransi. Untuk mengetahui pengurangan asupan makanan yang meningkatkan pembentukan gas. Makanan yang mengandung serat tinggi dapat membantu menjaga daya tahan tubuh. Asupan cairan yang cukup dapat membantu klien dalam mengatasi konstipasi.',
+                    kolaborasi: 'Pemberian suppositoria anal dapat membantu melancarkan klien dalam mengeluarkan feses.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0050',
+        keywords: ['d.0050', 'retensi urine'],
+        diagnosis: {
+            judul: 'Retensi Urine',
+            kode: 'D.0050',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Pengosongan kandung kemih yang tidak lengkap.',
+            penyebab: {
+                fisiologis: ['Peningkatan tekanan uretra', 'Kerusakan arkus refleks', 'Blok spingter', 'Disfungsi neurologis (mis. trauma, penyakit saraf)'],
+                situasional: ['Efek agen farmakologis (mis. atropine, belladonna, psikotropik, antihistamin, opiate)']
+            },
+            gejalaMayor: {
+                subjektif: ['Sensasi penuh pada kandung kemih'],
+                objektif: ['Disuria/anuria', 'Distensi kandung kemih']
+            },
+            gejalaMinor: {
+                subjektif: ['Dribbling'],
+                objektif: ['Inkontinensia berlebih', 'Residu urine 150 ml atau lebih']
+            },
+            kondisiKlinis: ['Benigna prostat hiperplasia', 'Pembengkakan perineal', 'Cedera medula spinalis', 'Rektokel', 'Tumor di saluran kemih']
+        },
+        luaran: {
+            utama: {
+                judul: 'Eliminasi Urine',
+                kode: 'L.04034',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Sensasi berkemih meningkat', 'Desakan berkemih (urgensi) menurun', 'Distensi kandung kemih menurun', 'Berkemih tidak tuntas (hesitancy) menurun', 'Volume residu urine menurun', 'Urin menetes (dribbling) menurun', 'Nokturia menurun', 'Mengompol menurun', 'Enuresis menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Kateterisasi Urine',
+                kode: 'I.04148',
+                definisi: 'Memasukkan selang kateter urine ke dalam kandung kemih.',
+                tindakan: {
+                    observasi: ['Memeriksa kondisi pasien (mis. kesadaran, tanda-tanda vital, daerah perineal, distensi kandung kemih, inkontinensia urine, refleks berkemih)'],
+                    terapeutik: ['Menyiapkan peralatan, bahan-bahan, dan ruangan tindakan', 'Menyiapkan pasien: bebaskan pakaian bawah dan posisikan dorsal recumbent (untuk wanita) dan supine (untuk laki-laki)', 'Memasang sarung tangan', 'Membersihkan daerah perineal atau periposium dengan cairan NaCl', 'Melakukan insersi kateter urine dengan menerapkan prinsip aseptik', 'Menyambungkan kateter urine dengan urine bag', 'Mengisi balon dengan NaCl 0,9% sesuai dengan anjuran pabrik', 'Mengfiksasi selang kateter di atas simpisis atau di paha', 'Memastikan kantung urine ditempatkan lebih rendah dari kandung kemih', 'Memberikan label waktu pemasangan'],
+                    edukasi: ['Menjelaskan tujuan dan prosedur pemasangan kateter urine', 'Menganjurkan menarik napas saat insersi selang kateter'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui kondisi tanda-tanda vital klien.',
+                    terapeutik: 'Mempermudah melakukan tindakan dengan menyiapkan alat dan bahan terlebih dahulu. Untuk memungkinkan akses yang aman ke daerah genital klien selama prosedur. Untuk mengurangi infeksi silang. Untuk mencegah transmisi mikroorganisme dan mencegah terjadinya infeksi. Untuk memastikan item tetap steril. Untuk menampung drainase urine setelah kateter dimasukkan. Untuk menghindari kebocoran pada saat sudah dipasang. Untuk menghindari kateter kemana-mana. Untuk mencegah urine merembes kemana-mana. Untuk memberikan informasi kepada tenaga medis lainnya dan mempermudah evaluasi.',
+                    edukasi: 'Untuk memastikan bahwa pasien mengerti dengan prosedur yang akan dilakukan. Untuk mengurangi nyeri yang dirasakan klien.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0052',
+        keywords: ['d.0052', 'risiko konstipasi'],
+        diagnosis: {
+            judul: 'Risiko Konstipasi',
+            kode: 'D.0052',
+            kategori: 'Fisiologis',
+            subkategori: 'Eliminasi',
+            definisi: 'Berisiko mengalami penurunan frekuensi normal defekasi disertai kesulitan dan pengeluaran feses tidak lengkap.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Penurunan motilitas gastrointestinal', 'Pertumbuhan gigi tidak adekuat', 'Ketidakcukupan diet', 'Ketidakcukupan asupan serat', 'Ketidakcukupan asupan cairan', 'Aganglionik (mis. Penyakit Hirschsprung)', 'Kelemahan otot abdomen'],
+                psikologis: ['Konfusi', 'Depresi', 'Gangguan emosional'],
+                situasional: ['Perubahan kebiasaan makan', 'Ketidakadekuatan toileting', 'Aktivitas fisik harian kurang dari yang dianjurkan', 'Penyalahgunaan laksatif', 'Efek agen farmakologis', 'Ketidakteraturan kebiasaan defekasi', 'Kebiasaan menahan dorongan defekasi', 'Perubahan lingkungan']
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Lesi/cedera pada medulla spinalis', 'Spina bifida', 'Stroke', 'Sklerosis multiple', 'Penyakit Parkinson', 'Demensia', 'Hiperparatiroidisme', 'Hipoparatiroidisme']
+        },
+        luaran: {
+            utama: {
+                judul: 'Eliminasi Fekal',
+                kode: 'L.04033',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kontrol pengeluaran feses membaik', 'Keluhan defekasi lama membaik', 'Mengejan saat defekasi menurun', 'Distensi abdomen menurun', 'Konsistensi feses membaik', 'Frekuensi defekasi membaik', 'Peristaltik usus membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Pencegahan Konstipasi',
+                kode: 'I.04157', // disesuaikan dengan konteks
+                definisi: 'Mengidentifikasi dan menurunkan risiko terjadinya penurunan frekuensi normal defekasi yang disertai kesulitan pengeluaran feses yang tidak lengkap.',
+                tindakan: {
+                    observasi: ['Identifikasi faktor risiko konstipasi', 'Monitor tanda dan gejala konstipasi', 'Identifikasi status kognitif untuk mengkomunikasikan kebutuhan'],
+                    terapeutik: ['Batasi minuman yang mengandung kafein dan alkohol', 'Jadwalkan rutinitas BAB'],
+                    edukasi: ['Jelaskan penyebab dan faktor risiko konstipasi', 'Anjurkan minum air putih sesuai dengan kebutuhan (1500-2000 mL/hari)', 'Anjurkan mengkonsumsi makanan berserat (25-30 gram/hari)'],
+                    kolaborasi: ['Kolaborasi dengan ahli gizi, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Dengan mengidentifikasi faktor risiko konstipasi maka akan lebih mudah merencanakan intervensi yang tepat untuk dilakukan. Tanda dan gejala dapat menjadi sinyal mengenai kondisi konstipasi baik itu membaik atau memburuk. Status kognitif klien dapat membuat komunikasi terapeutik berjalan dengan baik.',
+                    terapeutik: 'Minuman yang mengandung kafein dan alkohol dapat membuat konstipasi apabila dikonsumsi secara berlebihan. Tidak BAB lebih dari 3 hari dapat membuat feses menjadi lebih kering dan keras oleh sebab itu dianjurkan untuk membuat jadwal BAB.',
+                    edukasi: 'Dengan mengetahui penyebab dan faktor risiko konstipasi klien dapat mengatur apa saja yang bisa dilakukan dan tidak perlu. Air berperan sebagai pelumas yang bisa memperlancar pencernaan dan melunakkan feses. Serat dapat membantu merangsang pergerakan usus secara teratur serta membantu memperlunak buangan atau feses.',
+                    kolaborasi: 'Untuk mendapatkan hasil yang lebih maksimal dalam mengatasi konstipasi maka sebaiknya dikolaborasikan dengan ahli gizi.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0053',
+        keywords: ['d.0053', 'disorganisasi perilaku bayi'],
+        diagnosis: {
+            judul: 'Disorganisasi Perilaku Bayi',
+            kode: 'D.0053',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Disintegrasi respon fisiologis dan neurobehaviour bayi terhadap lingkungan.',
+            penyebab: {
+                fisiologis: ['Keterbatasan lingkungan fisik', 'Ketidaktepatan sensori', 'Kelebihan stimulasi sensorik', 'Imaturitas sistem sensoris', 'Prematuritas', 'Prosedur invasif', 'Malnutrisi', 'Gangguan motorik', 'Kelainan kongenital', 'Kelainan genetik', 'Terpapar teratogenik'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: [],
+                objektif: ['Hiperekstensi ekstremitas', 'Jari-jari meregang atau tangan menggenggam', 'Respon abnormal terhadap stimulus sensorik', 'Gerakan tidak terkoordinasi']
+            },
+            gejalaMinor: {
+                subjektif: [],
+                objektif: ['Menangis', 'Tidak mampu menghambat respon terkejut', 'Iritabilitas', 'Gangguan refleks', 'Tonus motorik berubah', 'Tangan di wajah', 'Gelisah', 'Tremor', 'Tersentak', 'Aritmia', 'Bradikardia atau takikardia', 'Saturasi menurun', 'Tidak mau menyusu', 'Warna kulit berubah']
+            },
+            kondisiKlinis: ['Hospitalisasi', 'Prosedur invasif', 'Prematuritas', 'Gangguan neurologis', 'Gangguan pernafasan', 'Gangguan kardiovaskuler']
+        },
+        luaran: {
+            utama: {
+                judul: 'Organisasi Perilaku Bayi',
+                kode: 'L.05043',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Gerakan pada ekstremitas meningkat', 'Kemampuan jari-jari menggenggam meningkat', 'Gerakan terkoordinasi meningkat', 'Respon normal terhadap stimulus sensorik meningkat']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Perawatan Bayi',
+                kode: 'I.10338',
+                definisi: 'Mengidentifikasi dan merawat kesehatan bayi.',
+                tindakan: {
+                    observasi: ['Monitor tanda-tanda vital bayi (terutama suhu 36,5°C-37,5°C)'],
+                    terapeutik: ['Mandikan bayi dengan suhu ruangan 21-24°C', 'Mandikan bayi dalam waktu 5-10 menit dan 2 kali dalam sehari', 'Rawat tali pusat secara terbuka (tali pusat tidak dibungkus apapun)', 'Bersihkan pangkal tali pusat lidi kapas yang telah diberi air matang', 'Kenakan popok bayi di bawah umbilikus jika tali pusat belum terlepas', 'Lakukan pemijatan bayi', 'Ganti popok bayi jika basah', 'Kenakan pakaian bayi dari bahan katun'],
+                    edukasi: ['Ajarkan ibu menyusui sesuai kebutuhan bayi', 'Ajarkan ibu cara merawat bayi di rumah', 'Ajarkan cara pemberian makanan pendamping ASI pada bayi > 6 bulan'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui keadaan atau kondisi bayi terutama suhu tubuh.',
+                    terapeutik: 'Memandikan bayi pada suhu normal agar bayi tidak merasa kedinginan. Memandikan bayi dalam waktu yang kurang dari 10 menit dapat mencegah terjadinya hipotermia. Merawat tali pusat secara terbuka bertujuan agar tali pusat dapat mengering dan tetap bersih. Membersihkan pangkal tali pusat bertujuan agar tali pusat tetap bersih dan tidak terkena infeksi. Tujuan tali pusat tidak tertutup popok agar tidak terkena air seni dan tinja untuk menghindari infeksi. Pemijatan lembut pada bayi membuat bayi merasa nyaman dan relaks. Mengganti popok bertujuan agar bayi tidak mengalami iritasi kulit. Pakaian bayi dari bahan katun memiliki tekstur yang lembut dan nyaman.',
+                    edukasi: 'Mengajarkan ibu memberikan ASI sangat berguna untuk menunjang pertumbuhan dan perkembangan fisik serta kecerdasan bayi. Mengajarkan ibu cara merawat bayi di rumah agar bayi tetap terjaga kesehatannya. Mengajarkan cara pembagian makanan pendamping ASI pada bayi lebih dari 6 bulan sangat penting.'
                 }
             }
         ]
@@ -2403,6 +2961,193 @@ const askepData = [
                     terapeutik: 'Mengelola energi melibatkan keseimbangan antara istirahat yang cukup, aktivitas bertahap, dan distraksi untuk mencegah kelelahan berlebih.',
                     edukasi: 'Mengajarkan pasien tentang konservasi energi dan strategi koping membantu mereka untuk berpartisipasi dalam aktivitas sehari-hari tanpa mengalami kelelahan yang signifikan.',
                     kolaborasi: 'Kolaborasi dengan ahli gizi penting untuk memastikan asupan kalori dan nutrien yang adekuat, yang merupakan dasar dari produksi energi tubuh.'
+                }
+            }
+        ]
+    },
+        {
+        id: 'D.0057',
+        keywords: ['d.0057', 'keletihan'],
+        diagnosis: {
+            judul: 'Keletihan',
+            kode: 'D.0057',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Penurunan kapasitas kerja fisik dan mental yang tidak pulih dengan istirahat.',
+            penyebab: {
+                fisiologis: ['Gangguan tidur', 'Gaya hidup monoton', 'Kondisi fisiologis (mis. penyakit kronis, penyakit terminal, anemia, malnutrisi, kehamilan)', 'Program perawatan/pengobatan jangka panjang', 'Peristiwa hidup negatif', 'Stres berlebihan', 'Depresi'],
+                situasional: []
+            },
+            gejalaMayor: {
+                subjektif: ['Merasa energi tidak pulih walaupun terasa tidur', 'Merasa kurang tenaga', 'Mengeluh lelah'],
+                objektif: ['Tidak mampu mempertahankan aktivitas rutin', 'Tampak lesu']
+            },
+            gejalaMinor: {
+                subjektif: ['Merasa bersalah akibat tidak mampu menjalankan tanggung jawab', 'Libido menurun'],
+                objektif: ['Kebutuhan istirahat meningkat']
+            },
+            kondisiKlinis: ['Anemia', 'Kanker', 'Hipotiroidisme/Hipertiroidisme', 'AIDS', 'Depresi', 'Menopause']
+        },
+        luaran: {
+            utama: {
+                judul: 'Tingkat Keletihan',
+                kode: 'L.05046',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan melakukan aktivitas rutin meningkat', 'Verbalisasi lelah menurun', 'Lesu menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Aktivitas/Istirahat',
+                kode: 'I.12362',
+                definisi: 'Mengajarkan pengaturan aktivitas dan istirahat.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan dan kemampuan menerima informasi'],
+                    terapeutik: ['Sediakan materi dan media pengaturan aktivitas dan istirahat', 'Jadwalkan pemberian pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan pada pasien dan keluarga untuk bertanya'],
+                    edukasi: ['Jelaskan pentingnya melakukan aktivitas fisik/olahraga secara rutin', 'Ajarkan cara mengidentifikasi kebutuhan istirahat (mis. kelelahan, sesak napas saat aktivitas)'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Tujuan informasi adalah pemberitahuan atau kabar berita yang disampaikan baik secara langsung maupun tidak langsung.',
+                    terapeutik: 'Istirahat berarti suatu keadaan tenang, relaks, tanpa tekanan emosional, dan bebas dari perasaan gelisah. Pendidikan kesehatan adalah profesi yang mendidik masyarakat tentang kesehatan.',
+                    edukasi: 'Olahraga merupakan obat ajaib yang bisa didapatkan dengan mudah tanpa biaya mahal. Kebutuhan istirahat dan tidur merupakan kebutuhan dasar yang mutlak harus dipenuhi oleh semua orang.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0058',
+        keywords: ['d.0058', 'kesiapan peningkatan tidur'],
+        diagnosis: {
+            judul: 'Kesiapan Peningkatan Tidur',
+            kode: 'D.0058',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Pola penurunan kesadaran alamiah dan periodik yang memungkinkan istirahat adekuat, mempertahankan gaya hidup yang diinginkan dan dapat ditingkatkan.',
+            penyebab: { fisiologis: [], situasional: [] },
+            gejalaMayor: {
+                subjektif: ['Mengekspresikan keinginan untuk meningkatkan tidur', 'Mengekspresikan perasaan cukup istirahat setelah tidur'],
+                objektif: ['Jumlah waktu tidur sesuai dengan pertumbuhan perkembangan']
+            },
+            gejalaMinor: {
+                subjektif: ['Tidak menggunakan obat tidur'],
+                objektif: ['Menerapkan rutinitas tidur yang meningkatkan kebiasaan tidur']
+            },
+            kondisiKlinis: ['Pemulihan pasca operasi', 'Nyeri kronis', 'Kehamilan (periode prenatal/postnatal)', 'Sleep apnea']
+        },
+        luaran: {
+            utama: {
+                judul: 'Pola Tidur',
+                kode: 'L.05045',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Kemampuan beraktivitas meningkat', 'Keluhan sulit tidur menurun', 'Keluhan sering terjaga menurun', 'Keluhan tidak puas tidur menurun', 'Keluhan pola tidur berubah menurun', 'Keluhan istirahat tidak cukup menurun']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Promosi Keutuhan Keluarga',
+                kode: 'I.13490',
+                definisi: 'Meningkatkan pengetahuan dan kemampuan untuk menjaga dan meningkatkan kerekatan dan keutuhan keluarga.',
+                tindakan: {
+                    observasi: ['Identifikasi pemahaman keluarga terhadap masalah', 'Identifikasi adanya konflik prioritas antar anggota keluarga', 'Identifikasi mekanisme koping keluarga', 'Monitor hubungan antara anggota keluarga'],
+                    terapeutik: ['Hargai privasi keluarga', 'Fasilitasi kunjungan keluarga', 'Fasilitasi keluarga melakukan pengambilan keputusan dan pemecahan masalah', 'Fasilitasi komunikasi terbuka antar setiap anggota keluarga'],
+                    edukasi: ['Informasikan kondisi pasien secara berkala kepada keluarga', 'Anjurkan anggota keluarga mempertahankan keharmonisan keluarga'],
+                    kolaborasi: ['Rujuk untuk terapi keluarga, jika perlu']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui sejauh mana pengetahuan keluarga akan masalah klien. Untuk mengetahui apakah faktor penyebab masalah klien berasal dari konflik prioritas antar anggota keluarga. Mekanisme koping keluarga digunakan untuk mengatasi tuntutan internal dan/atau eksternal. Keluarga merupakan lingkungan pertama dan terdekat bagi klien.',
+                    terapeutik: 'Privasi merupakan salah satu hal yang harus didapatkan oleh klien dan keluarga. Dengan adanya kunjungan dari keluarga akan membantu mengatasi masalah klien. Keluarga memiliki hak untuk mengambil keputusan untuk masalah klien. Komunikasi menjadi bagian penting antar keluarga.',
+                    edukasi: 'Informasi akan perkembangan klien perlu didapatkan oleh keluarga. Keluarga yang harmonis dan tenang merupakan komponen penting bagi klien.',
+                    kolaborasi: 'Terapi keluarga membantu setiap anggota keluarga agar dapat meningkatkan komunikasi dan menyelesaikan masalah.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0059',
+        keywords: ['d.0059', 'risiko disorganisasi perilaku bayi'],
+        diagnosis: {
+            judul: 'Risiko Disorganisasi Perilaku Bayi',
+            kode: 'D.0059',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Beresiko mengalami disintegrasi respon fisiologis dan neurobehaviour bayi terhadap lingkungan.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Kelebihan stimulasi sensorik', 'Prematuritas', 'Prosedur invasif', 'Gangguan motorik', 'Kelainan kongenital', 'Kelainan genetik'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Hospitalisasi', 'Prosedur invasif', 'Prematuritas', 'Gangguan neurologis', 'Gangguan pernafasan', 'Gangguan kardiovaskular']
+        },
+        luaran: {
+            utama: {
+                judul: 'Organisasi Perilaku Bayi',
+                kode: 'L.05043',
+                ekspektasi: 'membaik',
+                kriteriaHasil: ['Gerakan pada ekstremitas meningkat', 'Kemampuan jari-jari menggenggam meningkat', 'Gerakan terkoordinasi meningkat', 'Respon normal terhadap stimulus sensorik meningkat', 'Gelisah menurun', 'Tremor menurun', 'Tersentak menurun', 'Aritmia menurun', 'Bradikardi menurun', 'Takikardia menurun', 'Kemampuan menyusu membaik', 'Warna kulit membaik', 'Menangis membaik', 'Mampu berespons kejut membaik', 'Irritabilitas menurun', 'Refleks membaik', 'Tonus motorik membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Edukasi Keamanan Bayi',
+                kode: 'I.12379',
+                definisi: 'Menyediakan informasi dan dukungan terhadap pencegahan cedera pada bayi.',
+                tindakan: {
+                    observasi: ['Identifikasi kesiapan dan kemampuan menerima informasi'],
+                    terapeutik: ['Sediakan materi dan media pendidikan kesehatan', 'Jadwalkan pendidikan kesehatan sesuai kesepakatan', 'Berikan kesempatan untuk bertanya'],
+                    edukasi: ['Anjurkan selalu mengawasi bayi', 'Anjurkan tidak meninggalkan bayinya sendirian', 'Anjurkan menjauhkan benda yang berisiko membahayakan bayi', 'Anjurkan memasang penghalang pada sisi tempat tidur', 'Anjurkan menutup sumber listrik yang terjangkau oleh bayi', 'Anjurkan mengatur perabotan rumah tangga di rumah', 'Anjurkan memberikan pembatas pada area berisiko', 'Anjurkan menggunakan kursi dan sabuk pengaman khusus bayi saat berkendara', 'Anjurkan penggunaan sabuk pengaman pada stroller (kursi dorong bayi)', 'Anjurkan tidak meletakkan bayi pada tempat tidur yang tinggi'],
+                    kolaborasi: []
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui kesiapan dan kemampuan menerima informasi terapeutik.',
+                    terapeutik: 'Untuk memberikan pendidikan kesehatan. Untuk mengatur jadwal pendidikan kesehatan yang telah diatur. Untuk menjelaskan pernyataan yang belum diketahui.',
+                    edukasi: 'Selalu mengawasi bayi agar bayi selalu aman dan terjaga. Tidak meninggalkan bayi sendirian agar bayi tidak mengalami kecelakaan yang tidak diinginkan. Untuk menghindari benda yang berisiko membahayakan bayi. Agar melindungi bayi pada saat tidur tidak terjatuh. Agar bayi tidak tersetrum ketika terkena sumber listrik. Agar bayi tidak terkena benda-benda tajam. Memberikan pembatas pada area berisiko. Agar bayi dalam situasi aman. Agar bayi tidak terjatuh dari stroller dan kursi bayi. Tidak meletakkan tempat tidur bayi tinggi karena takut bayi bisa terjatuh.'
+                }
+            }
+        ]
+    },
+    {
+        id: 'D.0060',
+        keywords: ['d.0060', 'risiko intoleransi aktivitas'],
+        diagnosis: {
+            judul: 'Risiko Intoleransi Aktivitas',
+            kode: 'D.0060',
+            kategori: 'Fisiologis',
+            subkategori: 'Aktivitas/Istirahat',
+            definisi: 'Beresiko mengalami ketidakcukupan energi untuk melakukan aktivitas sehari-hari.',
+            penyebab: { // Faktor Risiko
+                fisiologis: ['Gangguan sirkulasi', 'Ketidakbugaran status fisik', 'Riwayat intoleransi aktivitas sebelumnya', 'Tidak berpengalaman dengan suatu aktivitas', 'Gangguan pernapasan'],
+                situasional: []
+            },
+            gejalaMayor: { subjektif: [], objektif: [] },
+            gejalaMinor: { subjektif: [], objektif: [] },
+            kondisiKlinis: ['Anemia', 'Gagal jantung kongestif', 'Penyakit katup jantung', 'Aritmia', 'Penyakit paru obstruktif kronis (PPOK)', 'Gangguan metabolik', 'Gangguan muskuloskeletal']
+        },
+        luaran: {
+            utama: {
+                judul: 'Toleransi Aktivitas',
+                kode: 'L.05047',
+                ekspektasi: 'meningkat',
+                kriteriaHasil: ['Keluhan lelah menurun', 'Dispnea saat aktivitas menurun', 'Dispnea setelah aktivitas menurun', 'Frekuensi nadi membaik']
+            }
+        },
+        intervensi: [
+            {
+                judul: 'Manajemen Energi',
+                kode: 'I.05178',
+                definisi: 'Mengidentifikasi dan mengelola penggunaan energi untuk mengatasi atau mencegah kelelahan dan mengoptimalkan proses pemulihan.',
+                tindakan: {
+                    observasi: ['Identifikasi gangguan fungsi tubuh yang mengakibatkan kelelahan', 'Monitor kelelahan fisik dan emosional', 'Monitor pola dan jam tidur', 'Monitor lokasi dan ketidaknyamanan selama melakukan aktivitas'],
+                    terapeutik: ['Sediakan lingkungan nyaman dan rendah stimulus (mis. cahaya, suara, kunjungan)', 'Lakukan latihan rentang gerak pasif dan/atau aktif', 'Berikan aktivitas distraksi yang menenangkan', 'Fasilitasi duduk di sisi tempat tidur, jika tidak dapat berpindah atau berjalan'],
+                    edukasi: ['Anjurkan tirah baring', 'Anjurkan melakukan aktivitas secara bertahap', 'Anjurkan menghubungi perawat jika tanda dan gejala kelelahan tidak berkurang', 'Ajarkan strategi koping untuk mengurangi kelelahan'],
+                    kolaborasi: ['Kolaborasi dengan ahli gizi tentang cara meningkatkan asupan makanan']
+                },
+                rasional: {
+                    observasi: 'Untuk mengetahui gangguan fungsi tubuh yang dialami pasien akibat kelelahan. Untuk mengetahui tingkat kelelahan fisik dan emosional pasien. Untuk mengetahui pola tidur pasien apakah teratur atau tidak. Untuk mengetahui lokasi dan tingkat ketidaknyamanan pasien selama melakukan aktivitas.',
+                    terapeutik: 'Untuk memberi rasa nyaman bagi pasien. Untuk meningkatkan dan melatih masa otot dan gerak ekstremitas pasien. Untuk mengalihkan rasa ketidaknyamanan yang dialami pasien. Untuk melatih gerak mobilisasi pasien selama dirawat.',
+                    edukasi: 'Untuk memberikan kenyamanan pasien saat beristirahat. Untuk menunjang proses kesembuhan pasien secara bertahap. Agar perawat bisa dengan segera mengkaji dan merencanakan kembali tindakan keperawatan yang bisa diberikan. Agar pasien dapat mengatasi kelelahannya secara mandiri dengan mudah.',
+                    kolaborasi: 'Untuk memaksimalkan proses penyembuhan pasien.'
                 }
             }
         ]
